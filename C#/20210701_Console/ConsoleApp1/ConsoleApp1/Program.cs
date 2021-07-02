@@ -43,7 +43,7 @@ namespace ConsoleApp1
             // If a directory is not specified, exit program.
             if (args.Length != 2)
             {
-                // Display the proper way to call the program.
+                // Display the proper way to call the program.asdf
                 Console.WriteLine("Usage: Watcher.exe (directory)");
                 return;
             }
@@ -71,7 +71,7 @@ namespace ConsoleApp1
             Console.WriteLine("Press \'q\' to quit the sample.");
             while (Console.Read() != 'q') ;
         }
-
+       
         // Define the event handlers.
         private static void OnChanged(object source, FileSystemEventArgs e)
         {
@@ -97,7 +97,7 @@ namespace ConsoleApp1
             b.field = 2;
             b.Method();
 
-            //a.Folder("\\\\tal\\mail\\2021\\Июль\\02_07_2021");
+            a.Folder("\\\\tal\\mail\\2021\\Июль\\02_07_2021");
         }
     }
 }
