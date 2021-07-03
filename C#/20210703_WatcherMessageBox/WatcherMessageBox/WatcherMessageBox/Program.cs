@@ -4,20 +4,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+
 
 namespace WatcherMessageBox
 {
     static class Program
     {
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+
+
+ 
 
             FileSystemWatcher watcher = new FileSystemWatcher(@"D:\download\test");
 
@@ -36,15 +39,15 @@ namespace WatcherMessageBox
             //watcher.Renamed += OnRenamed;
             //watcher.Error += OnError;
 
-            watcher.Filter = "";
+            watcher.Filter = "*.*";
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
 
-            Console.WriteLine("Press enter to exit.");
-            Console.ReadLine();
-
-
-
+            //Console.WriteLine("Press enter to exit.");
+            //Console.ReadLine();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run();
         }
 
         private static void OnChanged(object sender, FileSystemEventArgs e)
@@ -58,8 +61,8 @@ namespace WatcherMessageBox
 
         private static void OnCreated(object sender, FileSystemEventArgs e)
         {
-            string value = $"Почта: {e.FullPath}";
-            Console.WriteLine(value);
+            string value = $"Почта: {e.Name}";
+            //Console.WriteLine(value);
             MessageBox.Show(value);
         }
 
@@ -87,5 +90,6 @@ namespace WatcherMessageBox
                  PrintException(ex.InnerException);
              }
          }*/
+
     }
 }
