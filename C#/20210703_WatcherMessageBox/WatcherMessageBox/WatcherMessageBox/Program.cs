@@ -87,7 +87,7 @@ namespace WatcherMessageBox
             }
 
             string direkt = "D:\\download\\test\\" + thisday.Year.ToString() + "\\" + month + "\\" + day + "_" + month0 + "_" + thisday.Year.ToString();
-            MessageBox.Show(direkt);
+            //MessageBox.Show(direkt);
             FileSystemWatcher watcher = new FileSystemWatcher(direkt);
 
             watcher.NotifyFilter = NotifyFilters.Attributes
