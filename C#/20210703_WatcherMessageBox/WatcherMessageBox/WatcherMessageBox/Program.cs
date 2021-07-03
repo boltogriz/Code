@@ -11,17 +11,12 @@ namespace WatcherMessageBox
 {
     static class Program
     {
-        //
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
         static void Main()
         {
-
-
- 
-
             FileSystemWatcher watcher = new FileSystemWatcher(@"D:\download\test");
 
             watcher.NotifyFilter = NotifyFilters.Attributes
