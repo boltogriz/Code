@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "G:\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "G:\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "G:\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
-        "packagesPath": "C:\\Users\\admin2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\obj\\",
+        "projectPath": "G:\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "packagesPath": "C:\\Users\\toha\\.nuget\\packages\\",
+        "outputPath": "G:\\Code\\C#\\20210701_Console\\ConsoleApp1\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\toha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
