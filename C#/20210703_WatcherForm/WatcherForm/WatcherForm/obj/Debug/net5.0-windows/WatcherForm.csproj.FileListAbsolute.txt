@@ -15,3 +15,4 @@ G:\Code\C#\20210703_WatcherForm\WatcherForm\WatcherForm\obj\Debug\net5.0-windows
 G:\Code\C#\20210703_WatcherForm\WatcherForm\WatcherForm\obj\Debug\net5.0-windows\ref\WatcherForm.dll
 G:\Code\C#\20210703_WatcherForm\WatcherForm\WatcherForm\obj\Debug\net5.0-windows\WatcherForm.pdb
 G:\Code\C#\20210703_WatcherForm\WatcherForm\WatcherForm\obj\Debug\net5.0-windows\WatcherForm.genruntimeconfig.cache
+G:\Code\C#\20210703_WatcherForm\WatcherForm\WatcherForm\obj\Debug\net5.0-windows\WatcherForm.csproj.AssemblyReference.cache

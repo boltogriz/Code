@@ -5,19 +5,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WatcherForm
+
+
+namespace MyNamespace
 {
-    static class Program
+    class MyClassCS
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
+
         static void Main()
         {
-            
-
-
             using var watcher = new FileSystemWatcher(@"D:\download\test");
 
             watcher.NotifyFilter = NotifyFilters.Attributes
@@ -29,25 +25,21 @@ namespace WatcherForm
                                  | NotifyFilters.Security
                                  | NotifyFilters.Size;
 
-            watcher.Changed += OnChanged;
+            //watcher.Changed += OnChanged;
             watcher.Created += OnCreated;
-            watcher.Deleted += OnDeleted;
-            watcher.Renamed += OnRenamed;
-            watcher.Error += OnError;
+            //watcher.Deleted += OnDeleted;
+            //watcher.Renamed += OnRenamed;
+            //watcher.Error += OnError;
 
-            watcher.Filter = "*.txt";
+            watcher.Filter = "";
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
 
             Console.WriteLine("Press enter to exit.");
             Console.ReadLine();
 
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            MessageBox.Show("test");
-            Application.Run(new Form1());
-            
+
+
         }
 
         private static void OnChanged(object sender, FileSystemEventArgs e)
@@ -61,10 +53,9 @@ namespace WatcherForm
 
         private static void OnCreated(object sender, FileSystemEventArgs e)
         {
-            string value = $"Created: {e.FullPath}";
-           
-            MessageBox.Show(value);
+            string value = $"Почта: {e.FullPath}";
             Console.WriteLine(value);
+
         }
 
         private static void OnDeleted(object sender, FileSystemEventArgs e) =>
@@ -90,8 +81,6 @@ namespace WatcherForm
                 Console.WriteLine();
                 PrintException(ex.InnerException);
             }
-
         }
-
     }
 }

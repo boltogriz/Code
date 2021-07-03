@@ -3,6 +3,7 @@ using System.IO;
 
 
 
+
 namespace MyNamespace
 {
     class MyClassCS
@@ -33,6 +34,9 @@ namespace MyNamespace
 
             Console.WriteLine("Press enter to exit.");
             Console.ReadLine();
+
+
+
         }
 
         private static void OnChanged(object sender, FileSystemEventArgs e)
