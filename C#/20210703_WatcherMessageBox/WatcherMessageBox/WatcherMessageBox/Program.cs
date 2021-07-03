@@ -43,6 +43,8 @@ namespace WatcherMessageBox
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
 
+
+            
             //Console.WriteLine("Press enter to exit.");
             //Console.ReadLine();
             Application.EnableVisualStyles();
@@ -63,7 +65,12 @@ namespace WatcherMessageBox
         {
             string value = $"Почта: {e.Name}";
             //Console.WriteLine(value);
-            MessageBox.Show(value);
+            //Если if удалить, то отобразятся и вложения в сообщениях
+            if (!value.Contains(@"\")) 
+            {
+                MessageBox.Show(value);
+            }
+            
         }
 
         private static void OnDeleted(object sender, FileSystemEventArgs e) =>
