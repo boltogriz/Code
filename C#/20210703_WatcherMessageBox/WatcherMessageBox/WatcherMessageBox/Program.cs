@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace WatcherMessageBox
 {
+
     static class Program
     {
         /// <summary>
@@ -17,78 +18,8 @@ namespace WatcherMessageBox
         [STAThread]
         static void Main()
         {
-            DateTime thisday = DateTime.Today;
-            string month = "Январь";
-            string month0 = "01";
-            string day = "01";
-            if (!thisday.Day.ToString().Contains("0"))
-            {
-                day = "0" + thisday.Day.ToString();
-            }
-            if (thisday.Month == 1) 
-            {
-                month = "Январь";
-                month0 = "01";
-            }
-            if (thisday.Month == 2)
-            {
-                month = "Февраль";
-                month0 = "02";
-            }
-            if (thisday.Month == 3)
-            {
-                month = "Март";
-                month0 = "03";
-            }
-            if (thisday.Month == 4)
-            {
-                month = "Апрель";
-                month0 = "04";
-            }
-            if (thisday.Month == 5)
-            {
-                month = "Мая";
-                month0 = "05";
-            }
-            if (thisday.Month == 6)
-            {
-                month = "Июнь";
-                month0 = "06";
-            }
-            if (thisday.Month == 7)
-            {
-                month = "Июль";
-                month0 = "07";
-            }
-            if (thisday.Month == 8)
-            {
-                month = "Август";
-                month0 = "08";
-            }
-            if (thisday.Month == 9)
-            {
-                month = "Сентябрь";
-                month0 = "09";
-            }
-            if (thisday.Month == 10)
-            {
-                month = "Октябрь";
-                month0 = "10";
-            }
-            if (thisday.Month == 11)
-            {
-                month = "Ноябрь";
-                month0 = "11";
-            }
-            if (thisday.Month == 12)
-            {
-                month = "Декабрь";
-                month0 = "12";
-            }
-
-            string direkt = "D:\\download\\test\\" + thisday.Year.ToString() + "\\" + month + "\\" + day + "_" + month0 + "_" + thisday.Year.ToString();
-            //MessageBox.Show(direkt);
-            FileSystemWatcher watcher = new FileSystemWatcher(direkt);
+            MyData getDirekt = new MyData();
+            FileSystemWatcher watcher = new FileSystemWatcher(getDirekt.GetData());
 
             watcher.NotifyFilter = NotifyFilters.Attributes
                                  | NotifyFilters.CreationTime
@@ -164,5 +95,82 @@ namespace WatcherMessageBox
              }
          }*/
 
+    }
+    class MyData
+    {
+        public string month;
+        public string month0;
+        public string day;
+        public string direkt;
+
+        public string GetData()
+        {
+            DateTime thisday = DateTime.Today;
+            if (!thisday.Day.ToString().Contains("0"))
+            {
+                day = "0" + thisday.Day.ToString();
+            }
+            if (thisday.Month == 1)
+            {
+                month = "Январь";
+                month0 = "01";
+            }
+            if (thisday.Month == 2)
+            {
+                month = "Февраль";
+                month0 = "02";
+            }
+            if (thisday.Month == 3)
+            {
+                month = "Март";
+                month0 = "03";
+            }
+            if (thisday.Month == 4)
+            {
+                month = "Апрель";
+                month0 = "04";
+            }
+            if (thisday.Month == 5)
+            {
+                month = "Мая";
+                month0 = "05";
+            }
+            if (thisday.Month == 6)
+            {
+                month = "Июнь";
+                month0 = "06";
+            }
+            if (thisday.Month == 7)
+            {
+                month = "Июль";
+                month0 = "07";
+            }
+            if (thisday.Month == 8)
+            {
+                month = "Август";
+                month0 = "08";
+            }
+            if (thisday.Month == 9)
+            {
+                month = "Сентябрь";
+                month0 = "09";
+            }
+            if (thisday.Month == 10)
+            {
+                month = "Октябрь";
+                month0 = "10";
+            }
+            if (thisday.Month == 11)
+            {
+                month = "Ноябрь";
+                month0 = "11";
+            }
+            if (thisday.Month == 12)
+            {
+                month = "Декабрь";
+                month0 = "12";
+            }
+            return direkt = "D:\\download\\test\\" + thisday.Year.ToString() + "\\" + month + "\\" + day + "_" + month0 + "_" + thisday.Year.ToString();
+        }
     }
 }
