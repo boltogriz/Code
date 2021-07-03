@@ -10,3 +10,4 @@ G:\Code\C#\20210703_Watcher\Watcher\Watcher\obj\Debug\netcoreapp3.1\Watcher.cspr
 G:\Code\C#\20210703_Watcher\Watcher\Watcher\obj\Debug\netcoreapp3.1\Watcher.dll
 G:\Code\C#\20210703_Watcher\Watcher\Watcher\obj\Debug\netcoreapp3.1\Watcher.pdb
 G:\Code\C#\20210703_Watcher\Watcher\Watcher\obj\Debug\netcoreapp3.1\Watcher.genruntimeconfig.cache
+G:\Code\C#\20210703_Watcher\Watcher\Watcher\obj\Debug\netcoreapp3.1\Watcher.csproj.AssemblyReference.cache

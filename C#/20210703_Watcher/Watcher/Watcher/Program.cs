@@ -1,10 +1,13 @@
 ﻿using System;
 using System.IO;
 
+
+
 namespace MyNamespace
 {
     class MyClassCS
     {
+        
         static void Main()
         {
             using var watcher = new FileSystemWatcher(@"D:\download\test");
@@ -45,6 +48,7 @@ namespace MyNamespace
         {
             string value = $"Почта: {e.FullPath}";
             Console.WriteLine(value);
+            
         }
 
         private static void OnDeleted(object sender, FileSystemEventArgs e) =>
