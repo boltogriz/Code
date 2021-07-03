@@ -7,7 +7,7 @@ namespace MyNamespace
     {
         static void Main()
         {
-            using var watcher = new FileSystemWatcher(@"D:\download");
+            using var watcher = new FileSystemWatcher(@"D:\download\test");
 
             watcher.NotifyFilter = NotifyFilters.Attributes
                                  | NotifyFilters.CreationTime
@@ -18,13 +18,13 @@ namespace MyNamespace
                                  | NotifyFilters.Security
                                  | NotifyFilters.Size;
 
-            watcher.Changed += OnChanged;
+            //watcher.Changed += OnChanged;
             watcher.Created += OnCreated;
-            watcher.Deleted += OnDeleted;
-            watcher.Renamed += OnRenamed;
-            watcher.Error += OnError;
+            //watcher.Deleted += OnDeleted;
+            //watcher.Renamed += OnRenamed;
+            //watcher.Error += OnError;
 
-            watcher.Filter = "*.txt";
+            watcher.Filter = "";
             watcher.IncludeSubdirectories = true;
             watcher.EnableRaisingEvents = true;
 
@@ -43,7 +43,7 @@ namespace MyNamespace
 
         private static void OnCreated(object sender, FileSystemEventArgs e)
         {
-            string value = $"Created: {e.FullPath}";
+            string value = $"Почта: {e.FullPath}";
             Console.WriteLine(value);
         }
 
