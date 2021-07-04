@@ -106,7 +106,7 @@ namespace WatcherMessageBox
         public string GetData()
         {
             DateTime thisday = DateTime.Today;
-            if (!thisday.Day.ToString().Contains("0"))
+            if (thisday.Day.ToString().Length == 1)
             {
                 day = "0" + thisday.Day.ToString();
             }
