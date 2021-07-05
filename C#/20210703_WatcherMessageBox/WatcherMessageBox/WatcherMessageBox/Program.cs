@@ -170,7 +170,7 @@ namespace WatcherMessageBox
                 month = "Декабрь";
                 month0 = "12";
             }
-            return direkt = "D:\\download\\test\\" + thisday.Year.ToString() + "\\" + month + "\\" + day + "_" + month0 + "_" + thisday.Year.ToString();
+            return direkt = "\\\\tal\\mail\\" + thisday.Year.ToString() + "\\" + month + "\\" + day + "_" + month0 + "_" + thisday.Year.ToString();
         }
     }
 }

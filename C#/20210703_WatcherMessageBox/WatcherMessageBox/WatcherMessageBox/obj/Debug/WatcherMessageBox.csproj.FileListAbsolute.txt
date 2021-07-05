@@ -7,3 +7,12 @@ G:\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\De
 G:\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\Debug\WatcherMessageBox.exe
 G:\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\Debug\WatcherMessageBox.pdb
 G:\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\Debug\WatcherMessageBox.csproj.AssemblyReference.cache
+C:\Users\admin2\source\repos\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\bin\Debug\WatcherMessageBox.exe.config
+C:\Users\admin2\source\repos\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\bin\Debug\WatcherMessageBox.exe
+C:\Users\admin2\source\repos\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\bin\Debug\WatcherMessageBox.pdb
+C:\Users\admin2\source\repos\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\Debug\WatcherMessageBox.csproj.AssemblyReference.cache
+C:\Users\admin2\source\repos\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\Debug\WatcherMessageBox.Properties.Resources.resources
+C:\Users\admin2\source\repos\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\Debug\WatcherMessageBox.csproj.GenerateResource.cache
+C:\Users\admin2\source\repos\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\Debug\WatcherMessageBox.csproj.CoreCompileInputs.cache
+C:\Users\admin2\source\repos\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\Debug\WatcherMessageBox.exe
+C:\Users\admin2\source\repos\Code\C#\20210703_WatcherMessageBox\WatcherMessageBox\WatcherMessageBox\obj\Debug\WatcherMessageBox.pdb
