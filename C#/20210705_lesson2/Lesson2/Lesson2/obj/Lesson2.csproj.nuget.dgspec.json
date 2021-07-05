@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\Lesson2.csproj": {}
+    "C:\\Users\\admin2\\Source\\Repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\Lesson2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\Lesson2.csproj": {
+    "C:\\Users\\admin2\\Source\\Repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\Lesson2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\Lesson2.csproj",
+        "projectUniqueName": "C:\\Users\\admin2\\Source\\Repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\Lesson2.csproj",
         "projectName": "Lesson2",
-        "projectPath": "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\Lesson2.csproj",
+        "projectPath": "C:\\Users\\admin2\\Source\\Repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\Lesson2.csproj",
         "packagesPath": "C:\\Users\\admin2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin2\\source\\repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\obj\\",
+        "outputPath": "C:\\Users\\admin2\\Source\\Repos\\Code\\C#\\20210705_lesson2\\Lesson2\\Lesson2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin2\\AppData\\Roaming\\NuGet\\NuGet.Config",
