@@ -1,0 +1,16 @@
+G:\Code\C#\lesson2_2\lesson2_2\bin\Debug\net5.0\lesson2_2.exe
+G:\Code\C#\lesson2_2\lesson2_2\bin\Debug\net5.0\lesson2_2.deps.json
+G:\Code\C#\lesson2_2\lesson2_2\bin\Debug\net5.0\lesson2_2.runtimeconfig.json
+G:\Code\C#\lesson2_2\lesson2_2\bin\Debug\net5.0\lesson2_2.runtimeconfig.dev.json
+G:\Code\C#\lesson2_2\lesson2_2\bin\Debug\net5.0\lesson2_2.dll
+G:\Code\C#\lesson2_2\lesson2_2\bin\Debug\net5.0\ref\lesson2_2.dll
+G:\Code\C#\lesson2_2\lesson2_2\bin\Debug\net5.0\lesson2_2.pdb
+G:\Code\C#\lesson2_2\lesson2_2\obj\Debug\net5.0\lesson2_2.GeneratedMSBuildEditorConfig.editorconfig
+G:\Code\C#\lesson2_2\lesson2_2\obj\Debug\net5.0\lesson2_2.AssemblyInfoInputs.cache
+G:\Code\C#\lesson2_2\lesson2_2\obj\Debug\net5.0\lesson2_2.AssemblyInfo.cs
+G:\Code\C#\lesson2_2\lesson2_2\obj\Debug\net5.0\lesson2_2.csproj.CoreCompileInputs.cache
+G:\Code\C#\lesson2_2\lesson2_2\obj\Debug\net5.0\lesson2_2.dll
+G:\Code\C#\lesson2_2\lesson2_2\obj\Debug\net5.0\ref\lesson2_2.dll
+G:\Code\C#\lesson2_2\lesson2_2\obj\Debug\net5.0\lesson2_2.pdb
+G:\Code\C#\lesson2_2\lesson2_2\obj\Debug\net5.0\lesson2_2.genruntimeconfig.cache
+G:\Code\C#\lesson2_2\lesson2_2\obj\Debug\net5.0\lesson2_2.csproj.AssemblyReference.cache
