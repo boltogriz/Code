@@ -6,7 +6,19 @@ namespace lesson3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Invoice invoice = new Invoice();
+
+            //Write
+            //Title
+            invoice.SetDate("08 Июля 2021 года");
+            //Body
+            //Footer
+
+            //Read
+            //Title
+            string date = invoice.GetDate();
+            //Body
+            //Footer
         }
     }
 }
