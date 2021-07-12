@@ -6,21 +6,22 @@ namespace lesson3
 {
     class Invoice
     {
-        
         //Title
         string date = null;
-        public void SetDate(string date)
+        public string Date
         {
-            this.date = date.ToLower();
+            //public void SetDate(string date)
+            set { date = value.ToLower(); }
+            //public string GetDate()
+            get { return date; }
         }
-        string number = null;
-        string to = null;
-        string from = null;
 
-        public string GetDate()
-        {
-            return date;
-        }
+        public string Number { set; get; } = null;
+
+        public string To { set; get; } = null;
+
+        public string From { set; get; } = null;
+
 
         //Body
 
