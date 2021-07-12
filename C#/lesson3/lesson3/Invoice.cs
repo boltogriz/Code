@@ -6,7 +6,7 @@ namespace lesson3
 {
     class Invoice
     {
-        //Title
+        //Title 42 min
         string date = null;
         public string Date
         {
