@@ -6,7 +6,13 @@ namespace lesson3
 {
     class Invoice
     {
-        //Title 42 min
+        //Title 1:18 min
+        public Invoice(string constV)
+        {
+            Const = constV;
+        }
+        public string Const { set; get; } = null;
+
         string date = null;
         public string Date
         {
@@ -21,6 +27,7 @@ namespace lesson3
         public string To { set; get; } = null;
 
         public string From { set; get; } = null;
+        public decimal Total { get => total; set => total = value; }
 
 
         //Body
