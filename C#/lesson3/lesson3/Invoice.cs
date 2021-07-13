@@ -6,38 +6,17 @@ namespace lesson3
 {
     class Invoice
     {
-        //Title 1:18 min
-        public Invoice(string constV)
-        {
-            Const = constV;
-        }
-        public string Const { set; get; } = null;
-
-        string date = null;
-        public string Date
-        {
-            //public void SetDate(string date)
-            set { date = value.ToLower(); }
-            //public string GetDate()
-            get { return date; }
-        }
-
-        public string Number { set; get; } = null;
-
-        public string To { set; get; } = null;
-
-        public string From { set; get; } = null;
-        public decimal Total { get => total; set => total = value; }
-
+        //Title
+        public DateTime Date { get; set; }
+        public string Number { get; set; } = null;
+        public string To { get; set; } = null;
+        public string From { get; set; } = null;
 
         //Body
 
-
         //Footer
-        decimal total = 0;
-        string storekeeperSurname = null;
-        string forwarderSurname = null;
- 
-
-    }
+        public decimal Total { get; private set; }
+        public string StorekeeperSurname { get; set; } = null;
+        public string ForwarderSurname { get; set; } = null;
+     }
 }

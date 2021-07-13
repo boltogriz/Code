@@ -6,32 +6,22 @@ namespace lesson3
     {
         static void Main(string[] args)
         {
-            Invoice invoice = new Invoice("Construction has been done");
-
-            //Write
-            //Title
-            //invoice.SetDate("08 Июля 2021 года");
-            invoice.Date = "12 июля 2021 года";
-            //Body
-            //Footer
-
-            //Read
-            //Title
-            //string date = invoice.GetDate();
-            string date = invoice.Date;
-            //Body
-            //Footer
-            Console.WriteLine(invoice.Const);
-            DateTime myTime = DateTime.Now;
-            Console.WriteLine($"Сейчаc: { myTime.ToString("dd_MM_yyyy")}");
-            var now = new WeatherObservation
+            Invoice invoice = new Invoice()
             {
-                RecordedAt = DateTime.Now,
-                TemperatureInCelsius = 20,
-                PressureInMillibars = 998.0m
+                Date = DateTime.Parse("11/07/2021"),
+                Number = "91-ВН-09124",
+                To = "ГКУ КК \"Ейская РЦБ УСО\"",
+                From = "ООО \"АутСорсинг\"",
+                StorekeeperSurname = "Сазыкин Н.П.",
+                ForwarderSurname = "Каданцев А.Л."
             };
-            Console.WriteLine(now.RecordedAt);
 
+            Console.WriteLine(invoice.Date);
+            Console.WriteLine(invoice.Number);
+            Console.WriteLine(invoice.To);
+            Console.WriteLine(invoice.From);
+            Console.WriteLine(invoice.StorekeeperSurname);
+            Console.WriteLine(invoice.ForwarderSurname);
         }
     }
 }
