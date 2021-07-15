@@ -6,7 +6,7 @@ namespace lesson3
     {
         static void Main(string[] args)
         {
-            Invoice invoice = new Invoice()
+            Invoice invoice = new()
             {
                 Date = DateTime.Parse("11/07/2021"),
                 Number = "91-ВН-09124",
@@ -15,13 +15,36 @@ namespace lesson3
                 StorekeeperSurname = "Сазыкин Н.П.",
                 ForwarderSurname = "Каданцев А.Л."
             };
+            Row row = new()
+            {
+                Description = "Code complete. Steve McConnell.",
+                Quntity = 3,
+                Price = 400
+            };
+            invoice.Table.AddRow(row);
+            row = new()
+            {
+                Description = "C# in a Nutshell",
+                Quntity = 5,
+                Price = 500
+            };
+            invoice.Table.AddRow(row);
 
-            Console.WriteLine(invoice.Date);
-            Console.WriteLine(invoice.Number);
-            Console.WriteLine(invoice.To);
-            Console.WriteLine(invoice.From);
-            Console.WriteLine(invoice.StorekeeperSurname);
-            Console.WriteLine(invoice.ForwarderSurname);
+            string stringTitle = $"Дата {invoice.Date} \nНакладаная № {invoice.Number}" +
+                $"\nКому: {invoice.To} \nОт кого: {invoice.From}";
+            Console.WriteLine(stringTitle);
+
+            for (int i = 0; i < invoice.Table.size; i++)
+            {
+                row = invoice.Table.GetRow(i);
+                string stringRow = $"{row.SequentialNumber} | {row.Description} | " +
+                    $"{row.Quntity} шт. | {row.Price} руб. | {row.Amount} руб.";
+                Console.WriteLine(stringRow);
+            }
+            Console.WriteLine($"Итого: {invoice.Table.Total} руб.");
+            string stringFooter = $"Кладовщик: {invoice.StorekeeperSurname}," +
+                $"Экспедитор: {invoice.ForwarderSurname}";
+            Console.WriteLine(stringFooter);
         }
     }
 }
