@@ -6,7 +6,7 @@ namespace lesson3
 {
     class Invoice
     {
-        //Title lesson 5 time 28 mins
+        //Title lesson 6, time 21 mins
         public DateTime Date { get; set; }
         public string Number { get; set; } = null;
         public string To { get; set; } = null;
