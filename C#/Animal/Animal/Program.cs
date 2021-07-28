@@ -28,20 +28,39 @@ namespace Animal
             Animal[] animals = { dog, cat };
             for (int i = 0; i < animals.Length; i++)
                 animals[i].MakeSound();
-            if (true)
+            for (int i = 0; i < animals.Length; i++)
+            {
+                Animal animal = animals[i];
+                if (animal is Dog)
+                {
+                    Dog isDog = (Dog)animal;
+                    isDog.BringStick();
+                }
+                else if (animal is Cat)
+                {
+                    Cat isCat = (Cat)animal;
+                    isCat.CatchMouse();
+                }
+                else
+                {
+                    ; //DoNothing
+                }
+            }
+            if (false)
             {
                 Animal animal = animals[0];
                 
-                bool dogIsDog = animal is Dog;
-                Dog myDog = (dogIsDog == true) ? (Dog)animal : null;
+                //bool dogIsDog = animal is Dog;
+                //Dog myDog = (dogIsDog == true) ? (Dog)animal : null;
+                Dog myDog = animal as Dog;
 
-                if (myDog != null)
-                    myDog.BringStick();
+                //if (myDog != null)
+                myDog?.BringStick();
 
-                Cat myCat = (animal is Cat) ? (Cat)animal : null;
-
-                if (myCat != null)
-                    myCat.CatchMouse();
+                //Cat myCat = (animal is Cat) ? (Cat)animal : null;
+                Cat myCat = animal as Cat;
+                //if (myCat != null)
+                myCat?.CatchMouse();
             }
             // 1. Опасное (явное) приведение
             if (false)
