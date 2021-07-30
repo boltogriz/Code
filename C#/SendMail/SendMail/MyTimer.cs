@@ -17,7 +17,7 @@ namespace SendMail
         public void StartTimer(int dueTime)
         {
             System.Threading.Timer t = new System.Threading.Timer(new TimerCallback(TimerProc));
-            t.Change(dueTime, 2000);
+            t.Change(dueTime, 5000);
         }
 
         private void TimerProc(object state)
