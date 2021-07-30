@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
@@ -13,7 +12,7 @@ namespace SendMail
 {
     class MyTimer
     {
-        //Paths paths = new Paths();
+        Paths paths = new Paths();
         public void StartTimer(int dueTime)
         {
             System.Threading.Timer t = new System.Threading.Timer(new TimerCallback(TimerProc));
@@ -25,7 +24,8 @@ namespace SendMail
             // The state object is the Timer object.
             //System.Threading.Timer t = (System.Threading.Timer)state;
             //t.Dispose();
-            MessageBox.Show("paths.NoEptyShow()");
+            //MessageBox.Show(paths.NoEmptyShow());
+            paths.NoEmptyShow();
 
         }
     }
