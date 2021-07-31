@@ -14,7 +14,7 @@ namespace SendMail
     class GoSendMail
     {
         public void Send(string smtpServer, string from, string password,
-        string mailto, string caption, string message, string attachFile = null)
+        string mailto, string caption, string message, FileInfo[] attachFile)
         {
             try
             {
@@ -23,8 +23,15 @@ namespace SendMail
                 mail.To.Add(new MailAddress(mailto));
                 mail.Subject = caption;
                 mail.Body = message;
-                if (!string.IsNullOrEmpty(attachFile))
-                    mail.Attachments.Add(new Attachment(attachFile));
+              if (attachFile.Length != 0 )
+              {
+                  for (int i = 0; i < attachFile.Length; i++)
+                  { 
+                      mail.Attachments.Add(new Attachment(attachFile[i].ToString()));
+                      //MessageBox.Show(mailto + ": " + attachFile[i].ToString());
+                  }
+              }
+                MessageBox.Show("good");
                 SmtpClient client = new SmtpClient();
                 client.Host = smtpServer;
                 client.Port = 587;
@@ -38,7 +45,7 @@ namespace SendMail
             {
                 throw new Exception("Mail.Send: " + e.Message);
             }
-            //MessageBox.Show(smtpServer + "; " + from + "; " + password + "; " + mailto + "; " + caption + "; " + message + "; " + attachFile);
+            //MessageBox.Show(smtpServer + "; " + from + "; " + password + "; " + mailto + "; " + caption + "; " + message + "; " + attachFile.ToString());
         }
     }
 }

@@ -12,14 +12,15 @@ namespace SendMail
 {
     class Paths
     {
-        private string smtpServer = "";
-        private string from = "";
-        private string password = "";
+        private string smtpServer = "smtp.gmail.com";
+        private string from = "kadantsev.anton@gmail.com";
+        private string password = "mirtrudmai88";
         private string mailto = "";
+        private string caption = "";
         private string message = "";
-        private string attachFile = "";
+        private FileInfo[] attachFile;
         private DirectoryInfo[] directory;
-            // Specify the directories you want to manipulate.
+        // Specify the directories you want to manipulate.
         private DirectoryInfo di = new DirectoryInfo(@"SendMail");
         private GoSendMail goSendMail = new GoSendMail();
         public void NoEmptyShow()
@@ -34,9 +35,9 @@ namespace SendMail
                     {
                         if (directory[i].GetFiles().Length != 0)
                         {
-                            attachFile = directory[i].ToString();
+                            attachFile = directory[i].GetFiles();
                             mailto = directory[i].ToString();
-                            goSendMail.Send(smtpServer, from, password, mailto, message, attachFile);//вместо MessageBox вставить рабочую функцию
+                            goSendMail.Send(smtpServer, from, password, mailto, caption, message, attachFile);//вместо MessageBox вставить рабочую функцию
                         }
                     }
                 }
