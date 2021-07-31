@@ -110,6 +110,10 @@ namespace WatcherMessageBox
             {
                 day = "0" + thisday.Day.ToString();
             }
+            else
+            {
+                day = thisday.Day.ToString();
+            }
             if (thisday.Month == 1)
             {
                 month = "Январь";
