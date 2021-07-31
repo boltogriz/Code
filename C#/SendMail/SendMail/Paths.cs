@@ -36,12 +36,12 @@ namespace SendMail
                     {
                         if (directory[i].GetFiles().Length != 0)
                         {
+                            mailto = directory[i].ToString();
                             attachFiles = directory[i].GetFiles();
                             for (int x = 0; x < attachFiles.Length; x++)
                             {
-                                attachFile = attachFiles[i].ToString();
-                                mailto = directory[i].ToString();
-                                goSendMail.Send(smtpServer, from, password, mailto, message, attachFile);//вместо MessageBox вставить рабочую функцию
+                                attachFile = attachFiles[x].ToString();
+                                goSendMail.Send(smtpServer, from, password, mailto, caption, message, attachFile);//вместо MessageBox вставить рабочую функцию
                             }
                         }
                     }

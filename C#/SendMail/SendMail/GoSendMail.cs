@@ -38,7 +38,7 @@ namespace SendMail
             {
                 throw new Exception("Mail.Send: " + e.Message);
             }
-            MessageBox.Show(smtpServer + "; " + from + "; " + password + "; " + mailto + "; " + caption + "; " + message + "; " + attachFile);
+            //MessageBox.Show(smtpServer + "; " + from + "; " + password + "; " + mailto + "; " + caption + "; " + message + "; " + attachFile);
         }
     }
 }
