@@ -52,6 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GoSendMail.cs" />
     <Compile Include="MyTimer.cs" />
     <Compile Include="Paths.cs" />
     <Compile Include="Program.cs" />

@@ -11,19 +11,23 @@ namespace SendMail
 {
     class Paths
     {
-        public DirectoryInfo[] NoEmptyShow()
-        {
-            string Text = "";
-
-            DirectoryInfo[] directory;
+        private DirectoryInfo[] directory;
             // Specify the directories you want to manipulate.
-            DirectoryInfo di = new DirectoryInfo(@"SendMail");
+        private DirectoryInfo di = new DirectoryInfo(@"SendMail");
+        private GoSendMail goSendMail = new GoSendMail();
+        public void NoEmptyShow()
+        {
             try
             {  
                 // Determine whether the directory exists.
                 if (di.Exists)
                 {
-                    Text = "SendMail exists";
+                    directory = di.GetDirectories();
+                    for (int i = 0; i < directory.Length; i++)
+                    {
+                        if (directory[i].GetFiles().Length != 0)
+                            goSendMail.Send(directory[i].ToString());//вместо MessageBox вставить рабочую функцию
+                    }
                 }
             }
             catch (Exception e)
@@ -31,12 +35,6 @@ namespace SendMail
                 Console.WriteLine("The process failed: {0}", e.ToString());
             }
             finally { }
-            directory = di.GetDirectories();
-            for (int i = 0; i < directory.Length; i++)
-            {
-                MessageBox.Show(directory[i].ToString());
-            }
-            return directory;
         }
     }
 }
