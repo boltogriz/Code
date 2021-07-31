@@ -7,10 +7,17 @@ using System.IO;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 namespace SendMail
 {
     class Paths
     {
+        private string smtpServer = "";
+        private string from = "";
+        private string password = "";
+        private string mailto = "";
+        private string message = "";
+        private string attachFile = "";
         private DirectoryInfo[] directory;
             // Specify the directories you want to manipulate.
         private DirectoryInfo di = new DirectoryInfo(@"SendMail");
@@ -26,7 +33,11 @@ namespace SendMail
                     for (int i = 0; i < directory.Length; i++)
                     {
                         if (directory[i].GetFiles().Length != 0)
-                            goSendMail.Send(directory[i].ToString());//вместо MessageBox вставить рабочую функцию
+                        {
+                            attachFile = directory[i].ToString();
+                            mailto = directory[i].ToString();
+                            goSendMail.Send(smtpServer, from, password, mailto, message, attachFile);//вместо MessageBox вставить рабочую функцию
+                        }
                     }
                 }
             }

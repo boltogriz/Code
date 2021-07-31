@@ -13,7 +13,7 @@ namespace SendMail
 {
     class GoSendMail
     {
-        public static void Send(string smtpServer, string from, string password,
+        public void Send(string smtpServer, string from, string password,
         string mailto, string caption, string message, string attachFile = null)
         {
             try
@@ -38,6 +38,7 @@ namespace SendMail
             {
                 throw new Exception("Mail.Send: " + e.Message);
             }
+            //MessageBox.Show(smtpServer + "; " + from + "; " + password + "; " + mailto + "; " + caption + "; " + message + "; " + attachFile);
         }
     }
 }
