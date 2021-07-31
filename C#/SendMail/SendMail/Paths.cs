@@ -28,7 +28,7 @@ namespace SendMail
         {
             try
             {  
-                // Determine whether the directory exists.
+                // Determine whether the directory exists.пр
                 if (di.Exists)
                 {
                     directory = di.GetDirectories();
