@@ -18,6 +18,7 @@ namespace SendMail
         private string mailto = "";
         private string message = "";
         private string attachFile = "";
+        private FileInfo[] attachFiles;
         private DirectoryInfo[] directory;
             // Specify the directories you want to manipulate.
         private DirectoryInfo di = new DirectoryInfo(@"SendMail");
@@ -34,9 +35,13 @@ namespace SendMail
                     {
                         if (directory[i].GetFiles().Length != 0)
                         {
-                            attachFile = directory[i].ToString();
-                            mailto = directory[i].ToString();
-                            goSendMail.Send(smtpServer, from, password, mailto, message, attachFile);//вместо MessageBox вставить рабочую функцию
+                            attachFiles = directory[i].GetFiles();
+                            for (int x = 0; x < attachFiles.Length; x++)
+                            {
+                                attachFile = attachFiles[i].ToString();
+                                mailto = directory[i].ToString();
+                                goSendMail.Send(smtpServer, from, password, mailto, message, attachFile);//вместо MessageBox вставить рабочую функцию
+                            }
                         }
                     }
                 }
