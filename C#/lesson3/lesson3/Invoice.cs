@@ -6,6 +6,17 @@ namespace lesson3
 {
     class Invoice
     {
+        public Invoice() { }
+        public Invoice(DateTime date, string number, string to, string from,
+            string storekeeperSurname, string forwarderSurname)
+        {
+            Date = date;
+            Number = number;
+            To = to;
+            From = from;
+            StorekeeperSurname = storekeeperSurname;
+            ForwarderSurname = forwarderSurname;
+        }
         //Title lesson 6, time 46 mins
         public DateTime Date { get; set; }
         public string Number { get; set; } = null;
