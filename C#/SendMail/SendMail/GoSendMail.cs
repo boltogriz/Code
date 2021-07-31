@@ -24,10 +24,14 @@ namespace SendMail
                 mail.Subject = caption;
                 mail.Body = message;
                 if (!string.IsNullOrEmpty(attachFile))
+                {
                     mail.Attachments.Add(new Attachment(attachFile));
+                }
+                //MessageBox.Show("good");
                 SmtpClient client = new SmtpClient();
                 client.Host = smtpServer;
-                client.Port = 587;
+                client.Port = 587; //google
+                //client.Port = 465; //mail
                 client.EnableSsl = true;
                 client.Credentials = new NetworkCredential(from.Split('@')[0], password);
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
@@ -36,9 +40,10 @@ namespace SendMail
             }
             catch (Exception e)
             {
+                MessageBox.Show(e.Message);
                 throw new Exception("Mail.Send: " + e.Message);
             }
-            //MessageBox.Show(smtpServer + "; " + from + "; " + password + "; " + mailto + "; " + caption + "; " + message + "; " + attachFile);
+            MessageBox.Show(smtpServer + "; " + from + "; " + password + "; " + mailto + "; " + caption + "; " + message + "; " + attachFile);
         }
     }
 }

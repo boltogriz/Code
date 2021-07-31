@@ -14,7 +14,7 @@ namespace SendMail
     {
         private string smtpServer = "smtp.gmail.com";
         private string from = "kadantsev.anton@gmail.com";
-        private string password = "mirtrudmai88";
+        private string password = "****";
         private string mailto = "";
         private string caption = "";
         private string message = "";
@@ -40,7 +40,7 @@ namespace SendMail
                             attachFiles = directory[i].GetFiles();
                             for (int x = 0; x < attachFiles.Length; x++)
                             {
-                                attachFile = attachFiles[x].ToString();
+                                attachFile = directory[i].FullName + "\\" + attachFiles[x].ToString();
                                 goSendMail.Send(smtpServer, from, password, mailto, caption, message, attachFile);//вместо MessageBox вставить рабочую функцию
                             }
                         }
