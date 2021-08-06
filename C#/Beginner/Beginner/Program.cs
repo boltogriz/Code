@@ -11,7 +11,7 @@ namespace Beginner
         public static void TextConShow(object states)
         {
             text = "asdf";
-            Console.WriteLine("text");
+            Console.WriteLine(text);
         }
 
         static void Main(string[] args)
