@@ -6,6 +6,8 @@ namespace Beginner2
     {
         static void Main(string[] args)
         {
+            // UNDONE: Доделать код вывода текста
+            // TODO: Сделать
             Console.WriteLine("Hello World!");
             Console.ReadKey();
         }
