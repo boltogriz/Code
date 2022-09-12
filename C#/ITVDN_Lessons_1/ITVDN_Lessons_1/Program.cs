@@ -7,9 +7,10 @@ namespace ITVDN_Lessons_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!!");
             Class1 MyC = new Class1();
-            MyC.MyConsole();
+            MyC.Name = "Toha";
+            MyC.MyConsole(MyC.Name);
+            Console.WriteLine("Hello World!!");
         }
     }
 }
