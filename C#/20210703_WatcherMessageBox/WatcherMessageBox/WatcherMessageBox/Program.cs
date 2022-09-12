@@ -30,8 +30,18 @@ namespace WatcherMessageBox
                                  | NotifyFilters.Security
                                  | NotifyFilters.Size;
 
+            FileSystemWatcher kadr = new FileSystemWatcher (getDirekt.kadr);
+            kadr.NotifyFilter = NotifyFilters.Attributes
+                                 | NotifyFilters.CreationTime
+                                 | NotifyFilters.DirectoryName
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.LastAccess
+                                 | NotifyFilters.LastWrite
+                                 | NotifyFilters.Security
+                                 | NotifyFilters.Size;
             //watcher.Changed += OnChanged;
             watcher.Created += OnCreated;
+            kadr.Created += OnCreated;
             //watcher.Deleted += OnDeleted;
             //watcher.Renamed += OnRenamed;
             //watcher.Error += OnError;
@@ -39,6 +49,10 @@ namespace WatcherMessageBox
             watcher.Filter = "*.*";
             watcher.IncludeSubdirectories = false;
             watcher.EnableRaisingEvents = true;
+
+            kadr.Filter = "*.*";
+            kadr.IncludeSubdirectories = false;
+            kadr.EnableRaisingEvents = true;
 
 
             
@@ -102,6 +116,7 @@ namespace WatcherMessageBox
         public string month0;
         public string day;
         public string direkt;
+        public string kadr = "\\\\tal\\share\\mail";
 
         public string GetData()
         {
@@ -136,7 +151,7 @@ namespace WatcherMessageBox
             }
             if (thisday.Month == 5)
             {
-                month = "Мая";
+                month = "Май";
                 month0 = "05";
             }
             if (thisday.Month == 6)
