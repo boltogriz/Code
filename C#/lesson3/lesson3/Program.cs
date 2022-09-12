@@ -17,6 +17,7 @@ namespace lesson3
             //    From = "ООО \"АутСорсинг\"",
             //    StorekeeperSurname = "Сазыкин Н.П.",
             //    ForwarderSurname = "Каданцев А.Л."
+            //
             //};
             Row row = new Row(description: "Code complete. Steve McConnell.",
                 quantity: 3, price: 400);
