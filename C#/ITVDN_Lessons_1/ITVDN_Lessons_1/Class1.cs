@@ -6,14 +6,14 @@ namespace ITVDN_Lessons_1
 {
     class Class1
     {
-        public void MyConsole(string name)
+        public void MyConsole()
         {
-            Console.WriteLine(name);
+            Console.WriteLine("> " + _name + " " + "Cool");
         }
         private string _name;
         public string Name
         {
-            get { return _name + " " + "Cool"; }
+            get { return _name; }
             set { _name = value; }
         }
     }

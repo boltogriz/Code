@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 using System;
+using System.IO;
 
 namespace ITVDN_Lessons_1
 {
@@ -7,10 +8,18 @@ namespace ITVDN_Lessons_1
     {
         static void Main(string[] args)
         {
+            /*
+             UNDONE: Many
+             TODO: Work
+             HACK: My console adds words
+             */
             Class1 MyC = new Class1();
-            MyC.Name = "Toha";
-            MyC.MyConsole(MyC.Name);
-            Console.WriteLine("Hello World!!");
+            do
+            {
+                Console.WriteLine("\nWrite your name:");
+                MyC.Name = Console.ReadLine();
+                MyC.MyConsole();
+            } while (MyC.Name != "exit");
         }
     }
 }
