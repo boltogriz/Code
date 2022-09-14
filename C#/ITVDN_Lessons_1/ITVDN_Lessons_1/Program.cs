@@ -12,7 +12,10 @@ namespace ITVDN_Lessons_1
              UNDONE: Many
              TODO: Work
              HACK: My console adds words
+
              */
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.BackgroundColor = ConsoleColor.Black;
             Class1 MyC = new Class1();
             do
             {

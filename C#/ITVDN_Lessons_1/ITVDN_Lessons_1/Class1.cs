@@ -8,6 +8,7 @@ namespace ITVDN_Lessons_1
     {
         public void MyConsole()
         {
+            Console.Beep();
             Console.WriteLine("> " + _name + " " + "Cool");
         }
         private string _name;
