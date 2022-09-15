@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ITVDN_Lesson_2
+namespace Lesson_2
 {
     class Program
     {

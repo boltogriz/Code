@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace ITVDN_Lessons_1
+namespace Lesson_1
 {
     class Class1
     {
         public void MyConsole()
         {
-            Console.Beep();
+            Console.Beep(323, 300);
+            Console.Beep(373, 300);
             Console.WriteLine("> " + _name + " " + "Cool");
         }
         private string _name;

@@ -1,19 +1,16 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.IO;
+﻿using System;
 
-namespace ITVDN_Lessons_1
+namespace Lesson_1
 {
     class Program
     {
         static void Main(string[] args)
         {
             /*
-             UNDONE: Many
-             TODO: Work
-             HACK: My console adds words
-
-             */
+            UNDONE: Many
+            TODO: Work
+            HACK: My console adds words
+            */
             Console.ForegroundColor = ConsoleColor.Green;
             Console.BackgroundColor = ConsoleColor.Black;
             Class1 MyC = new Class1();
@@ -23,6 +20,7 @@ namespace ITVDN_Lessons_1
                 MyC.Name = Console.ReadLine();
                 MyC.MyConsole();
             } while (MyC.Name != "exit");
+            Console.ResetColor();
         }
     }
 }
