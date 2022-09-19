@@ -16,7 +16,7 @@ namespace Lesson_3
                 Comand = Console.ReadLine();
                 if (Comand == "reset")
                 {
-                    sys_count.ChengSysCount();
+                    sys_count.ChengSysCount(); 
                     continue;
                 }
                 if (Comand == "exit") break;
