@@ -15,6 +15,8 @@ namespace Lesson_2
             Console.WriteLine("Temper: " + t);
             Console.WriteLine("C: " + c);
             Console.WriteLine("Fruits: " + SummFruit);
+            SummFruit = sizeof(byte);
+            Console.WriteLine("Sizeof byte: " + SummFruit);
         }
     }
 }
