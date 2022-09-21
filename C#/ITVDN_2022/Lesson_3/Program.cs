@@ -10,7 +10,7 @@ namespace Lesson_3
             string Comand = "start";
             SystemCount sys_count = new SystemCount();
             sys_count.ChengSysCount(); //вводит ситему счиление ввода и вывода, создает свойства которые потом используются
-            while(Comand != "exit")
+            while (Comand != "exit")
             {
                 Console.WriteLine("Введите " + sys_count.SysCountEnter + " чило:");
                 Comand = Console.ReadLine();
