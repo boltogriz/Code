@@ -25,7 +25,7 @@ namespace Lesson_9
             Console.WriteLine(Math.Sqrt(-36));
             int a = 2, b = a++ * 5 + a;
             Console.WriteLine($"a = {a}, b = {b}");
-            Console.ReadLine();
+            Console.ReadLine();//wait
         }
     }
 }
