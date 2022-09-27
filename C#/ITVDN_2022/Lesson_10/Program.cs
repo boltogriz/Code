@@ -11,7 +11,7 @@ namespace Lesson_10
         static void Main(string[] args)
         {
             string Chart = "Hollow World!";
-            char letter = 'A';
+            char letter = Convert.ToChar("H");
             char letter2 = Convert.ToChar("A");
 
             Console.WriteLine(Chart);
