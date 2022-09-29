@@ -10,8 +10,9 @@ namespace _013_LogicalOperations
     {
         static void Main(string[] args)
         {
+            Answer getAnswer = new Answer();
             int salary = 500, minimumWae = 1000;
-            bool salaryLessM = true, x, y, result, credit = false;
+            bool salaryMoreM = true, x, y, result, credit = false;
             string answer, answerCredit;
             int age, maxAge = 55;
             while (!credit) { 
@@ -19,28 +20,13 @@ namespace _013_LogicalOperations
                 salary = Convert.ToInt32(Console.ReadLine());
                 Console.Write("Введите Возраст: ");
                 age = Convert.ToInt32(Console.ReadLine());
-                salaryLessM = salary < minimumWae;
-                credit =  age < maxAge && !salaryLessM;
-                if (salaryLessM)
-                {
-                    answer = "Да";
-                }
-                else
-                {
-                    answer = "Нет";
-                }
-                if (credit)
-                {
-                    answerCredit = "Да";
-                }
-                else {
-                    answerCredit = "Нет";
-                }
+                salaryMoreM = salary > minimumWae;
+                credit =  age < maxAge && salaryMoreM;
                 Console.WriteLine(
                     $"Минимальная ЗП {minimumWae}\n" +
-                    $"Зарплата {salary} меньше минимальной: {answer}\n" +
-                    $"Возраста меньше {maxAge}: {age < maxAge}\n" +
-                    $"Разрешен кредит: {answerCredit}\n" +
+                    $"Зарплата {salary} больше минимальной: {getAnswer.wrideAnswer(salaryMoreM)}\n" +
+                    $"Возраста меньше {maxAge}: {getAnswer.wrideAnswer(age < maxAge)}\n" +
+                    $"Разрешен кредит: {getAnswer.wrideAnswer(credit)}\n" +
                     $"=======================\n"
                     );
             }
