@@ -30,7 +30,7 @@ namespace _013_LogicalOperations
                 isUnemployed = Console.ReadLine().Contains("да");
                 Console.Write("Работает да/нет: ");
                 isEmployment = Console.ReadLine().Contains("да");
-                subsidyAllowed = (isPensioner | isUnemployed) & !isEmployment;
+                subsidyAllowed = (isPensioner | isUnemployed) & isEmployment;
                 salaryMoreM = salary >= minimumWae;
                 credit = ((age < maxAge) | !cripy) && salaryMoreM;
                 Console.WriteLine(
