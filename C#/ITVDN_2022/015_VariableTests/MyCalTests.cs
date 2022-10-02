@@ -8,19 +8,25 @@ using System.Threading.Tasks;
 
 namespace _015_Variable.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class MyCalTests
     {
-        [TestMethod()]
-        public void SumTest()
+        [TestMethod]
+        public void SumTest1()
         {
             // arrage
-            int x = 10, y = 20, expected = 31;
+            int x = 10, y = 20, expected = 30;
             // act
             MyCal C = new MyCal();
             int actual = C.Sum(x, y);
             // assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void SumTest()
+        {
+            Assert.Fail();
         }
     }
 }

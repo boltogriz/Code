@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _015_Variable
 {
-    internal class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -26,8 +26,14 @@ namespace _015_Variable
             Console.WriteLine($"Kitchen area = {roomArea}");
 
             MyCal Cal = new MyCal();
+            int y = sum(20, 30);
             Console.WriteLine(Cal.Sum(2, 3));
+            Console.WriteLine(y);
             Console.ReadKey();
+        }
+        public static int sum(int x, int y)
+        {
+            return x + y;
         }
     }
 }
