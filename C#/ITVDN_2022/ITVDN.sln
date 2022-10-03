@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "016_Scope", "016_Scope\016_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "015_VariableTests1", "015_VariableTests1\015_VariableTests1.csproj", "{98A91D04-A650-49E0-A1A0-0F7F5D407D40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "017_WinOpportunity", "017_WinOpportunity\017_WinOpportunity.csproj", "{81F091A1-8001-4E0C-9403-13C85A42A77E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{98A91D04-A650-49E0-A1A0-0F7F5D407D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98A91D04-A650-49E0-A1A0-0F7F5D407D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98A91D04-A650-49E0-A1A0-0F7F5D407D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81F091A1-8001-4E0C-9403-13C85A42A77E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F091A1-8001-4E0C-9403-13C85A42A77E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F091A1-8001-4E0C-9403-13C85A42A77E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F091A1-8001-4E0C-9403-13C85A42A77E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
