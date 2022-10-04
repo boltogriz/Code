@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "015_VariableTests1", "015_V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "017_WinOpportunity", "017_WinOpportunity\017_WinOpportunity.csproj", "{81F091A1-8001-4E0C-9403-13C85A42A77E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "018_Checked", "017_Checked\018_Checked.csproj", "{07E41EB9-9486-41A2-A036-B6BF0DE103EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "019_Unchecked", "019_Unchecked\019_Unchecked.csproj", "{79EC7A1E-F1C7-41FD-ACF3-EE5F45EC6E55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,14 @@ Global
 		{81F091A1-8001-4E0C-9403-13C85A42A77E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81F091A1-8001-4E0C-9403-13C85A42A77E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81F091A1-8001-4E0C-9403-13C85A42A77E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E41EB9-9486-41A2-A036-B6BF0DE103EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E41EB9-9486-41A2-A036-B6BF0DE103EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E41EB9-9486-41A2-A036-B6BF0DE103EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E41EB9-9486-41A2-A036-B6BF0DE103EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79EC7A1E-F1C7-41FD-ACF3-EE5F45EC6E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79EC7A1E-F1C7-41FD-ACF3-EE5F45EC6E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79EC7A1E-F1C7-41FD-ACF3-EE5F45EC6E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79EC7A1E-F1C7-41FD-ACF3-EE5F45EC6E55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
