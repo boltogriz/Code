@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _013_LogicalOperations
 {
-    internal class Answer
+    public class Answer
     {
         public string wrideAnswer(bool Answer)
         {

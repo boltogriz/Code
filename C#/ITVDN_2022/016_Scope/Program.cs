@@ -15,16 +15,16 @@ namespace _016_Scope
                 int x = 5;
                 Console.WriteLine($"temperature={t}");
                 Console.WriteLine(x);
-                Console.WriteLine(y);
+                //Console.WriteLine(y);
             }
             int y = 10;
             {
                 float t = 11.35f;
                 Console.WriteLine($"time={t}");
-                Console.WriteLine(x);
+                //Console.WriteLine(x);
                 Console.WriteLine(y);
             }
-            Console.WriteLine(x);
+            //Console.WriteLine(x);
             Console.ReadKey();
         }
     }

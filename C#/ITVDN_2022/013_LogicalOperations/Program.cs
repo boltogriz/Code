@@ -11,7 +11,8 @@ namespace _013_LogicalOperations
         static void Main(string[] args)
         {
             Answer getAnswer = new Answer();
-            int salary = 500, minimumWae = 1000;
+            int salary = 0;
+            const int MINIMUMWAE = 1000;
             bool salaryMoreM = true, x, y, result, credit = false, cripy, isPensioner, isUnemployed, isEmployment, subsidyAllowed;
             int age, maxAge = 55;
             string name;
@@ -31,7 +32,7 @@ namespace _013_LogicalOperations
                 Console.Write("Работает да/нет: ");
                 isEmployment = Console.ReadLine().Contains("да");
                 subsidyAllowed = (isPensioner & isUnemployed) & !isEmployment;
-                salaryMoreM = salary >= minimumWae;
+                salaryMoreM = MINIMUMWAE <= salary;
                 credit = ((age < maxAge) | !cripy) && salaryMoreM;
                 Console.WriteLine(
                     $"\n=======================\n" +
@@ -46,7 +47,7 @@ namespace _013_LogicalOperations
             }
             x = true;
             y = false;
-            result = x && y & (salary++ > minimumWae);
+            result = x && y & (MINIMUMWAE < salary++);
             Console.WriteLine($"{x,-5} & {y,-5} = {result,-5}\n{salary,-5}");
             Console.WriteLine($"x = {x,-5}, y = {y,-5}");
             Console.WriteLine($"{x,-5} | {y,-5} = {x | y,-5}");

@@ -22,5 +22,14 @@ namespace _015_Variable.Tests
             int actualy = Cal.Sum(x, y);
             Assert.AreEqual(e, actualy);
         }
+
+        [TestMethod()]
+        public void MinusTest1()
+        {
+            int x = 10, y = 3, e = 7;
+            MyCal Mycal1 = new MyCal();
+            int actual = Mycal1.Minus(x, y);
+            Assert.AreEqual(e, actual);
+        }
     }
 }

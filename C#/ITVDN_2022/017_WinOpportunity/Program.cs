@@ -12,25 +12,42 @@ namespace _017_WinOpportunity
         {
             int roomTotalCost;
             {
-                int roomLength = 5,
-                    roomWidth = 4,
-                    roomArea = roomLength * roomWidth,
-                    parguetPrice = 5000,
-                    layingParquetPrice = 600,
-                    parquetCost = roomArea * parguetPrice,
+                int roomArea;
+                {
+                    const int ROOM_LENGTH = 5, ROOM_WIDTH = 4;
+                    roomArea = ROOM_LENGTH * ROOM_WIDTH;
+                }
+                int parquetCost;
+                {
+                    const int PARQUET_PRICE = 5000;
+                    parquetCost = roomArea * PARQUET_PRICE;
+                }
+                int layingParquetCost;
+                {
+                    int layingParquetPrice = 600;
                     layingParquetCost = roomArea * layingParquetPrice;
+                }
                 roomTotalCost = parquetCost + layingParquetCost;
             }
             int kitchenTotalCost;
             {
-                int kitchenLength = 4,
-                    kitchenWidth = 3,
-                    kitchenArea = kitchenLength * kitchenWidth,
-                    tilePrice = 4000,
-                    layingTilesPrice = 700,
-                    tileCost = kitchenArea * tilePrice,
+                int kitchenArea;
+                {
+                    int kitchenLength = 4,
+                        kitchenWidth = 3;
+                    kitchenArea = kitchenLength * kitchenWidth;
+                }
+                int tileCost;
+                {
+                    int tilePrice = 4000;
+                    tileCost = kitchenArea * tilePrice;
+                }
+                int layingTilesCost;
+                {
+                    int layingTilesPrice = 700;
                     layingTilesCost = kitchenArea * layingTilesPrice;
-                kitchenTotalCost = tileCost + layingTilesCost; 
+                }
+                kitchenTotalCost = tileCost + layingTilesCost;
             }
             int totalCost = roomTotalCost + kitchenTotalCost;
 
