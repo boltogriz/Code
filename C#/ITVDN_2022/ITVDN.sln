@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "020_Constant", "020_Constan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "013_LogicalOperationsTests", "013_LogicalOperationsTests\013_LogicalOperationsTests.csproj", "{210A37A7-C142-4080-BEF7-70E1DAFC22AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "021_If", "021_If\021_If.csproj", "{C85C65B9-007D-4081-9D6B-FADC5D77CAEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{210A37A7-C142-4080-BEF7-70E1DAFC22AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{210A37A7-C142-4080-BEF7-70E1DAFC22AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{210A37A7-C142-4080-BEF7-70E1DAFC22AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85C65B9-007D-4081-9D6B-FADC5D77CAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85C65B9-007D-4081-9D6B-FADC5D77CAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85C65B9-007D-4081-9D6B-FADC5D77CAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85C65B9-007D-4081-9D6B-FADC5D77CAEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
