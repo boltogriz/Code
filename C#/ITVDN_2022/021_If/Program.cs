@@ -10,24 +10,30 @@ namespace _021_If
     {
         static void Main(string[] args)
         {
-            uint quotiti, price;
+            decimal quotiti, price;
             {
                 Console.Write("Количество плитки: ");
-                quotiti = Convert.ToUInt32(Console.ReadLine());
+                string stringQuontiti = Console.ReadLine();
+                quotiti = Convert.ToUInt32(stringQuontiti);
+                
                 Console.Write("Цена за 1 м.кв. плитки: ");
-                price = Convert.ToUInt32(Console.ReadLine());
+                string stringPrice = Console.ReadLine();
+                price = Convert.ToUInt32(stringPrice);
             }
             decimal cost = quotiti * price;
-            decimal discount;
-            bool discountAvailable = quotiti >= 100;
-            if (discountAvailable)
+            decimal discount; // руб
             {
-                const decimal DISCOUNT_PERSENTAGE = 10;
-                discount = cost / 100 * DISCOUNT_PERSENTAGE;
-            }
-            else
-            {
-                discount = 0;
+                const decimal MIN_QUANTITY_FOR_DISCOUNT = 100; // м.кв.
+                bool discountAvailable = quotiti >= MIN_QUANTITY_FOR_DISCOUNT;
+                if (discountAvailable)
+                {
+                    const decimal DISCOUNT_PERSENTAGE = 10;
+                    discount = cost / 100 * DISCOUNT_PERSENTAGE;
+                }
+                else
+                {
+                    discount = 0;
+                }
             }
             decimal paymentAmount = cost - discount;
             Console.WriteLine($"Общая стоимость: {cost} руб.");
