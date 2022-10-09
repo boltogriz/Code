@@ -23,17 +23,33 @@ namespace _021_If
             decimal cost = quotiti * price;
             decimal discount; // руб
             {
-                const decimal MIN_QUANTITY_FOR_DISCOUNT = 100; // м.кв.
-                bool discountAvailable = quotiti >= MIN_QUANTITY_FOR_DISCOUNT;
-                if (discountAvailable)
+                decimal discountPersentage;
                 {
-                    const decimal DISCOUNT_PERSENTAGE = 10;
-                    discount = cost / 100 * DISCOUNT_PERSENTAGE;
+                    bool discount20PctAvailabe, discoun50PctAvailable;
+                    {
+                        const decimal MIN_TILE_QTY_FOR_DISCOUNT_20_PCT = 500,
+                                      MIN_TILE_QTY_FOR_DISCOUNT_50_PCT = 1000;// м.кв.
+                        discount20PctAvailabe = quotiti >= MIN_TILE_QTY_FOR_DISCOUNT_20_PCT &&
+                                                quotiti < MIN_TILE_QTY_FOR_DISCOUNT_50_PCT;
+                        discoun50PctAvailable = quotiti >= MIN_TILE_QTY_FOR_DISCOUNT_50_PCT;
+                    }
+                    if (discount20PctAvailabe)
+                    {
+                        discountPersentage = 20; // %
+                    }
+                    else
+                    {
+                        if (discoun50PctAvailable)
+                        {
+                            discountPersentage = 50;
+                        }
+                        else
+                        {
+                            discountPersentage = 0;
+                        }
+                    }
                 }
-                else
-                {
-                    discount = 0;
-                }
+                discount = cost / 100 * discountPersentage;
             }
             decimal paymentAmount = cost - discount;
             Console.WriteLine($"Общая стоимость: {cost} руб.");
