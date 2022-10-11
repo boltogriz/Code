@@ -38,67 +38,71 @@ namespace _021_If
                              LATVIA_CODE = "371", LITHUANIA_CODE = "370", MOLDOVA_CODE = "373",
                              RUSSIA_CODE = "007", TAJIKISTAN_CODE = "992", TURKMENISTAN_CODE = "993",
                              UZBEKISTAN_CODE = "998", URKAINE_CODE = "380", ESTONIA_CODE = "372";
-                if (countryCode == AZERBAIJAN_CODE)
+                switch (countryCode)
                 {
-                    const decimal AZERBAIJAN_RATE = 1.07m;
-                    rate = AZERBAIJAN_RATE;
-                }
-                else if (countryCode == ARMENIA_CODE)
-                {
-                    const decimal ARMENIA_RATE = .95m;
-                    rate = ARMENIA_RATE;
-                }
-                else if (countryCode == BELARUS_CODE)
-                {
-                    const decimal BELARUS_RATE = 1m;
-                    rate = BELARUS_RATE;
-                }
-                else if (countryCode == GEORGIA_CODE)
-                {
-                    const decimal GEORGIA_RATE = 0.94m;
-                    rate = GEORGIA_RATE;
-                }
-                else if (countryCode == KAZAKHSTAN_CODE)
-                {
-                    Console.Write($"Казахстан? да/нет: ");
-                    string KazIf = Console.ReadLine();
-                    if (KazIf == "да")
+                    case AZERBAIJAN_CODE:
                     {
-                        const decimal KAZAKHSTAN_RATE = 0.79m;
-                        rate = KAZAKHSTAN_RATE;
+                        const decimal AZERBAIJAN_RATE = 1.07m;
+                        rate = AZERBAIJAN_RATE;
+                        break;
                     }
-                    else if (KazIf == "нет")
+                    else if (countryCode == ARMENIA_CODE)
                     {
-                        const decimal RUSSIA_RATE = 1m;
-                        rate = RUSSIA_RATE;
+                        const decimal ARMENIA_RATE = .95m;
+                        rate = ARMENIA_RATE;
+                    }
+                    else if (countryCode == BELARUS_CODE)
+                    {
+                        const decimal BELARUS_RATE = 1m;
+                        rate = BELARUS_RATE;
+                    }
+                    else if (countryCode == GEORGIA_CODE)
+                    {
+                        const decimal GEORGIA_RATE = 0.94m;
+                        rate = GEORGIA_RATE;
+                    }
+                    else if (countryCode == KAZAKHSTAN_CODE)
+                    {
+                        Console.Write($"Казахстан? да/нет: ");
+                        string KazIf = Console.ReadLine();
+                        if (KazIf == "да")
+                        {
+                            const decimal KAZAKHSTAN_RATE = 0.79m;
+                            rate = KAZAKHSTAN_RATE;
+                        }
+                        else if (KazIf == "нет")
+                        {
+                            const decimal RUSSIA_RATE = 1m;
+                            rate = RUSSIA_RATE;
+                        }
+                        else
+                        {
+                            rate = 0;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine($"Надо вводить да или нет: {KazIf}!");
+                        }
+                    }
+                    else if (countryCode == KYRGYZSTAN_CODE)
+                    {
+                        const decimal KYRGYZSTAN__RATE = 0.83m;
+                        rate = KYRGYZSTAN__RATE;
+                    }
+                    else if (countryCode == LATVIA_CODE)
+                    {
+                        const decimal LATVIA_RATE = 1.12m;
+                        rate = LATVIA_RATE;
+                    }
+                    else if (countryCode == LITHUANIA_CODE)
+                    {
+                        const decimal LITHUANIA_RATE = 1.12m;
+                        rate = LITHUANIA_RATE;
                     }
                     else
                     {
                         rate = 0;
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"Надо вводить да или нет: {KazIf}!");
+                        Console.WriteLine($"Вы ввели несуществующий код: {countryCode}!");
                     }
-                }
-                else if (countryCode == KYRGYZSTAN_CODE)
-                {
-                    const decimal KYRGYZSTAN__RATE = 0.83m;
-                    rate = KYRGYZSTAN__RATE;
-                }
-                else if (countryCode == LATVIA_CODE)
-                {
-                    const decimal LATVIA_RATE = 1.12m;
-                    rate = LATVIA_RATE;
-                }
-                else if (countryCode == LITHUANIA_CODE)
-                {
-                    const decimal LITHUANIA_RATE = 1.12m;
-                    rate = LITHUANIA_RATE;
-                }
-                else
-                {
-                    rate = 0;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"Вы ввели несуществующий код: {countryCode}!");
                 }
             }
             decimal tilePriceWithRate = price * rate;
