@@ -37,8 +37,7 @@ namespace _021_If
                 const string AZERBAIJAN_CODE = "994", ARMENIA_CODE = "374", BELARUS_CODE = "375",
                              GEORGIA_CODE = "995", KAZAKHSTAN_CODE = "007K", KYRGYZSTAN_CODE = "996",
                              LATVIA_CODE = "371", LITHUANIA_CODE = "370", MOLDOVA_CODE = "373",
-                             RUSSIA_CODE = "007", TAJIKISTAN_CODE = "992", TURKMENISTAN_CODE = "993",
-                             UZBEKISTAN_CODE = "998", URKAINE_CODE = "380", ESTONIA_CODE = "372";
+                             RUSSIA_CODE = "007";
                 switch (countryCode)
                 {
                     case AZERBAIJAN_CODE:

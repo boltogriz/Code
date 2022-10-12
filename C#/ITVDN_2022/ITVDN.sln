@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "021_If", "021_If\021_If.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "022_ImageAndDifficult", "022_ImageAndDifficult\022_ImageAndDifficult.csproj", "{A2A046E3-0055-4A8A-891F-191B0E1B05E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "022_TernaryOperator", "022_TernaryOperator\022_TernaryOperator.csproj", "{C50FD563-141B-401B-BFEE-95FCE9959D55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{A2A046E3-0055-4A8A-891F-191B0E1B05E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2A046E3-0055-4A8A-891F-191B0E1B05E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2A046E3-0055-4A8A-891F-191B0E1B05E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50FD563-141B-401B-BFEE-95FCE9959D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50FD563-141B-401B-BFEE-95FCE9959D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50FD563-141B-401B-BFEE-95FCE9959D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50FD563-141B-401B-BFEE-95FCE9959D55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
