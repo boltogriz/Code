@@ -16,7 +16,10 @@ namespace _021_If
             {
                 string countryCode;
                 decimal quotiti, price;
+                // countryCode, quotiti, price = RunInputUserInterface ()
                 {
+                    Console.WriteLine("Нажмите Enter, для начала обслуживания нового клиента");
+                    Console.ReadKey();
                     const string COUNTRY_CODES =
                         "======================================================\n" +
                         "Азербайджан (994) | Киргизяи (996) | Таджикистан (992)\n" +
@@ -26,22 +29,64 @@ namespace _021_If
                         "Казахстан  (007K) | Россия   (007) | Эстония     (372)\n" +
                         "------------------------------------------------------";
                     Console.WriteLine(COUNTRY_CODES);
-                    Console.Write("Телефонный код страны: ");
-                    countryCode = Console.ReadLine();
-                    // DetectKazakhstanCode (countryCode)
+                    // countryCode = ProcessCountryCode (CountryCode);
                     {
-                        const string KAZAKHSTAN_CODE = "007";
-                        const string LOWERCASE_ENGLISH_LETTER_k = "k", UPPERCASE_RUSSIAN_LETTER_K = "К", 
-                                     LOWERCASE_RUSSIAN_LETTER_k = "к";
-                        bool countryCodeIsKazakhstanCodeAndAnyLetterK =
-                                    countryCode == (KAZAKHSTAN_CODE + LOWERCASE_ENGLISH_LETTER_k) ||
-                                    countryCode == (KAZAKHSTAN_CODE + UPPERCASE_RUSSIAN_LETTER_K) ||
-                                    countryCode == (KAZAKHSTAN_CODE + LOWERCASE_RUSSIAN_LETTER_k);
-                        if (countryCodeIsKazakhstanCodeAndAnyLetterK)
+                        bool countryCodeIsCorrect;
+                        do
                         {
-                            const string UPPERCASE_ENGLISH_LETTER_K = "K";
-                            countryCode = KAZAKHSTAN_CODE + UPPERCASE_ENGLISH_LETTER_K;
+                            Console.Write("Телефонный код страны: ");
+                            countryCode = Console.ReadLine();
+                            // countryCode = DetectKazakhstanCode (countryCode)
+                            {
+                                const string KAZAKHSTAN_CODE = "007";
+                                const string LOWERCASE_ENGLISH_LETTER_k = "k", UPPERCASE_RUSSIAN_LETTER_K = "К",
+                                             LOWERCASE_RUSSIAN_LETTER_k = "к";
+                                bool countryCodeIsKazakhstanCodeAndAnyLetterK =
+                                            countryCode == (KAZAKHSTAN_CODE + LOWERCASE_ENGLISH_LETTER_k) ||
+                                            countryCode == (KAZAKHSTAN_CODE + UPPERCASE_RUSSIAN_LETTER_K) ||
+                                            countryCode == (KAZAKHSTAN_CODE + LOWERCASE_RUSSIAN_LETTER_k);
+                                if (countryCodeIsKazakhstanCodeAndAnyLetterK)
+                                {
+                                    const string UPPERCASE_ENGLISH_LETTER_K = "K";
+                                    countryCode = KAZAKHSTAN_CODE + UPPERCASE_ENGLISH_LETTER_K;
+                                }
+                            }
+                            // countyrCodeIsCorrect = CheckCountryCode (coutnryCode)
+                            {
+                                const string UPPERCASE_ENGLISH_LETTER_K = "K";
+                                const string AZERBAIJAN_CODE = "994", ARMENIA_CODE = "374", BELARUS_CODE = "375",
+                                             GEORGIA_CODE = "995", KAZAKHSTAN_CODE = "007" + UPPERCASE_ENGLISH_LETTER_K, KYRGYZSTAN_CODE = "996",
+                                             LATVIA_CODE = "371", LITHUANIA_CODE = "370", MOLDOVA_CODE = "373",
+                                             RUSSIA_CODE = "007", TAJIKISTAN_CODE = "992";
+                                switch (countryCode)
+                                {
+                                    case AZERBAIJAN_CODE:
+                                    case ARMENIA_CODE:
+                                    case BELARUS_CODE:
+                                    case GEORGIA_CODE:
+                                    case KAZAKHSTAN_CODE:
+                                    case KYRGYZSTAN_CODE:
+                                    case LATVIA_CODE:
+                                    case LITHUANIA_CODE:
+                                    case MOLDOVA_CODE:
+                                    case RUSSIA_CODE:
+                                    case TAJIKISTAN_CODE:
+                                        {
+                                            countryCodeIsCorrect = true;
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            countryCodeIsCorrect = false;
+                                            Console.ForegroundColor = ConsoleColor.Red;
+                                            Console.WriteLine($"Вы ввели несуществующий код: {countryCode}!");
+                                            Console.ForegroundColor = ConsoleColor.Gray;
+                                            break;
+                                        }
+                                }
+                            }
                         }
+                        while (countryCodeIsCorrect == false);
                     }
                     Console.Write("Количество плитки: ");
                     string stringQuontiti = Console.ReadLine();
@@ -52,12 +97,13 @@ namespace _021_If
                     price = Convert.ToUInt32(stringPrice);
                 }
                 decimal rate;
+                // rate = CalculatePriceRate (countryCode)
                 {
                     const string UPPERCASE_ENGLISH_LETTER_K = "K";
                     const string AZERBAIJAN_CODE = "994", ARMENIA_CODE = "374", BELARUS_CODE = "375",
                                  GEORGIA_CODE = "995", KAZAKHSTAN_CODE = "007" + UPPERCASE_ENGLISH_LETTER_K, KYRGYZSTAN_CODE = "996",
                                  LATVIA_CODE = "371", LITHUANIA_CODE = "370", MOLDOVA_CODE = "373",
-                                 RUSSIA_CODE = "007";
+                                 RUSSIA_CODE = "007", TAJIKISTAN_CODE = "992";
                     switch (countryCode)
                     {
                         case AZERBAIJAN_CODE:
@@ -120,12 +166,15 @@ namespace _021_If
                                 rate = RUSSIA_RATE;
                                 break;
                             }
+                        case (TAJIKISTAN_CODE):
+                            {
+                                const decimal TAJIKISTAN_RATE = 1.8m;
+                                rate = TAJIKISTAN_RATE;
+                                break;
+                            }
                         default:
                             {
                                 rate = 0;
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine($"Вы ввели несуществующий код: {countryCode}!");
-                                Console.ForegroundColor = ConsoleColor.Gray;
                                 break;
                             }
                     }
@@ -160,14 +209,13 @@ namespace _021_If
                     discount = cost / 100 * discountPersentage;
                 }
                 decimal paymentAmount = cost - discount;
+                // RunOutputUserInterface (tilePriceWithRate, cost, discount, paymentAmount)
                 {
                     Console.WriteLine($"Цена с коэффицентом   : {tilePriceWithRate} руб.");
                     Console.WriteLine($"Общая стоимость плитки: {cost} руб.");
                     Console.WriteLine($"Скидка                : {discount} руб.");
                     Console.WriteLine($"Сумма к оплате        : {paymentAmount} руб.");
                 }
-                Console.WriteLine("Нажмите Enter, для начала обслуживания нового клиента");
-                Console.ReadKey();
             }
         }
     }
