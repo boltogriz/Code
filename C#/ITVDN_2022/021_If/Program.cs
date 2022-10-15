@@ -31,8 +31,7 @@ namespace _021_If
                     }
                     // authorized = TryAuthorizeUser(login, password);
                     {
-                        int index = 0;
-                        while (index < loginList.Length && index < passwordList.Length)
+                        for (int index = 0; index < loginList.Length && index < passwordList.Length; index++)
                         {
                             bool loginMatched, passwordMatched; // = MatchLoginAndPassword()
                             {
@@ -45,10 +44,6 @@ namespace _021_If
                             {
                                 userAuthorized = true;
                                 break;
-                            }
-                            else
-                            {
-                                index++;
                             }
                         }
                     }
