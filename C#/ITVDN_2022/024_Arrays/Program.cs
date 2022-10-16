@@ -43,6 +43,25 @@ namespace _024_Arrays
                     Console.Write($"{array[index]} ");
                 }    
             }
+            {
+                int[,] array = {
+                                    { 1, 2 },
+                                    { 3, 4 },
+                                    { 5, 6 }
+                                };
+                int numberOfLines = array.GetLength(0), numberOfColumns = array.GetLength(1);
+                Console.WriteLine();
+                Console.WriteLine();
+                for (int y = 0; y < numberOfLines; y++)
+                {
+                    for (int x = 0; x < numberOfColumns; x++)
+                    {
+                        int element = array[y, x];
+                        Console.Write($"{element} ");
+                    }
+                    Console.WriteLine();
+                }
+            }
             Console.ReadKey();
         }
     }
