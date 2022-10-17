@@ -63,6 +63,9 @@ namespace _026_RawMaterialPlanning
                     P += C[i] * Z[i, 0];
                 Console.WriteLine($"Общая стоимость сырья = {P:C2}");
             }
+            { 
+            
+            }
             Console.ReadKey();
         }
     }
