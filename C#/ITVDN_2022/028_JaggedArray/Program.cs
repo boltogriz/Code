@@ -165,6 +165,50 @@ namespace _028_JaggedArray
                     }
                 }
             }
+            {
+                byte[,][,] array;
+                byte[,] array0 = new byte[2, 3];
+                byte[,] array1 = new byte[6, 3];
+                array = new byte[2, 3][,] 
+                            {
+                                {
+                                    array0, array1, array0
+                                },
+                                {
+                                    array0, array0, array0
+                                }
+                                
+                            };
+            }
+            {
+                Console.WriteLine();
+                int[][] array;
+                array = new int[4][];
+                array[0] = new int[3];
+                array[1] = new int[6];
+                array[2] = new int[9];
+                array[3] = new int[12];
+                /*int[][] array = new int[4][] 
+                { 
+                    new int[3],
+                    new int[6],
+                    new int[9],
+                    new int[12]
+                };*/
+                int x = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    
+                    for (int j = 0; j < array[i].Length; j++)
+                    {
+                        x++; 
+                        array[i][j] = x;
+                        Console.Write($"{array[i][j]} ");
+                    }
+                    Console.WriteLine();
+                }
+
+            }
             Console.ReadKey();
         }
     }
