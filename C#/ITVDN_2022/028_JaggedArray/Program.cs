@@ -209,6 +209,49 @@ namespace _028_JaggedArray
                 }
 
             }
+            {
+                Console.WriteLine();
+                int[][] array;
+                int x = 4;
+                array = new int[x][];
+                for (int i = 0; i < array.Length; i++)
+                {
+                    array[i] = new int[i + 1];
+                    for (int j = 0; j < array[i].Length; j++)
+                    {
+                        Console.Write($"{array[i][j]} ");
+                    }
+                    Console.WriteLine();
+                }
+
+            }
+            {
+                Console.WriteLine();
+                int[][,] array;
+                int x = 4;
+                int y = 0;
+                array = new int[x][,];
+                for (int i = 0; i < array.Length; i++)
+                {
+                    y++;
+                    array[i] = new int[i + 1, y];
+                    for (int j = 0; j < array[i].GetLength(0); j++)
+                    {
+                        for (int k = 0; k < array[i].GetLength(1); k++)
+                        {
+                            Console.Write($"{array[i][j, k]} ");
+                        }
+                        Console.Write("|");
+                    }
+                    Console.WriteLine();
+                }
+
+            }
+            {
+                int[][,] array;
+                array = new int[2][,];
+                array[0] = new int[2,3] { { 1, 2, 3 },{ 1, 2, 3 } };
+            }
             Console.ReadKey();
         }
     }
