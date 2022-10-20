@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "028_JaggedArray", "028_Jagg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "029_SalesReport", "029_SalesReport\029_SalesReport.csproj", "{23FD56C6-A71A-42A0-B9B1-73E4BC580196}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "030_Methods", "030_Methods\030_Methods.csproj", "{64235717-2D5D-45CA-8D98-D2B33D46AD5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -207,6 +209,10 @@ Global
 		{23FD56C6-A71A-42A0-B9B1-73E4BC580196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23FD56C6-A71A-42A0-B9B1-73E4BC580196}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23FD56C6-A71A-42A0-B9B1-73E4BC580196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64235717-2D5D-45CA-8D98-D2B33D46AD5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64235717-2D5D-45CA-8D98-D2B33D46AD5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64235717-2D5D-45CA-8D98-D2B33D46AD5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64235717-2D5D-45CA-8D98-D2B33D46AD5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
