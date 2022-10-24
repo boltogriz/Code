@@ -77,6 +77,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "032_MethodOverLoading", "03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "033_Recursion", "033_Recursion\033_Recursion.csproj", "{2148E93A-1B58-4B7E-8555-A6911CAAFAD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "034_GOTO", "034_GOTO\034_GOTO.csproj", "{E08C0E76-13CB-4BDF-9613-589BDCC7A472}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -231,6 +233,10 @@ Global
 		{2148E93A-1B58-4B7E-8555-A6911CAAFAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2148E93A-1B58-4B7E-8555-A6911CAAFAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2148E93A-1B58-4B7E-8555-A6911CAAFAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E08C0E76-13CB-4BDF-9613-589BDCC7A472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E08C0E76-13CB-4BDF-9613-589BDCC7A472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E08C0E76-13CB-4BDF-9613-589BDCC7A472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E08C0E76-13CB-4BDF-9613-589BDCC7A472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
