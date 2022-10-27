@@ -8,6 +8,9 @@ namespace MySpace
 {
     internal class Console
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public void Method()
         {
             System.Console.WriteLine("Test");
