@@ -7,4 +7,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="021_If">
+      <HintPath>..\..\ITVDN_2022\021_If\bin\Debug\021_If.exe</HintPath>
+    </Reference>
+    <Reference Include="SendMail">
+      <HintPath>..\..\SendMail\SendMail\bin\Debug\SendMail.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

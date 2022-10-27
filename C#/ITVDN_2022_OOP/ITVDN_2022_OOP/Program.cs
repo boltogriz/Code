@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ITVDN_2022_OOP
 {
+    class MyClass
+    {
+        public int field;
+        public void Method()
+        {
+            Console.WriteLine(field);
+        }
+    }
     internal class Program
     {
-        class MyClass
-        {
-            public int field;
-            public void Method()
-            { 
-                Console.WriteLine(field);
-            }
-        }
         static void Main(string[] args)
         {
             MyClass a = new MyClass();
