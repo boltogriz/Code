@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MySpace
 {
+    /// <summary>
+    /// 
+    /// </summary>
     internal class Console
     {
         /// <summary>
