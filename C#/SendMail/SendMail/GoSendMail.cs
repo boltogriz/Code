@@ -27,6 +27,7 @@ namespace SendMail
                 {
                     mail.Attachments.Add(new Attachment(attachFile));
                 }
+
                 //MessageBox.Show("good");
                 SmtpClient client = new SmtpClient();
                 client.Host = smtpServer;
