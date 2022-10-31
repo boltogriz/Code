@@ -9,13 +9,19 @@ namespace OOP_002_InvoiceModeling
     internal class Invoce
     {
         //title
-        string title = null;
-        string date = null;
-        public void SetDate(string date)
+        string title;
+        string date;
+        public string Date
         {
-            this.date = date.ToLower();
+            set//public void SetDate(string date)
+            {
+                date = value.ToLower();
+            }
+            get//public (string Date, string From) GetDate()
+            {
+                return date;
+            }
         }
-
         string number = null;
         internal void SetNumber(string number)
         {
@@ -34,10 +40,6 @@ namespace OOP_002_InvoiceModeling
             this.from = from;
         }
 
-        public (string Date, string From) GetDate()
-        {
-            return (date, from);
-        }
         /// <summary>
         /// устанавливает значение поля
         /// заголовка названивия накладной
