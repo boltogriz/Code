@@ -1,64 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace OOP_002_InvoiceModeling
 {
-    internal class Invoce
+    class Invoce
     {
         //title
-        string title;
-        string date;
-        public string Date
-        {
-            set//public void SetDate(string date)
-            {
-                date = value.ToLower();
-            }
-            get//public (string Date, string From) GetDate()
-            {
-                return date;
-            }
-        }
-        string number = null;
-        internal void SetNumber(string number)
-        {
-            this.number = number;
-        }
-
-        string to = null;
-        internal void SetTo(string to)
-        {
-            this.to = to;
-        }
-
-        string from = null;
-        internal void SetFrom(string from)
-        {
-            this.from = from;
-        }
-
-        /// <summary>
-        /// устанавливает значение поля
-        /// заголовка названивия накладной
-        /// title
-        /// </summary>
-        /// <param name="title">Название накладной</param>
-        /// <returns></returns>
-        public void SetTitle(string title)
-        {
-            this.title = title;
-        }
-
-
+        public DateTime Date { get; init; }
+        public string Number { get; init; } = null;
+        public string To { get; init; } = null;
+        public string From { get; init; } = null;
+       
         //body
 
         //footer
-        decimal total = 0;
-        string storekeeperSurname = null;
-        string forwarderSurname = null;
+        public decimal Total { get; private set; }
+        public string StorekeeperSurname { get; init; } = null;
+        public string ForwarderSurname { get; init; } = null;
+
 
     }
 }

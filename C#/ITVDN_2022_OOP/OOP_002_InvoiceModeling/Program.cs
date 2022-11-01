@@ -4,20 +4,21 @@
     {
         static void Main(string[] args)
         {
-            Invoce invoice = new Invoce();
-            //title
-            invoice.SetTitle("001");
-            //invoice.date = "23 апреля 2035 года";
-            invoice.Date = ("23 Апреля 2035 года");
-            //invoice.number = "1024";
-            invoice.SetNumber("1024");
-            //invoice.to = "Дом книги";
-            invoice.SetTo("Дом книги");
-            //invoice.from = "Microsoft Press";
-            invoice.SetFrom("Microsoft Press");
-            string date = invoice.Date;
-            Console.WriteLine(date);
-
+            Invoce invoice = new Invoce()
+            {
+                Date = DateTime.Parse("23/4/2035"),
+                Number = "54-TK-07162",
+                To = "Дом книг",
+                From = "Microsoft press",
+                StorekeeperSurname = "Иванов",
+                ForwarderSurname = "Петров"
+            };
+            Console.WriteLine(invoice.Date);
+            Console.WriteLine(invoice.Number);
+            Console.WriteLine(invoice.To);
+            Console.WriteLine(invoice.From);
+            Console.WriteLine(invoice.StorekeeperSurname);
+            Console.WriteLine(invoice.ForwarderSurname);
             Console.ReadKey();
         }
     }
