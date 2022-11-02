@@ -21,7 +21,5 @@ namespace OOP_002_InvoiceModeling
         public decimal Total { get; private set; }
         public string StorekeeperSurname { get; init; } = null;
         public string ForwarderSurname { get; init; } = null;
-
-
     }
 }
