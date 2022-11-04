@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F20DE1F7-20A9-43DC-910A-87E7469317C1}</ProjectGuid>
+    <ProjectGuid>{08737C2C-96A7-49AE-A4E8-7029A2E4CA61}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TestNuGet</RootNamespace>
-    <AssemblyName>TestNuGet</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,14 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Mail.dll">
-      <Version>3.0.22293.1001</Version>
-    </PackageReference>
-    <PackageReference Include="MailKit">
-      <Version>3.4.2</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
