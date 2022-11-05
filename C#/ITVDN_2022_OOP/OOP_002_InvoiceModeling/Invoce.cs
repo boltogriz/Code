@@ -19,7 +19,7 @@ namespace OOP_002_InvoiceModeling
         //public Table table = new Table();
         public Table Table { get; } = new Table();
         //footer
-        public decimal Total { get; private set; }
+        public decimal Total { get => Table.Total; }
         public string StorekeeperSurname { get; init; } = null;
         public string ForwarderSurname { get; init; } = null;
     }

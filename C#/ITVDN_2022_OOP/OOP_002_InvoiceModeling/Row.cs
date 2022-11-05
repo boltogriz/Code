@@ -14,22 +14,22 @@ namespace OOP_002_InvoiceModeling
         /// <summary>
         /// Gets or set the Sequential Nubmer
         /// </summary>
-        int SequentialNumber { get; set; }
+        public int SequentialNumber { get; set; }
         /// <summary>
         /// Gets or sets the Description
         /// </summary>
-        string Description { get; set; }
+        public string Description { get; set; }
         /// <summary>
         /// Gets or sets the Quantity
         /// </summary>
-        decimal Quantity { get; set; }
+        public decimal Quantity { get; set; }
         /// <summary>
         /// Gets or sets the Price
         /// </summary>
-        decimal Price { get; set; }
+        public decimal Price { get; set; }
         /// <summary>
         /// Gets the Amount
         /// </summary>
-        decimal Amount { get => Quantity * Price; }
+        public decimal Amount { get => Quantity * Price; }
     }
 }
