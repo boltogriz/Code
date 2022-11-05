@@ -14,9 +14,10 @@ namespace OOP_002_InvoiceModeling
         public string Number { get; init; } = null;
         public string To { get; init; } = null;
         public string From { get; init; } = null;
-       
-        //body
 
+        //body
+        //public Table table = new Table();
+        public Table Table { get; } = new Table();
         //footer
         public decimal Total { get; private set; }
         public string StorekeeperSurname { get; init; } = null;
