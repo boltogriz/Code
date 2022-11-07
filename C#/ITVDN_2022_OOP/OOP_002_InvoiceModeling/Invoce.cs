@@ -18,6 +18,11 @@ namespace OOP_002_InvoiceModeling
         //body
         //public Table table = new Table();
         public Table Table { get; } = new Table();
+        public Row this[int index]
+        {
+            get { return Table[index]; }
+            set { Table[index] = value; }
+        }
         //footer
         public decimal Total { get => Table.Total; }
         public string StorekeeperSurname { get; init; } = null;

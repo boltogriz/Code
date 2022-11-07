@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_000", "OOP_000\OOP_000.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_001", "OOP_001\OOP_001.csproj", "{4373C3D6-05A0-4D2B-A15F-0EDF387F72D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_002_InvoiceModeling", "OOP_002_InvoiceModeling\OOP_002_InvoiceModeling.csproj", "{5E06A045-EFE4-4E77-A160-13642045F4BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_002_InvoiceModeling", "OOP_002_InvoiceModeling\OOP_002_InvoiceModeling.csproj", "{5E06A045-EFE4-4E77-A160-13642045F4BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_003_Indexer", "OOP_003_Indexer\OOP_003_Indexer.csproj", "{32061E0C-2F1B-4699-A2EF-E4E823EA6B89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5E06A045-EFE4-4E77-A160-13642045F4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E06A045-EFE4-4E77-A160-13642045F4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E06A045-EFE4-4E77-A160-13642045F4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32061E0C-2F1B-4699-A2EF-E4E823EA6B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32061E0C-2F1B-4699-A2EF-E4E823EA6B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32061E0C-2F1B-4699-A2EF-E4E823EA6B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32061E0C-2F1B-4699-A2EF-E4E823EA6B89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

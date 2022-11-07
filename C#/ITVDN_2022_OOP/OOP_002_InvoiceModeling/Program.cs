@@ -19,14 +19,16 @@
                 Quantity = 5,
                 Price = 500
             };
-            invoice.Table.AddRow(row);
+            //invoice.Table.AddRow(row);
+            invoice[0] = row;
             row = new()
             {
                 Description = "CLR via C#. Jeffrey Richter.",
                 Quantity = 5,
                 Price = 500
             };
-            invoice.Table.AddRow(row);
+            //invoice.Table.AddRow(row);
+            invoice[1] = row;
             /*Console.WriteLine(invoice.Date);
             Console.WriteLine(invoice.Number);
             Console.WriteLine(invoice.To);
@@ -39,7 +41,7 @@
             Console.WriteLine(stringTitle);
             for (int i = 0; i < invoice.Table.Size; i++)
             {
-                row = invoice.Table.GetRow(i);
+                row = invoice[i];
                 string stringRow = $"{row.SequentialNumber} | {row.Description} | " +
                     $"{row.Quantity} шт. | {row.Price} руб. | {row.Amount} руб.";
                 Console.WriteLine(stringRow);
