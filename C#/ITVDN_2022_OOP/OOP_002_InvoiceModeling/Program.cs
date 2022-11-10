@@ -4,21 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Invoce invoice = new Invoce()
-            {
-                Date = DateTime.Parse("23/4/2035"),
-                Number = "54-TK-07162",
-                To = "Дом книг",
-                From = "Microsoft press",
-                StorekeeperSurname = "Иванов",
-                ForwarderSurname = "Петров"
-            };
-            Row row = new()
-            {
-                Description = "Code complete. Steve McConnell.",
-                Quantity = 5,
-                Price = 500
-            };
+            Invoce invoice = new Invoce(date: DateTime.Parse("23/4/2035"), number: "54-TK-07162", 
+                                        to: "Дом книг", from: "Microsoft press", storekeeperSurname: "Иванов", 
+                                        forwarderSurname: "Петров");
+            //Row row = new()
+            //{
+            //    Description = "Code complete. Steve McConnell.",
+            //    Quantity = 5,
+            //    Price = 500
+            //};
+            Row row = new Row(description: "Code complete. steve McConnell.", quantity: 3, price: 400);
             //invoice.Table.AddRow(row);
             invoice[0] = row;
             row = new()
@@ -27,14 +22,7 @@
                 Quantity = 5,
                 Price = 500
             };
-            //invoice.Table.AddRow(row);
             invoice[1] = row;
-            /*Console.WriteLine(invoice.Date);
-            Console.WriteLine(invoice.Number);
-            Console.WriteLine(invoice.To);
-            Console.WriteLine(invoice.From);
-            Console.WriteLine(invoice.StorekeeperSurname);
-            Console.WriteLine(invoice.ForwarderSurname);*/
             //вывод
             string stringTitle = $"Дата {invoice.Date} \nНакладная № {invoice.Number}" +
                 $"\nКому: {invoice.To} \nОт кого: {invoice.From}";

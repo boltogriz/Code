@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,16 @@ namespace OOP_002_InvoiceModeling
     class Invoce
     {
         //title
+        public Invoce() { }
+        public Invoce(DateTime date, string number, string to, string from, string storekeeperSurname, string forwarderSurname)
+        {
+            Date = date;
+            Number = number;
+            To = to;
+            From = from;
+            StorekeeperSurname = storekeeperSurname;
+            ForwarderSurname = forwarderSurname;
+        }
         public DateTime Date { get; init; }
         public string Number { get; init; } = null;
         public string To { get; init; } = null;

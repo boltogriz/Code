@@ -12,6 +12,20 @@ namespace OOP_002_InvoiceModeling
     internal class Row
     {
         /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        public Row() { }
+        /// <summary>
+        /// Initializes a new instance of the InvoiceModeling. Row class
+        /// using the specified field names.
+        /// </summary>
+        /// <param name="description">The value to write in the description</param>
+        /// <param name="quantity">The value to write in the quantity field.</param>
+        /// <param name="price">The value to write in the price field.</param>
+        public Row(string description, decimal quantity, decimal price) => 
+                  (Description, Quantity, Price) = (description, quantity, price);
+
+        /// <summary>
         /// Gets or set the Sequential Nubmer
         /// </summary>
         public int SequentialNumber { get; set; }
