@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOP_004_Inheritance
+﻿namespace OOP_004_Inheritance_2
 {
     class ClassA
     {
@@ -19,18 +13,17 @@ namespace OOP_004_Inheritance
     }
     class Animal
     {
-
+        protected string Sound { get; init; }
+        public void MakeSound() => Console.WriteLine(Sound);
     }
     class Dog : Animal
     {
-        private string Sound { get; set; } = "Woof-Woof";
-        public void MakeSound() => Console.WriteLine(Sound);
+        public Dog() => Sound = "Woof-Woof";
         public void BringStick() => Console.WriteLine("Bring a stick");
     }
     class Cat : Animal
     {
-        private string Sound { get; set; } = "Meow-Meow";
-        public void MakeSound() => Console.WriteLine(Sound);
+        public Cat() => Sound = "Meow-Meow";
         public void CatchMouse() => Console.WriteLine("Catch the mouse");
     }
     internal class Program
@@ -44,6 +37,16 @@ namespace OOP_004_Inheritance
 
             Animal dog = new Dog(), cat = new Cat();
             Animal[] animals = { dog, cat };
+            for (int i = 0; i < animals.Length; i++)
+                animals[i].MakeSound();
+
+            Animal animal = animals[0];
+
+            Dog myDog = (Dog)animal;
+            myDog.BringStick();
+
+            Cat myCat = (Cat)animal;
+            myCat.CatchMouse();
 
             Console.ReadKey();
         }

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_004_Indexers_2", "OOP_0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_004_Inheritance", "OOP_004_Inheritance\OOP_004_Inheritance.csproj", "{10370281-F1E9-4E75-BD43-C894DF79778B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_004_Inheritance_2", "OOP_004_Inheritance_2\OOP_004_Inheritance_2.csproj", "{ED394074-5110-46DC-A48C-F45A45048D6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{10370281-F1E9-4E75-BD43-C894DF79778B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10370281-F1E9-4E75-BD43-C894DF79778B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10370281-F1E9-4E75-BD43-C894DF79778B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED394074-5110-46DC-A48C-F45A45048D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED394074-5110-46DC-A48C-F45A45048D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED394074-5110-46DC-A48C-F45A45048D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED394074-5110-46DC-A48C-F45A45048D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
