@@ -40,13 +40,27 @@
             for (int i = 0; i < animals.Length; i++)
                 animals[i].MakeSound();
 
-            Animal animal = animals[0];
+            if (true)
+            {
+                Animal animal = animals[0];
+                bool dogIsDog = animal is Dog;
+                Dog myDog = (dogIsDog == true) ? (Dog)animal : null;
+                if (myDog != null)
+                    myDog.BringStick();
+                Cat myCat = (animal is Cat) ? (Cat)animal : null;
+                if (myCat != null)
+                    myCat.CatchMouse();
+            }
+            if (false)
+            {
+                Animal animal = animals[0];
 
-            Dog myDog = (Dog)animal;
-            myDog.BringStick();
+                Dog myDog = (Dog)animal;
+                myDog.BringStick();
 
-            Cat myCat = (Cat)animal;
-            myCat.CatchMouse();
+                Cat myCat = (Cat)animal;
+                myCat.CatchMouse();
+            }
 
             Console.ReadKey();
         }
