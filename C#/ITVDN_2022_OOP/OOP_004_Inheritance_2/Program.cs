@@ -1,4 +1,6 @@
-﻿namespace OOP_004_Inheritance_2
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace OOP_004_Inheritance_2
 {
     class ClassA
     {
@@ -48,6 +50,42 @@
                 if (myDog != null)
                     myDog.BringStick();
                 Cat myCat = (animal is Cat) ? (Cat)animal : null;
+                if (myCat != null)
+                    myCat.CatchMouse();
+            }
+            for (int i = 0; i < animals.Length; i++)
+            {
+                Animal animal = animals[i];
+                if ( animal is Dog)
+                {
+                    Dog isDog = (Dog)animal;
+                    isDog.BringStick();
+                }
+                else if (animal is Cat)
+                {
+                    Cat isCat = (Cat)animal;
+                    isCat.CatchMouse();
+                }
+                else 
+                {
+                    ; // DoNothing
+                }
+            }
+            if (false)
+            {
+                Animal animl = animals[0];
+                Dog MyDog = animl as Dog;
+                MyDog?.BringStick();
+                Cat myCat = animl as Cat;
+                myCat?.CatchMouse();
+            }
+            if (false)
+            {
+                Animal animal = animals[0];
+                Dog myDog = animal as Dog;
+                if (myDog != null)
+                    myDog.BringStick();
+                Cat myCat = animal as Cat;
                 if (myCat != null)
                     myCat.CatchMouse();
             }
