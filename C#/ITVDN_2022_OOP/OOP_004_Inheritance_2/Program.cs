@@ -13,7 +13,7 @@ namespace OOP_004_Inheritance_2
         #endregion
         public void MethodB() => Console.WriteLine("ClassB.MethodB");
     }
-    class Animal
+    abstract class Animal
     {
         protected string Sound { get; init; }
         public void MakeSound() => Console.WriteLine(Sound);
