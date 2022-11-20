@@ -30,5 +30,7 @@ document1.Body = new Body() { Content = "Текст контракта" };
 document1.Footer = new Footer() { Content = "Подпись" };
 document1.Call = new Call() { Content = "Call" };
 document1.Show();
+document1.Call2 = "Call2";
+Console.WriteLine(document1.Call2);
 
 

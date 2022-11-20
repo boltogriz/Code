@@ -15,6 +15,7 @@ namespace ITVDN_Essential
         Body body;
         Footer footer;
         Call call;
+        Call call2 = new Call();
         public Call Call
         {
             get 
@@ -26,6 +27,17 @@ namespace ITVDN_Essential
                 call = value;
             }
 
+        }
+        public string Call2
+        {
+            get 
+            {
+                return call2.Content;
+            }
+            set 
+            {
+                call2.Content = value;
+            }
         }
         public Title Title 
         { 
