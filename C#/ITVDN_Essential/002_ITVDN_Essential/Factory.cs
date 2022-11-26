@@ -13,7 +13,7 @@ namespace _002_ITVDN_Essential
             Console.WriteLine("Создание экземпляра класса Product");
         }
     }
-    internal class Factory
+    class Factory
     {
         public Product FactoryMethod()
         {
