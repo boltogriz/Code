@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "003_ITVDN_Abstraction", "00
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "004_ITVDN_Inheritance", "004_ITVDN_Inheritance\004_ITVDN_Inheritance.csproj", "{1A53D8B9-8B1D-4B9E-B2C8-433B7C32A6AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005_ITVDN_Static", "005_ITVDN_Static\005_ITVDN_Static.csproj", "{F62AAA27-942F-4A1A-9702-4319F05259AF}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005_ITVDN_Indexers", "005_ITVDN_Indexers\005_ITVDN_Indexers.csproj", "{68ED6ABB-C24D-4A94-97A6-0C758A1CA076}"
 EndProject
 Global
@@ -35,10 +37,6 @@ Global
 		{1A53D8B9-8B1D-4B9E-B2C8-433B7C32A6AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A53D8B9-8B1D-4B9E-B2C8-433B7C32A6AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A53D8B9-8B1D-4B9E-B2C8-433B7C32A6AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68ED6ABB-C24D-4A94-97A6-0C758A1CA076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68ED6ABB-C24D-4A94-97A6-0C758A1CA076}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68ED6ABB-C24D-4A94-97A6-0C758A1CA076}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68ED6ABB-C24D-4A94-97A6-0C758A1CA076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
