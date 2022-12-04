@@ -29,4 +29,16 @@ namespace _007_ITVDN_Structur
             field2 = 4;
         }
     }
+    class MyClass
+    {
+        public int item;
+        public MyClass(int item) : this (item, 0)
+        {
+            Console.WriteLine($"item = {item}");
+        }
+        public MyClass(int x, int y)
+        {
+            Console.WriteLine($"x = {x}, y = {y}");
+        }
+    }
 }

@@ -10,6 +10,8 @@
            // Console.WriteLine(instance.field);
             Struct instance2 = new Struct(10);
             instance2.Show();
+            Console.WriteLine();
+            MyClass myClass = new MyClass(1);
         }
     }
 } 
