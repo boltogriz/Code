@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "011_ITVDN_Constrane", "011_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "012_Events", "012_Events\012_Events.csproj", "{FC9EB0BD-C380-4482-A125-59CF727BDA5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "013_ITVDN_Multitasking", "013_ITVDN_Multitasking\013_ITVDN_Multitasking.csproj", "{4A89C650-6E3E-496A-BE56-DC435BBC5724}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "013_ITVDN_Multitasking", "013_ITVDN_Multitasking\013_ITVDN_Multitasking.csproj", "{4A89C650-6E3E-496A-BE56-DC435BBC5724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "014_ITVDN_Collection", "014_ITVDN_Collection\014_ITVDN_Collection.csproj", "{04C622D4-8BA5-45C7-9EBC-1BFD4E151236}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{4A89C650-6E3E-496A-BE56-DC435BBC5724}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A89C650-6E3E-496A-BE56-DC435BBC5724}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A89C650-6E3E-496A-BE56-DC435BBC5724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04C622D4-8BA5-45C7-9EBC-1BFD4E151236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C622D4-8BA5-45C7-9EBC-1BFD4E151236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C622D4-8BA5-45C7-9EBC-1BFD4E151236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C622D4-8BA5-45C7-9EBC-1BFD4E151236}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
