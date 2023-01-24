@@ -14,7 +14,7 @@ namespace Essential
         {
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Fly!");
+                Console.WriteLine(Name);
             }
         }
     }
