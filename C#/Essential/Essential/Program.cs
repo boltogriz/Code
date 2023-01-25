@@ -25,6 +25,12 @@ namespace Essential
             Butterfly mahaon = new Butterfly();
             mahaon.Name = "Admiral";
             mahaon.Fly();
+            MyClass myClass = new MyClass();
+            myClass.SetField("MyClass");
+            new MyClass().Method();
+            string @string = myClass.GetField();
+            myClass.Method();
+            Console.WriteLine(@string);
             Console.ReadLine();
         }
     }
