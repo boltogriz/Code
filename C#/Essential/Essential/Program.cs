@@ -9,7 +9,7 @@ namespace Essential
     class Butterfly
     {
         public string name;
-        public string Name { get => name; set => name = value; }
+        public string Name { get => name; set => name = value; } // setter
         public void Fly()
         {
             for (int i = 0; i < 10; i++)
