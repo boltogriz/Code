@@ -21,5 +21,11 @@ namespace Essential
         {
             return field;
         }
+        public MyClass(Butterfly butterfly)
+        {
+            butterfly.Fly();
+        }
+        public MyClass()
+        { }
     }
 }

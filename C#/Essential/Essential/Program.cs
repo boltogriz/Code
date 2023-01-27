@@ -9,7 +9,17 @@ namespace Essential
     class Butterfly
     {
         public string name;
-        public string Name { get => name; set => name = value; } // setter
+        public string Name 
+        { 
+            get 
+            { 
+                return name; 
+            }
+            set 
+            { 
+                name = value; 
+            } 
+        } // setter
         public void Fly()
         {
             for (int i = 0; i < 10; i++)
@@ -25,12 +35,15 @@ namespace Essential
             Butterfly mahaon = new Butterfly();
             mahaon.Name = "Admiral";
             mahaon.Fly();
+            Console.WriteLine(new string('-', 20));
             MyClass myClass = new MyClass();
             myClass.SetField("MyClass");
             new MyClass().Method();
             string @string = myClass.GetField();
             myClass.Method();
             Console.WriteLine(@string);
+            Console.WriteLine(new string('-', 20));
+            MyClass myClass2 = new MyClass(mahaon);
             Console.ReadLine();
         }
     }
