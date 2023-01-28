@@ -9,9 +9,11 @@ namespace Essential
     internal class MyClass
     {
         private string field;
+        private Butterfly butterfly;
         public void Method()
         {
             Console.WriteLine(field);
+            Console.WriteLine(butterfly.Name + " Initilization");
         }
         public void SetField(string value)
         {
@@ -21,11 +23,15 @@ namespace Essential
         {
             return field;
         }
-        public MyClass(Butterfly butterfly)
+        public MyClass(Butterfly butterfly):
+            this()
         {
             butterfly.Fly();
+            this.butterfly.Name = butterfly.Name;
         }
         public MyClass()
-        { }
+        { 
+            butterfly = new Butterfly();
+        }
     }
 }

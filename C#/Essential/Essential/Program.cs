@@ -44,7 +44,10 @@ namespace Essential
             Console.WriteLine(@string);
             Console.WriteLine(new string('-', 20));
             MyClass myClass2 = new MyClass(mahaon);
-            Console.ReadLine();
+            myClass2.Method();
+            MyClass myClass3 = new MyClass();
+            myClass3.Method();
+            Console.ReadKey();
         }
     }
 }
