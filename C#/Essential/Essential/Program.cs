@@ -47,6 +47,8 @@ namespace Essential
             myClass2.Method();
             MyClass myClass3 = new MyClass();
             myClass3.Method();
+            Console.WriteLine(new string('-', 20));
+            
             Console.ReadKey();
         }
     }

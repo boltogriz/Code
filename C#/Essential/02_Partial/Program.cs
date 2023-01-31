@@ -9,6 +9,7 @@ namespace _02_Partial
     class MyClass
     {
         MyClass my = null;
+
         private void Method()
         {
             Console.WriteLine("Hello");
@@ -29,6 +30,12 @@ namespace _02_Partial
             Console.WriteLine(new String('-', 20));
             MyClass my = new MyClass();
             my.CallMethod();
+            Console.WriteLine(new String('-', 20));
+            Class4 class4 = new Class4();
+            Class3 class3 = new Class3();
+            class3.Name = "По ком звонит колокол";
+            class4.Book = class3;
+            Console.WriteLine(class4.Book.Name);
             Console.ReadKey();
         }
     }
