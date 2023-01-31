@@ -36,6 +36,9 @@ namespace _02_Partial
             class3.Name = "По ком звонит колокол";
             class4.Book = class3;
             Console.WriteLine(class4.Book.Name);
+            Console.WriteLine(new String('-', 20));
+            Factory factory = new Factory();
+            Product product = factory.FactoryMethod();
             Console.ReadKey();
         }
     }
