@@ -12,6 +12,9 @@ namespace _03_Inheritance
         private string privateField = "BaseClass.privateField";
         protected string protectedField = "BaseClass.protectedField";
         public int baseNumber;
+        public int field1;
+        public int field2;
+        public int field3
 
         public BaseClass()
         {
