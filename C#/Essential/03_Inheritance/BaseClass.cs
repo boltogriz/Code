@@ -11,6 +11,17 @@ namespace _03_Inheritance
         public string publicField = "BaseClass.publicField";
         private string privateField = "BaseClass.privateField";
         protected string protectedField = "BaseClass.protectedField";
+        public int baseNumber;
+
+        public BaseClass()
+        {
+            Console.WriteLine("BaseClass()");
+        }
+        public BaseClass(int baseNumber)
+        {
+            this.baseNumber = baseNumber;
+            Console.WriteLine("BaseClass(int)");
+        }
         
         public void Show()
         {
