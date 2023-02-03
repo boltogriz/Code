@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace _03_Inheritance
 {
-    internal class DrivedClass : BaseClass
+    internal class DrivedClass : BaseClass, ICloneable
     {
         public int drivedField;
+        public int field4;
+        public int field5;
         // конструктор
         public DrivedClass()
         {
@@ -23,6 +25,27 @@ namespace _03_Inheritance
         public DrivedClass(int number2) 
         {
             drivedField = number2;
+        }
+        public void NewShow()
+        {
+            Console.WriteLine("DrivedClass.NewShow()");
+        }
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+        public void Method()
+        {
+            Console.WriteLine("Method form DrivedClass");
+        }
+        public override void MethodVirtual()
+        {
+            base.MethodVirtual();
+            Console.WriteLine("MethodVirtual() from DrivedClass");
+        }
+        public void NVMethod()
+        {
+            Console.WriteLine("NV from DrivedClass");
         }
     }
 }

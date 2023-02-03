@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _03_Inheritance
 {
-    internal class BaseClass
+    internal class BaseClass 
     {
         public string publicField = "BaseClass.publicField";
         private string privateField = "BaseClass.privateField";
@@ -14,7 +14,7 @@ namespace _03_Inheritance
         public int baseNumber;
         public int field1;
         public int field2;
-        public int field3
+        public int field3;
 
         public BaseClass()
         {
@@ -29,6 +29,18 @@ namespace _03_Inheritance
         public void Show()
         {
             Console.WriteLine(privateField);
+        }
+        public void Method()
+        {
+            Console.WriteLine("Method form BaseClass");
+        }
+        public virtual void MethodVirtual()
+        {
+            Console.WriteLine("MethodVirtual() from BaseClass");
+        }
+        public void NVMethod()
+        {
+            Console.WriteLine("NV from BaseClass");
         }
     }
 }
