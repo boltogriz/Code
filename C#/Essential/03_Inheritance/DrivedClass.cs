@@ -47,5 +47,9 @@ namespace _03_Inheritance
         {
             Console.WriteLine("NV from DrivedClass");
         }
+        public static void MethodStatic()
+        {
+            Console.WriteLine("Static Method");
+        }
     }
 }

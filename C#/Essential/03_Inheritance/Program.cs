@@ -99,7 +99,19 @@ namespace _03_Inheritance
 
                 DrivedClass drivedDown = baseUp as DrivedClass;
                 drivedDown.MethodVirtual();
+
+                DrivedClass.MethodStatic();
             }
+
+            Console.WriteLine(new string('-', 20));
+
+            Container container = new Container();
+            container.field = new Der1();
+            Console.WriteLine(container.field.GetHashCode());
+            container.field = new Der2();
+            Console.WriteLine(container.field.GetHashCode());
+
+
             Console.WriteLine(new string('-', 20));
 
             Console.ReadKey();

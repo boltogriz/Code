@@ -44,9 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClass.cs" />
+    <Compile Include="BaseClassPole.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="Der1.cs" />
+    <Compile Include="Der2.cs" />
     <Compile Include="DrivedClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SealedClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

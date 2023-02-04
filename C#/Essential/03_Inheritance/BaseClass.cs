@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _03_Inheritance
 {
-    internal class BaseClass 
+    internal class BaseClass
     {
         public string publicField = "BaseClass.publicField";
         private string privateField = "BaseClass.privateField";
