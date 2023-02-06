@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractBaseClass.cs" />
     <Compile Include="AbstractClass.cs" />
+    <Compile Include="AbstractClass1.cs" />
     <Compile Include="ConcreteClass.cs" />
+    <Compile Include="ConcreteClassA.cs" />
+    <Compile Include="ConcreteClassB.cs" />
+    <Compile Include="DerivedClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
