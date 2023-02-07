@@ -17,5 +17,11 @@ namespace _04_Abstraction_Interface
             Console.WriteLine("AbstractBaseClass.VirtualMethod");
         }
         abstract public void AbstractMethod();
+        public AbstractBaseClass()
+        {
+            Console.WriteLine("1 AbstractClass()");
+            this.AbstractMethod();
+            Console.WriteLine("2 AbstractClass()");
+        }
     }
 }

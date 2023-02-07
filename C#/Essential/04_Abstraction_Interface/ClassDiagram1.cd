@@ -1,60 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="_04_Abstraction_Interface.AbstractClass">
-    <Position X="6.25" Y="3.75" Width="1.5" />
+    <Position X="6.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AbstractClass.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="_04_Abstraction_Interface.Program" Collapsed="true">
-    <Position X="8.75" Y="0.75" Width="1.5" />
+  <Class Name="_04_Abstraction_Interface.Program">
+    <Position X="10.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_04_Abstraction_Interface.ConcreteClass">
-    <Position X="6.25" Y="5.5" Width="1.5" />
+    <Position X="6.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ConcreteClass.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_04_Abstraction_Interface.AbstractClass1">
-    <Position X="3.25" Y="2.5" Width="1.5" />
+    <Position X="3.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AbstractClass1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_04_Abstraction_Interface.ConcreteClassA">
-    <Position X="3.25" Y="0.75" Width="1.5" />
+    <Position X="3.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>ConcreteClassA.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_04_Abstraction_Interface.ConcreteClassB">
-    <Position X="3.25" Y="4.5" Width="1.5" />
+    <Position X="3.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ConcreteClassB.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_04_Abstraction_Interface.AbstractBaseClass" Collapsed="true">
-    <Position X="6.25" Y="0.75" Width="1.5" />
+    <Position X="6.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAgAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>AbstractBaseClass.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_04_Abstraction_Interface.DerivedClass" Collapsed="true">
-    <Position X="6.25" Y="2" Width="1.5" />
+    <Position X="6.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAQAAIAAAAAAAAA=</HashCode>
       <FileName>DerivedClass.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="_04_Abstraction_Interface.MyClass" BaseTypeListCollapsed="true">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMyInterface.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="_04_Abstraction_Interface.IMyInterface">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMyInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -50,6 +50,7 @@
     <Compile Include="ConcreteClassA.cs" />
     <Compile Include="ConcreteClassB.cs" />
     <Compile Include="DerivedClass.cs" />
+    <Compile Include="IMyInterface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

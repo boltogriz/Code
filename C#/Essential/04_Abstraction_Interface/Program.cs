@@ -20,6 +20,9 @@ namespace _04_Abstraction_Interface
             instance2.AbstractMethod();
             instance2.VirtualMethod();
             instance2.SimpleMethod();
+            Console.WriteLine(new string('-', 20));
+            MyClass my = new MyClass();
+            my.Method();
             Console.ReadKey();
         }
     }
