@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace _05_Massive_Indecsator
 {
@@ -12,11 +13,61 @@ namespace _05_Massive_Indecsator
     }
     public class Dog : IAnimal
     {
-        string[] array = new string[3];
-        public string this[int index]
+       static int index;
+        public static int Index 
         {
-            get { return array[index]; }
-            set { array[index] = value; }
+            get
+            {
+                return index;
+            }
+            private set 
+            { 
+                index = value; 
+            } 
+        }
+        string[] array = new string[Index];
+        string[] wordsRu = new string[3]; 
+        string[] wordsEn = new string[3]; 
+        public Dog()
+        {
+            Index = 3;
+            wordsRu[0] = "дом"; wordsEn[0] = "house";
+            wordsRu[1] = "ручка"; wordsEn[1] = "pen";
+            wordsRu[2] = "солнце"; wordsEn[2] = "Sun";
+        }
+        public int GetIndex()
+        {
+            return Index;
+        }
+        public int Length { get { return array.Length; } }
+        public string this[int Index]
+        {
+            get 
+            {
+                if(Index >= 0 && Index < array.Length)
+                    return wordsRu[Index] + " - " + wordsEn[Index];
+                else
+                    return null;
+            }
+            set 
+            {
+                if (Index >= 0 && Index < array.Length)
+                    array[Index] = value;
+                else
+                    Console.WriteLine("Попытка записи за пределами массива");
+            }
+        }
+        public string this[string Index]
+        {
+            get
+            {
+                for (int i = 0; i < wordsRu.Length; i++)
+                {
+                    if (wordsRu[i] == Index)
+                        return wordsEn[i];
+                }
+                        return "слово не найдено";
+            }
         }
         public void Voice()
         {
@@ -68,7 +119,17 @@ namespace _05_Massive_Indecsator
             dog[0] = "0";
             dog[1] = "1";
             dog[2] = "2";
-            Console.WriteLine(dog[0]);
+            dog[3] = "3";
+            int index = 3;
+            Console.WriteLine("index {0} = {1}, {2} ", index, dog[index], dog.Length);
+            for(int j = 0; j < dog.Length; j++)
+            {
+                Console.WriteLine(dog[j]);
+            }
+            Console.WriteLine(new String('-', 20));
+            string word = "дом";
+            Console.WriteLine("{0} - {1}", word, dog[word]);
+            Console.WriteLine(new String('-', 20));
             Console.ReadKey();
         }
     }
