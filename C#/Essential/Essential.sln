@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Abstraction_Interface", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Massive_Indecsator", "05_Massive_Indecsator\05_Massive_Indecsator.csproj", "{0202C30A-6081-4D8C-A8AC-D98447E791AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Static", "06_Static\06_Static.csproj", "{65647B48-ED3B-477D-9D40-B1511DB17A04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0202C30A-6081-4D8C-A8AC-D98447E791AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0202C30A-6081-4D8C-A8AC-D98447E791AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0202C30A-6081-4D8C-A8AC-D98447E791AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65647B48-ED3B-477D-9D40-B1511DB17A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65647B48-ED3B-477D-9D40-B1511DB17A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65647B48-ED3B-477D-9D40-B1511DB17A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65647B48-ED3B-477D-9D40-B1511DB17A04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
