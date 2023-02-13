@@ -20,7 +20,17 @@ namespace _06_Static
             NotStaticClass.MethodStatic();
             AbstractClass instanceAbstract = AbstractClass.CreataObject();
             instanceAbstract.Method();
+            Singleton instanceSingleton = Singleton.Instance();
+            Singleton instanceSingleton2 = Singleton.Instance();
+            Console.WriteLine(instanceSingleton.GetHashCode());
+            Console.WriteLine(instanceSingleton2.GetHashCode());
+            string text = "Text";
+            text.ExtensionMethod();
+            ExtensionClass.ExtensionMethod(text);
+            int number = 3;
+            number.ExtensionMethod();
             Console.ReadKey();
+
         }
     }
 }
