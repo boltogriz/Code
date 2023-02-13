@@ -18,6 +18,8 @@ namespace _06_Static
             instance.Method();
             instance1.Method();
             NotStaticClass.MethodStatic();
+            AbstractClass instanceAbstract = AbstractClass.CreataObject();
+            instanceAbstract.Method();
             Console.ReadKey();
         }
     }
