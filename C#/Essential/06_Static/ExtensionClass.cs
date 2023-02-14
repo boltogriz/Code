@@ -16,5 +16,9 @@ namespace _06_Static
         {
             Console.WriteLine(value);
         }
+        public static void ExtensionMethod(this Singleton value)
+        {
+            Console.WriteLine(value);
+        }
     }
 }
