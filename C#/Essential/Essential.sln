@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Massive_Indecsator", "05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Static", "06_Static\06_Static.csproj", "{65647B48-ED3B-477D-9D40-B1511DB17A04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_Struct", "07_Struct\07_Struct.csproj", "{4280F528-4551-421F-A1CD-F21E44506F8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{65647B48-ED3B-477D-9D40-B1511DB17A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65647B48-ED3B-477D-9D40-B1511DB17A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65647B48-ED3B-477D-9D40-B1511DB17A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4280F528-4551-421F-A1CD-F21E44506F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4280F528-4551-421F-A1CD-F21E44506F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4280F528-4551-421F-A1CD-F21E44506F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4280F528-4551-421F-A1CD-F21E44506F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
