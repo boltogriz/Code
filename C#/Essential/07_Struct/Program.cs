@@ -15,7 +15,7 @@ namespace _07_Struct
     {
         static void Main(string[] args)
         {
-            Struct s;
+            Struct s = new Struct();
             s.field = 1;
             Struct.second = 2;
         }
