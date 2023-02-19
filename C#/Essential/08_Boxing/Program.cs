@@ -95,6 +95,13 @@ namespace _08_Boxing
             object element = Enum.Parse(typeof(EnumType), "Two");
             EnumType number = (EnumType)element;
             Console.WriteLine(number + " " + (byte)number);
+            Console.WriteLine(new string('-', 20));
+            Array arrayEnum = Enum.GetValues(typeof(EnumType));
+            Console.WriteLine("Количество элементво в {0} = {1}", arrayEnum, arrayEnum.Length);
+            for(int i = 0; i < arrayEnum.Length; i++)
+            {
+                Console.WriteLine("{0} = {1}", arrayEnum.GetValue(i), (byte)arrayEnum.GetValue(i));
+            }
             Console.ReadKey();
             
 
