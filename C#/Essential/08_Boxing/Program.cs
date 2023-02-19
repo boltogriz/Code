@@ -91,7 +91,10 @@ namespace _08_Boxing
             Console.WriteLine("1. Перечисление {0} состоит из элементов типа: ", @enum.Name);
             Console.WriteLine(Enum.GetUnderlyingType(@enum));
             Console.WriteLine(Enum.GetUnderlyingType(typeof(EnumType)));
-
+            Console.WriteLine(new string('-', 20));
+            object element = Enum.Parse(typeof(EnumType), "Two");
+            EnumType number = (EnumType)element;
+            Console.WriteLine(number + " " + (byte)number);
             Console.ReadKey();
             
 
