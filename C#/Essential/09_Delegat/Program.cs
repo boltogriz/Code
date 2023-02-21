@@ -32,6 +32,8 @@ namespace _09_Delegat
             MyDelegate myDelegate2 = new MyDelegate(myClass2.Method);
             myDelegate2.Invoke();
             myDelegate2();
+            // задержка
+
             Console.ReadKey();
         }
     }
