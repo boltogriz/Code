@@ -75,17 +75,28 @@ namespace _09_Delegat
             switch (choice)
             {
                 case "1":
-                    myDelegateProgram1.Invoke();
-                    break;
+                    {
+                        myDelegateProgram1.Invoke();
+                        break;
+                    }
                 case "2":
-                    myDelegateProgram2.Invoke();
-                    break;
+                    {
+                        myDelegateProgram2.Invoke();
+                        break;
+                    }
                 case "3":
-                    myDelegateProgram3.Invoke();
-                    break;
+                    {
+                        myDelegateProgram3.Invoke();
+                        break;
+                    }
+                case "4":
+                    {
+                        MyDelegateProgram myDelegateProgram4 = myDelegateProgram - myDelegateProgram1;
+                        myDelegateProgram.Invoke();
+                        break;
+                    }
                 default:
                     break;
-
             }
 
             // задержка
