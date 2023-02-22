@@ -92,7 +92,7 @@ namespace _09_Delegat
                 case "4":
                     {
                         MyDelegateProgram myDelegateProgram4 = myDelegateProgram - myDelegateProgram1;
-                        myDelegateProgram.Invoke();
+                        myDelegateProgram4.Invoke();
                         break;
                     }
                 default:
