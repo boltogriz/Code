@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +11,7 @@ namespace _09_Delegat
     internal class Program
     {
         public delegate void MyDelegateProgram();
+        public delegate int MyDelegateProgram2(int a, int b );
         public static void Method1()
         {
             Console.WriteLine("Method1");
@@ -93,6 +96,31 @@ namespace _09_Delegat
                     {
                         MyDelegateProgram myDelegateProgram4 = myDelegateProgram - myDelegateProgram1;
                         myDelegateProgram4.Invoke();
+                        break;
+                    }
+                case "5":
+                    {
+                        MyDelegateProgram myDelegateProgram5 = myDelegateProgram - myDelegateProgram2;
+                        myDelegateProgram5.Invoke();
+                        break;
+                    }
+                case "6":
+                    {
+                        myDelegateProgram.Invoke();
+                        break;
+                    }
+                case "7":
+                    {
+                        MyDelegateProgram myDelegateProgram7 = delegate { Console.WriteLine("Hellow world!"); };
+                        myDelegateProgram7.Invoke();
+                        break;
+                    }
+                case "8":
+                    {
+                        int x = 1, y = 2, sum = 0;
+                        MyDelegateProgram2 myDelegateProgram8 = delegate (int a, int b) { return a + b; };
+                        sum = myDelegateProgram8(x, y);
+                        Console.WriteLine("{0} + {1} = {2}", x, y, sum);
                         break;
                     }
                 default:
