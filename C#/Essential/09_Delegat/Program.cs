@@ -10,8 +10,19 @@ namespace _09_Delegat
 {
     public delegate Delegate21 Delegate11();
     public delegate void Delegate21();
+
+    public delegate Delegate3a Functional(Delegate1a delegate1a, Delegate2a delegate2);
+    public delegate string Delegate1a();
+    public delegate string Delegate2a();
+    public delegate string Delegate3a();
     internal class Program
     {
+        public static Delegate3a MethodF(Delegate1a delegate1a, Delegate2a delegate2a)
+        {
+            return delegate { return delegate1a.Invoke() + delegate2a.Invoke(); };
+        }
+        public static string Method1a() { return "Hello";  }
+        public static string Method2a() { return "world"; }
         public delegate void MyDelegateProgram();
         public delegate int MyDelegateProgram2(int a, int b );
         
@@ -167,6 +178,13 @@ namespace _09_Delegat
                         Delegate11 myDelegate11 = new Delegate11(Method11);
                         Delegate21 myDelegate21 = myDelegate11();
                         myDelegate21();
+                        break;
+                    }
+                case "13":
+                    {
+                        Functional functional = new Functional(MethodF);
+                        Delegate3a delegate3a = functional.Invoke(new Delegate1a(Method1a), new Delegate2a(Method2a));
+                        Console.WriteLine(delegate3a.Invoke());    
                         break;
                     }
                 default:
