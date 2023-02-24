@@ -8,10 +8,22 @@ using System.Threading.Tasks;
 
 namespace _09_Delegat
 {
+    public delegate Delegate21 Delegate11();
+    public delegate void Delegate21();
     internal class Program
     {
         public delegate void MyDelegateProgram();
         public delegate int MyDelegateProgram2(int a, int b );
+        
+        public static Delegate21 Method11()
+        {
+            return new Delegate21(Method21);
+        }
+        public static void Method21()
+        {
+            Console.WriteLine("Hello");
+        }
+
         public static void Method1()
         {
             Console.WriteLine("Method1");
@@ -27,6 +39,10 @@ namespace _09_Delegat
         public static void Method4()
         {
             Console.WriteLine("Method4");
+        }
+        public static string Method5(string name)
+        {
+            return name + " 5";
         }
         public class MyClass 
         {
@@ -51,6 +67,7 @@ namespace _09_Delegat
         }
         public delegate void MyDelegate();
         public delegate string MyDelegate2(string name);
+        public delegate void MyDelegate3(ref int a, ref int b, out int c);
         static void Main(string[] args)
         {
             MyDelegate myDelegate = new MyDelegate(MyClass.Method);
@@ -121,6 +138,35 @@ namespace _09_Delegat
                         MyDelegateProgram2 myDelegateProgram8 = delegate (int a, int b) { return a + b; };
                         sum = myDelegateProgram8(x, y);
                         Console.WriteLine("{0} + {1} = {2}", x, y, sum);
+                        break;
+                    }
+                case "9":
+                    {
+                        int sum1 = 1, sum2 = 2, sum;
+                        MyDelegate3 myDelegate33 = delegate (ref int a, ref int b, out int c) { a++; b++; c = a + b; };
+                        myDelegate33(ref sum1, ref sum2, out sum);
+                        Console.WriteLine("{0} + {1} = {2}", sum1, sum2, sum);
+                        break;
+                    }
+                case "10":
+                    {
+                        string text2 = "text";
+                        MyDelegate2 myDelegate22 = x => { return x + " text"; };
+                        Console.WriteLine(myDelegate22(text2));
+                        break;
+                    }
+                case "11":
+                    {
+                        string text3 = "method";
+                        MyDelegate2 myDelegate2Text = new MyDelegate2(Method5);
+                        Console.WriteLine(myDelegate2Text(text3));
+                        break;
+                    }
+                case "12":
+                    {
+                        Delegate11 myDelegate11 = new Delegate11(Method11);
+                        Delegate21 myDelegate21 = myDelegate11();
+                        myDelegate21();
                         break;
                     }
                 default:
