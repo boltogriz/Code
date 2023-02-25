@@ -15,6 +15,7 @@ namespace _09_Delegat
     public delegate string Delegate1a();
     public delegate string Delegate2a();
     public delegate string Delegate3a();
+    public delegate void MyDelegate14(int argument);
     internal class Program
     {
         public static Delegate3a MethodF(Delegate1a delegate1a, Delegate2a delegate2a)
@@ -182,9 +183,27 @@ namespace _09_Delegat
                     }
                 case "13":
                     {
-                        Functional functional = new Functional(MethodF);
+                        //Functional functional = new Functional(MethodF);
+                        Functional functional = MethodF;
                         Delegate3a delegate3a = functional.Invoke(new Delegate1a(Method1a), new Delegate2a(Method2a));
                         Console.WriteLine(delegate3a.Invoke());    
+                        break;
+                    }
+                case "14":
+                    {
+                        MyDelegate14 my14 = null;
+                        my14 = (int i) =>
+                        {
+                            i--;
+                            Console.WriteLine("Begin {0} ", i);
+                            if (i > 0)
+                            {
+                                my14(i);
+                            }
+                            
+                            Console.WriteLine("End {0} ", i);
+                        };
+                        my14(3);
                         break;
                     }
                 default:
