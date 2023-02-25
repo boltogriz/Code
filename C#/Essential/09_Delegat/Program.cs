@@ -35,6 +35,13 @@ namespace _09_Delegat
         {
             Console.WriteLine("Hello");
         }
+        static int Factorial (int n)
+        {
+            if (n == 0)
+                return 1;
+            else
+                return n * Factorial(n - 1);
+        }
 
         public static void Method1()
         {
@@ -204,6 +211,12 @@ namespace _09_Delegat
                             Console.WriteLine("End {0} ", i);
                         };
                         my14(3);
+                        break;
+                    }
+                case "15":
+                    {
+                        int factorial = Factorial(4);
+                        Console.WriteLine(factorial);
                         break;
                     }
                 default:
