@@ -44,9 +44,9 @@ namespace _10_Universal_Type
 
             Console.WriteLine(new string('-', 20));
 
-            Circle circle = new Circle();
-            IContainer<Shape> container = new Container<Circle>(circle);
-            Console.WriteLine(container.Figure.ToString());
+            Shape shape = new Circle();
+            IContainer<Circle> container = new Container<Shape>(shape);
+            Console.WriteLine(container.ToString());
 
             Console.ReadKey();
         }

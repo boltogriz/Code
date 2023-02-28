@@ -8,9 +8,9 @@ namespace _10_Universal_Type
 {
     public abstract class Shape {}
     public class Circle : Shape { }
-    public interface IContainer<out T>
+    public interface IContainer<in T>
     {
-        T Figure { get; }
+        T Figure { set; }
     }
     public class Container<T> : IContainer<T> 
     {
@@ -22,7 +22,11 @@ namespace _10_Universal_Type
         }
         public T Figure
         { 
-            get { return figure; } 
+            set { figure = value; } 
+        }
+        public override string ToString()
+        {
+            return figure.GetType().ToString();
         }
     }
 }
