@@ -23,7 +23,6 @@ namespace _10_Universal_Type
         public T Figure
         { 
             get { return figure; } 
-            set { figure = value; }
         }
     }
 }
