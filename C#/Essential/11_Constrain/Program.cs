@@ -8,6 +8,9 @@ namespace _11_Constrain
 {
     internal class Program
     {
+        class Base { }
+        class Derived : Base { }
+        class MyClass3<T> where T : Base { }
         class MyClass1<T> where T : class
         {
             public T vaiable;
@@ -34,6 +37,7 @@ namespace _11_Constrain
             MyClass2<TestClass> instance1 = new MyClass2<TestClass>();
             instance1.instance.MyStr = "TestClass in MyClass1";
             instance1.GetStr();
+            MyClass3<Derived> instance3 = new MyClass3<Derived>();
             Console.ReadKey();
         }
     }
