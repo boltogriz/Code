@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,20 @@ namespace _11_Constrain
             instance1.instance.MyStr = "TestClass in MyClass1";
             instance1.GetStr();
             MyClass3<Derived> instance3 = new MyClass3<Derived>();
+            Console.WriteLine(new string('-', 20));
+            
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(1);
+            arrayList.Add((object)2);
+            int i1 = (int)arrayList[0];
+            for (int i =0; i < arrayList.Count; i++) 
+            {
+                Console.WriteLine((int)arrayList[i]);
+            }
+            List<int> list = new List<int>();
+            list.Add(3);
+            list.Add(4);
+
             Console.ReadKey();
         }
     }
