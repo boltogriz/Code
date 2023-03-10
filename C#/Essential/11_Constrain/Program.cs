@@ -52,7 +52,7 @@ namespace _11_Constrain
             List<int> list = new List<int>();
             list.Add(3);
             list.Add(4);
-
+            //задержка
             Console.ReadKey();
         }
     }
