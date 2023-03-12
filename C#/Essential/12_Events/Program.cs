@@ -9,19 +9,31 @@ namespace _12_Events
     public delegate void EventDelegate();
     public delegate void EvetDelegateSeeMs();
     public delegate void EvetDelegateObject();
+    public delegate void EvetDelegateObject2();
     public class MyClass
     {
         public event EventDelegate MyEvent = null;
         public event EvetDelegateSeeMs SeeMs = null;
         public event EvetDelegateObject EventObject = null;
+        EvetDelegateObject2 eventObject2 = null;
+        public event EvetDelegateObject2 EventObject2
+        {
+            add { eventObject2 += value; }
+            remove { eventObject2 -= value; }
+        }
         public void InvokeEvent()
         {
             MyEvent.Invoke();
         }
+        public void InvokeEvent2()
+        {
+            eventObject2.Invoke();
+            Console.WriteLine("Event2");
+        }
         public void InvokeEventSee()
         {
             SeeMs();
-        }        
+        }
         public void InvokeEventObject(object instance)
         {
             if (instance.GetType().ToString() == "_12_Events.MyClassEvent")
@@ -54,10 +66,52 @@ namespace _12_Events
         static private void HandlerSee()
         {
             Console.WriteLine("Привет, тетя");
-        }        
+        }
         static private void HandlerObject()
         {
             Console.WriteLine("Привет, объект");
+        }
+        static private void ColorDefault()
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+        }
+
+        static private void PressKeyA_Handler()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine();
+            Console.WriteLine("     ");
+            Console.WriteLine("   *   ");
+            Console.WriteLine("  * *  ");
+            Console.WriteLine(" ***** ");
+            Console.WriteLine("*     *");
+            Console.WriteLine();
+            ColorDefault();
+        }
+        static private void PressKeyB_Handler()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine();
+            Console.WriteLine("     ");
+            Console.WriteLine(" ****  ");
+            Console.WriteLine(" *    *");
+            Console.WriteLine(" ******");
+            Console.WriteLine(" *    *");
+            Console.WriteLine(" ***** ");
+            Console.WriteLine();
+            ColorDefault();
+        }
+        static private void PressKeyC_Handler()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine();
+            Console.WriteLine("     ");
+            Console.WriteLine(" ****  ");
+            Console.WriteLine(" *     ");
+            Console.WriteLine(" *     ");
+            Console.WriteLine(" ****  ");
+            Console.WriteLine();
+            ColorDefault();
         }
         static void Main(string[] args)
         {
@@ -69,9 +123,9 @@ namespace _12_Events
             Console.WriteLine(new String('-', 20));
 
             instance.MyEvent -= new EventDelegate(Handler1);
+            instance.EventObject2 += new EvetDelegateObject2(Handler1);
             instance.InvokeEvent();
-
-
+            instance.InvokeEvent2();
 
             Console.WriteLine(new String('-', 20));
 
@@ -84,7 +138,16 @@ namespace _12_Events
             MyClassEvent myClassEvent = new MyClassEvent();
             myClassEvent.Show(instance);
 
+            Console.WriteLine(new String('-', 20));
+
+            Key key = new Key();
+            key.PressKeyA += PressKeyA_Handler;
+            key.PressKeyB += PressKeyB_Handler;
+            key.PressKeyC += PressKeyC_Handler;
+            key.Start();
+
             Console.ReadKey();
+
         }
     }
 }
