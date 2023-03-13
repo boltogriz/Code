@@ -113,6 +113,10 @@ namespace _12_Events
             Console.WriteLine();
             ColorDefault();
         }
+        static private void HandlerForEventA()
+        {
+            Console.WriteLine("Обработал событие А");
+        }
         static void Main(string[] args)
         {
             MyClass instance = new MyClass();
@@ -145,6 +149,24 @@ namespace _12_Events
             key.PressKeyB += PressKeyB_Handler;
             key.PressKeyC += PressKeyC_Handler;
             key.Start();
+
+            Console.WriteLine(new String('-', 20));
+
+            DerivedClass derivedClass = new DerivedClass();
+            derivedClass.MyEvent += Handler1;
+            derivedClass.MyEvent += Handler1;
+            derivedClass.MyEvent += Handler1;
+            derivedClass.MyEvent += Handler1;
+            derivedClass.MyEvent -= Handler1;
+            derivedClass.InvokeEvent();
+
+            Console.WriteLine(new String('-', 20));
+
+            EventA eventA = new EventA();
+            eventA.delegateEventA += HandlerForEventA;
+            eventA.DelegateEventB += HandlerForEventA;
+            eventA.InvokeEvent();
+            eventA.InvokeEventB();
 
             Console.ReadKey();
 
