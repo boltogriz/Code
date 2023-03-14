@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using _12_Events.Form1Event;
 
 namespace _12_Events
 {
@@ -119,6 +121,11 @@ namespace _12_Events
         }
         static void Main(string[] args)
         {
+            Form1Event.Timer timer = new Form1Event.Timer();
+            
+            Form1 form = new Form1();
+            Application.Run(timer);
+            Application.Run(form);
             MyClass instance = new MyClass();
             instance.MyEvent += new EventDelegate(Handler1);
             instance.MyEvent += Handler2;
