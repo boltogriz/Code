@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_Constrain", "11_Constrai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Events", "12_Events\12_Events.csproj", "{413903AB-D860-4D58-9D1C-29F87C217471}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{C7E8A106-7B7D-4401-A769-BDADBCF054D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{BE923538-A36E-47F0-8A1B-4C5523C2124C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{413903AB-D860-4D58-9D1C-29F87C217471}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{413903AB-D860-4D58-9D1C-29F87C217471}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{413903AB-D860-4D58-9D1C-29F87C217471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E8A106-7B7D-4401-A769-BDADBCF054D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E8A106-7B7D-4401-A769-BDADBCF054D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E8A106-7B7D-4401-A769-BDADBCF054D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E8A106-7B7D-4401-A769-BDADBCF054D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE923538-A36E-47F0-8A1B-4C5523C2124C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE923538-A36E-47F0-8A1B-4C5523C2124C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE923538-A36E-47F0-8A1B-4C5523C2124C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE923538-A36E-47F0-8A1B-4C5523C2124C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

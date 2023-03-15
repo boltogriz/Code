@@ -121,11 +121,16 @@ namespace _12_Events
         }
         static void Main(string[] args)
         {
+
+            
             Form1Event.Timer timer = new Form1Event.Timer();
             
             Form1 form = new Form1();
+
+            
             Application.Run(timer);
             Application.Run(form);
+
             MyClass instance = new MyClass();
             instance.MyEvent += new EventDelegate(Handler1);
             instance.MyEvent += Handler2;
