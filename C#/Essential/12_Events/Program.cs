@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using _12_Events.Form1Event;
+using System.Threading;
 
 namespace _12_Events
 {
@@ -119,17 +120,21 @@ namespace _12_Events
         {
             Console.WriteLine("Обработал событие А");
         }
+        static void ThreadFunction()
+        {
+            Form1Event.Timer timer = new Form1Event.Timer();
+
+            Form1 form = new Form1();
+
+            Application.Run(timer);
+            Application.Run(form);
+        }
         static void Main(string[] args)
         {
 
-            
-            Form1Event.Timer timer = new Form1Event.Timer();
-            
-            Form1 form = new Form1();
-
-            
-            Application.Run(timer);
-            Application.Run(form);
+            ThreadStart threadStart = new ThreadStart(ThreadFunction);
+            Thread thread = new Thread(threadStart);
+            thread.Start();
 
             MyClass instance = new MyClass();
             instance.MyEvent += new EventDelegate(Handler1);
