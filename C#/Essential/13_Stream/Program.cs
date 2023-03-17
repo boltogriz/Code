@@ -10,6 +10,7 @@ namespace _13_Stream
     {
         static void Main(string[] args)
         {
+            //
         }
     }
 }
