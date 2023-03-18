@@ -25,7 +25,7 @@ namespace _13_Stream
             {
                 Console.WriteLine("Primary");
             }
-            //
+            // --
             Console.ReadKey();
         }
     }
