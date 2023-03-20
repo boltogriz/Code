@@ -14,6 +14,7 @@ namespace Threads
             int counter = 0;
             while (counter < 10)
             {
+                Thread.Sleep(500);
                 Console.WriteLine("Thread ID {0}, counter = {1}", Thread.CurrentThread.GetHashCode(), counter);
                 counter++;
             }
