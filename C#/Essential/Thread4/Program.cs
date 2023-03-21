@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Security.Policy;
 
 namespace Thread4
 {
@@ -18,7 +19,16 @@ namespace Thread4
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    Console.WriteLine("Поток # {0}: шаг {1}", hash, i);
+                    Console.WriteLine("1) Поток # {0}: шаг {1}", hash, i);
+                    Thread.Sleep(100);
+                }
+                Console.WriteLine(new String('-', 20));
+            }
+            lock (block)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine("2) Поток # {0}: шаг {1}", hash, i);
                     Thread.Sleep(100);
                 }
                 Console.WriteLine(new String('-', 20));
@@ -32,9 +42,8 @@ namespace Thread4
         static void Main(string[] args)
         {
             MyClass instance = new MyClass();
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
-
                 new Thread(instance.Method).Start();
                 //instance.Method();
             }
