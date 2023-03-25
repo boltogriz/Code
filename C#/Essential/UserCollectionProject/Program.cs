@@ -25,6 +25,9 @@ namespace UserCollectionProject
             //}
             //
             //
+            IEnumerable enumerl2 = Col2.Power();
+            foreach (int element in enumerl2)
+                Console.WriteLine(element);
             Console.ReadKey();
         }
     }

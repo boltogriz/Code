@@ -14,4 +14,11 @@ namespace UserCollectionProject
             yield return "Hellow world!";
         }
     }
+    public class Col2
+    {
+        public static IEnumerable Power()
+        {
+            yield return 32;
+        }
+    }
 }
