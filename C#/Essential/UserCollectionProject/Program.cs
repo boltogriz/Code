@@ -23,6 +23,7 @@ namespace UserCollectionProject
             //    String element = enumerator.Current as String;
             //    Console.WriteLine(element);
             //}
+            //
             Console.ReadKey();
         }
     }
