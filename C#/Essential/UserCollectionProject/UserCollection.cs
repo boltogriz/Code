@@ -19,6 +19,9 @@ namespace UserCollectionProject
         public static IEnumerable Power()
         {
             yield return 32;
+            yield return 33;
+            yield break;
+            yield return 34;
         }
     }
 }
