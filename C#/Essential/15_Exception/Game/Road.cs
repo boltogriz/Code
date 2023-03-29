@@ -24,6 +24,7 @@ namespace _15_Exception
         {
             this.left = left;
             this.top = top;
+            
         }
 
         public void Movie()
@@ -31,6 +32,23 @@ namespace _15_Exception
             Thread th = new Thread(DrawStrips);
             th.Start();
             th.IsBackground = true;
+            //Thread th2 = new Thread(DrawRoad);
+            //th2.Start();
+        }
+        void DrawRoad()
+        {
+            while (true)
+            {
+                Thread.Sleep(this.speed);
+                Console.SetCursorPosition(left, top);
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.WriteLine("                        ");
+            }
+            //Console.ForegroundColor = ConsoleColor.Blue;
+            //while(true)
+            //{
+            //    Console.WriteLine(new string(' ', left + 35));
+            //}
         }
 
         void DrawStrips()
@@ -41,7 +59,6 @@ namespace _15_Exception
                 {
                     for (int c = 0; c < 3; c++)
                     {
-                        top = c;
 
                         // Очистка старой полосы
                         for (int j = 0; j < 45; j++)

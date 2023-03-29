@@ -84,6 +84,7 @@ namespace _15_Exception
         }
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.Green;
             Console.Title = "Car";
             Console.SetWindowSize(100, 50);
             Console.CursorVisible = true;
