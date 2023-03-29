@@ -22,7 +22,7 @@ namespace _15_Exception
             }
             catch (Exception e)
             {
-                throw new Exception("Это внешнее исключение!", e);
+                throw new Exception("Это внешнее исключение exception!", e);
             }
         }
     }
@@ -35,6 +35,7 @@ namespace _15_Exception
     }
     class MyClass
     {
+
         public void MyMethod()
         {
             Exception ex = new Exception("Мое исключение");
@@ -45,10 +46,97 @@ namespace _15_Exception
             throw ex;
         }
     }
+    class MyClass2
+    {
+        public void Method()
+        {
+            Console.WriteLine("MyClass2");
+        }
+    }
+    class MyExceptionA : Exception
+    {
+        public MyExceptionA(string message)
+            : base(message)
+        {
+
+        }
+    }
+    class MyExceptionB : MyExceptionA
+    {
+        public MyExceptionB(string message)
+            : base(message) 
+        { 
+        }
+    }
     internal class Program
     {
+        public static void Method()
+        {
+            int[] arr = new int[10];
+            Console.WriteLine(arr);
+            Method();
+        }
+        public static void Method2()
+        {
+            int[] arr = new int[100000000];
+            Console.WriteLine(arr);
+            Method2();
+        }
         static void Main(string[] args)
         {
+            Console.Title = "Car";
+            Console.SetWindowSize(100, 50);
+            Console.CursorVisible = true;
+            Game game = new Game();
+            game.Run();
+            try
+            {
+                //throw new MyExceptionB("MyExceptionB");
+                //throw new MyExceptionA("MyExceptionA");
+                throw new Exception("Exception");
+            }
+            catch (MyExceptionB ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (MyExceptionA ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //MyClass2 myClass2 = null;
+            //myClass2.Method();
+            try
+            {
+                //throw null;
+            }
+            catch(NullReferenceException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            try 
+            {
+                //Method2();
+                //Method();
+                Action meth = null;
+                meth = () => {
+                    Console.WriteLine("!!");
+                    meth.Invoke();
+                };
+                //meth();
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally 
+            {
+                Console.WriteLine("finally");
+                Console.WriteLine(new string('-', 20));
+            }
             ClassWithException instance2 = new ClassWithException();
             //instance2.CatchInner();
             try 
@@ -74,7 +162,7 @@ namespace _15_Exception
                 { 
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    FileStream fs = File.Open(@"C:\NonExistenFile.log", FileMode.Open);
+                    FileStream fs = File.Open(@"C:\NonExistentFile.log", FileMode.Open);
                 }
                 catch (Exception exception)
                 {
@@ -90,7 +178,7 @@ namespace _15_Exception
             //int a = 1, n = 2;
             try
             {
-                //throw new Exception("My exeption");
+                //throw new Exception("My exception");
                 MyClass instance = new MyClass();
                 instance.MyMethod();
                 //a = a / (2 - n);
@@ -98,7 +186,7 @@ namespace _15_Exception
             }
             catch (Exception e)
             {
-                //Console.WriteLine("Оброботка исключения.");
+                //Console.WriteLine("Обработка исключения.");
                 //Console.WriteLine(e.Message);
                 //Console.WriteLine(e.GetType());
                 Console.WriteLine("Имя члена:               {0}", e.TargetSite);

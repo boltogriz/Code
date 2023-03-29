@@ -44,6 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game\Car.cs" />
+    <Compile Include="Game\CarBody.cs" />
+    <Compile Include="Game\EngineBase.cs" />
+    <Compile Include="Game\EngineToyta.cs" />
+    <Compile Include="Game\Engine.cs" />
+    <Compile Include="Game\EngineIsDeadException.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\IBaseEngine.cs" />
+    <Compile Include="Game\Road.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
