@@ -1,4 +1,4 @@
-﻿using Prototype.Pattern;
+﻿ using Prototype.Pattern;
 using System;
 using System.Collections.Generic;
 using System.Linq;
