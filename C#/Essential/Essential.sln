@@ -77,6 +77,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operators", "Operators\Oper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explicit", "Explicit\Explicit.csproj", "{433B33A7-4C69-4F27-B03F-C64C23CA0135}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17_Anonim", "17_Anonim\17_Anonim.csproj", "{F4F13C09-1EE8-469C-A88A-67AEE30CB66C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -211,6 +213,10 @@ Global
 		{433B33A7-4C69-4F27-B03F-C64C23CA0135}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{433B33A7-4C69-4F27-B03F-C64C23CA0135}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{433B33A7-4C69-4F27-B03F-C64C23CA0135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F13C09-1EE8-469C-A88A-67AEE30CB66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F13C09-1EE8-469C-A88A-67AEE30CB66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F13C09-1EE8-469C-A88A-67AEE30CB66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F13C09-1EE8-469C-A88A-67AEE30CB66C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
