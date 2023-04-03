@@ -23,7 +23,7 @@ namespace LINQ
                 {
                     FirstName = "first",
                     LastName = "Ivanov",
-                    Salary = 10000,
+                    Salary = 9000,
                     Date = DateTime.Parse("1/4/1999")
                 },
                 new Employee
@@ -37,7 +37,7 @@ namespace LINQ
                 {
                     FirstName = "first",
                     LastName = "Sidorov",
-                    Salary = 10000,
+                    Salary = 8000,
                     Date = DateTime.Parse("1/4/1999")
                 },
             };
@@ -47,6 +47,19 @@ namespace LINQ
                 Console.WriteLine(employees[i].LastName);
             }
             Console.WriteLine(employees.Last().LastName);
+            var query = from employee in employees
+                        where employee.Salary > 9000
+                        orderby employee.LastName, employee.FirstName
+                        select new
+                        {
+                            LastName = employee.LastName,
+                            FirstName = employee.FirstName
+                        };
+            Console.WriteLine("Высокооплачиваемые сотрудники: ");
+            foreach( var item in query ) 
+            {
+                Console.WriteLine("{0} {1}", item.LastName, item.FirstName);
+            }
             Console.ReadKey();
         }
     }
