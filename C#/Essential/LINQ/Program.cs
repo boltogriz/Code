@@ -23,7 +23,7 @@ namespace LINQ
                 {
                     FirstName = "first",
                     LastName = "Ivanov",
-                    Salary = 9000,
+                    Salary = 9500,
                     Date = DateTime.Parse("1/4/1999")
                 },
                 new Employee
@@ -60,6 +60,26 @@ namespace LINQ
             {
                 Console.WriteLine("{0} {1}", item.LastName, item.FirstName);
             }
+
+            //
+
+            var query2 = employees
+                         .Where(emp => emp.Salary > 9000)
+                         .OrderBy(emp => emp.FirstName)
+                         .OrderBy(emp => emp.LastName)
+                         .Select(emp => new
+                         {
+                             LastName = emp.LastName,
+                             FirstName = emp.FirstName
+                         });
+            Console.WriteLine(new String('-',20));
+            foreach(var item in query2)
+                Console.WriteLine("{0} {1}", item.LastName, item.FirstName);
+
+            //
+            int[] numbers = { 4, 7, 10 };
+            int product = numbers.Aggregate(1, (int interim, int next) => interim * next);
+            Console.WriteLine(product);   // output: 280
             Console.ReadKey();
         }
     }
