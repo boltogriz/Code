@@ -1,8 +1,10 @@
-﻿
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyClassSpae;
+
 
 namespace _18_SpaceName
 {
@@ -13,6 +15,7 @@ namespace _18_SpaceName
             //
             System.Console.WriteLine("Hello world");
             System.Console.ReadKey();
+            MyClass myClass = new MyClass();
         }
     }
 }
