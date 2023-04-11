@@ -85,6 +85,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18_SpaceName", "18_SpaceName\18_SpaceName.csproj", "{374A74A8-0863-4B61-9A8C-0045DB5F3990}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic", "Dynamic\Dynamic.csproj", "{63F87883-33AD-41FE-91E8-B357E2FC53F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic2", "Dynamic2\Dynamic2.csproj", "{282E1C4B-48F8-4172-A1EF-36C9D0121D87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -227,6 +231,10 @@ Global
 		{C88F0360-C206-40C5-B93A-069B2BD5F189}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C88F0360-C206-40C5-B93A-069B2BD5F189}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C88F0360-C206-40C5-B93A-069B2BD5F189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{374A74A8-0863-4B61-9A8C-0045DB5F3990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{374A74A8-0863-4B61-9A8C-0045DB5F3990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{374A74A8-0863-4B61-9A8C-0045DB5F3990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{374A74A8-0863-4B61-9A8C-0045DB5F3990}.Release|Any CPU.Build.0 = Release|Any CPU
 		{63F87883-33AD-41FE-91E8-B357E2FC53F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{63F87883-33AD-41FE-91E8-B357E2FC53F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63F87883-33AD-41FE-91E8-B357E2FC53F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
