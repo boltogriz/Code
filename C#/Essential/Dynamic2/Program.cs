@@ -22,6 +22,7 @@ namespace Dynamic2
         {
             foreach(dynamic item in UserCollection.Generator()) 
             {
+                //
                 Console.WriteLine("{0}, {1}", item.key, item.value);
             }
             Console.ReadKey();
