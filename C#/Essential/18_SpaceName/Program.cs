@@ -12,7 +12,7 @@ namespace _18_SpaceName
         {
             //
             System.Console.WriteLine("Hello world");
-            System.Console.ReadKey();
+            System.Console.WriteLine("2");
         }
     }
 }
