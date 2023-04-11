@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyClassSpae;
+//using MyClassSpae;
 
 
 namespace _18_SpaceName
 {
+    using MyClass1 = MyClassSpae.MyClass;
     internal class Program
     {
         static void Main(string[] args)
@@ -15,7 +16,7 @@ namespace _18_SpaceName
             //
             System.Console.WriteLine("Hello world");
             System.Console.ReadKey();
-            MyClass myClass = new MyClass();
+            MyClass1 myClass = new MyClass1();
         }
     }
 }
