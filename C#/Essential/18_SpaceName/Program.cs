@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace _18_SpaceName
 {
-    using MyClass1 = MyClassSpae.MyClass;
+    using MyClass = MyClassSpae.MyClass;
     internal class Program
     {
         static void Main(string[] args)
         {
-            //
+            // 
             System.Console.WriteLine("Hello world");
             System.Console.ReadKey();
-            MyClass1 myClass = new MyClass1();
+            MyClass myClass = new MyClass();
         }
     }
 }
