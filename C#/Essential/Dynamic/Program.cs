@@ -8,6 +8,7 @@ namespace Dynamic
 {
     internal class Program
     {
+        //
         static void Main(string[] args)
         {
             dynamic variable = 1;
