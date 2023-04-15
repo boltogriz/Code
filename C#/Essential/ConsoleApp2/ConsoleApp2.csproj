@@ -33,6 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClassLibrary2">
+      <HintPath>..\ClassLibrary2\bin\Debug\ClassLibrary2.dll</HintPath>
+    </Reference>
+    <Reference Include="Library1">
+      <HintPath>..\Library1\bin\Debug\Library1.dll</HintPath>
+      <Aliases>L1</Aliases>
+    </Reference>
+    <Reference Include="Library2">
+      <HintPath>..\Library2\bin\Debug\Library2.dll</HintPath>
+      <Aliases>L2</Aliases>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
+      <Project>{e923169f-d58b-449d-9c6a-95f3a95ab984}</Project>
+      <Name>ClassLibrary1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
