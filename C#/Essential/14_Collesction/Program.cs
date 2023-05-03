@@ -41,6 +41,7 @@ namespace _14_Collesction
         {
             UserCollection myCollection = new UserCollection();
             int[] arrays = { 1, 2, 3};
+            //asdf
             foreach (int element in arrays)
             {
                 Console.WriteLine("Name: {0} Field1: {1} Field2: {2}", element, element, element);
