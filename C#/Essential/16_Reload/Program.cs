@@ -16,7 +16,7 @@ namespace _16_Reload
     {
         public override string ToString()
         {
-            return "Hellow world1";
+            return "Hellow world1111";
         }
     }
     class Point : MyBaseClass
