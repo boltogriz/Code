@@ -19,6 +19,7 @@ namespace _14_Collesction
             name = s;
             field1 = a;
             field2 = b;
+            // test
         }
         public int Field1
         {
