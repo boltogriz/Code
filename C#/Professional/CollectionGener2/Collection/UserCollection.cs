@@ -7,7 +7,7 @@ using System.Collections;
 
 namespace CollectionGener2
 {
-    internal class UserCollection<T> : IEnumerable<T>, IEnumerator<T>
+    public class UserCollection<T>
     {
         readonly T[] elements = new T[4];
         public T this[int index]
@@ -18,44 +18,64 @@ namespace CollectionGener2
         int position = -1;
 
         //Реализация интерфейсов
-        T IEnumerator<T>.Current
+        //public T Current
+        //{
+        //    get { return elements[position]; }
+        //}
+        //public object Current
+        //{ 
+        //    get { return elements[position]; }
+        //}
+
+        public void Dispose()
         {
-            get { return elements[position]; }
-        }
-        object IEnumerator.Current
-        { 
-            get { return elements[position]; }
+            Reset();
         }
 
-        void IDisposable.Dispose()
-        {
-            ((IEnumerator)this).Reset();
-        }
+        //public bool MoveNext()
+        //{
+        //    if (position < elements.Length - 1)
+        //    {
+        //        position++;
+        //        return true;
+        //    }
+        //    ((IEnumerator)this).Reset();
+        //    return false;
+        //}
 
-        bool IEnumerator.MoveNext()
-        {
-            if (position < elements.Length - 1)
-            {
-                position++;
-                return true;
-            }
-            ((IEnumerator)this).Reset();
-            return false;
-        }
-
-        void IEnumerator.Reset()
+        public void Reset()
         {
             position = -1;
         }
 
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        public IEnumerator GetEnumerator()
         {
-            return this;
+            //while(true)
+            //{
+            //    if (position < elements.Length - 1 ) 
+            //    { 
+            //        position++;
+            //        yield return elements[position];
+            //    }
+            //    else
+            //    {
+            //        Reset();
+            //        yield break;
+            //    }
+            //}
+
+            //foreach (var element in elements)
+            //{
+            //    yield return element;
+            //}
+
+            return elements.GetEnumerator();
+
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return this;
-        }
+        //public IEnumerator GetEnumerator()
+        //{
+        //    return this;
+        //}
     }
 }
