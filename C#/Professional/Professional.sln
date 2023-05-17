@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionGener2", "Collect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionGener3", "CollectionGener3\CollectionGener3.csproj", "{66FD2137-14B8-4691-BDA8-599FF2BA662A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionUser", "CollectionUser\CollectionUser.csproj", "{333F7C58-AC0A-4C8D-916C-30674C9BC13D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollecttionUserGener", "CollecttionUserGener\CollecttionUserGener.csproj", "{676D9FF3-F2CE-4A66-967E-22A7570D8118}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{66FD2137-14B8-4691-BDA8-599FF2BA662A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66FD2137-14B8-4691-BDA8-599FF2BA662A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66FD2137-14B8-4691-BDA8-599FF2BA662A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{333F7C58-AC0A-4C8D-916C-30674C9BC13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333F7C58-AC0A-4C8D-916C-30674C9BC13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333F7C58-AC0A-4C8D-916C-30674C9BC13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333F7C58-AC0A-4C8D-916C-30674C9BC13D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{676D9FF3-F2CE-4A66-967E-22A7570D8118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676D9FF3-F2CE-4A66-967E-22A7570D8118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676D9FF3-F2CE-4A66-967E-22A7570D8118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676D9FF3-F2CE-4A66-967E-22A7570D8118}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +56,8 @@ Global
 		{34DA76F1-E21C-4B18-BC36-1B3A5D701E6A} = {53ED6536-F8D8-4A3F-86C3-539E100E492B}
 		{F293F1C7-572F-4FEA-81E0-6E5D5E674D45} = {53ED6536-F8D8-4A3F-86C3-539E100E492B}
 		{66FD2137-14B8-4691-BDA8-599FF2BA662A} = {53ED6536-F8D8-4A3F-86C3-539E100E492B}
+		{333F7C58-AC0A-4C8D-916C-30674C9BC13D} = {53ED6536-F8D8-4A3F-86C3-539E100E492B}
+		{676D9FF3-F2CE-4A66-967E-22A7570D8118} = {53ED6536-F8D8-4A3F-86C3-539E100E492B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}
