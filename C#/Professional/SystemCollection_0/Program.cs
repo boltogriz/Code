@@ -29,6 +29,20 @@ namespace SystemCollection_0
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine(new string('-',20));
+            for(int i = 0; i < list.Count; i++) 
+            {
+                Console.WriteLine(list[i]);
+            }
+
+            Console.WriteLine(new string('-',20));
+
+            IEnumerator enumerator = list.GetEnumerator();
+            while (enumerator.MoveNext()) 
+            {
+                Console.WriteLine(enumerator.Current);
+            }
+
             Console.ReadKey();
         }
     }
