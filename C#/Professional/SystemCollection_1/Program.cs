@@ -13,8 +13,8 @@ namespace SystemCollection_1
 
         public int Compare(object x, object y)
         {
-            //int result = comparer.Compare(y, x);
-            int result = (int)y - (int)x;
+            int result = comparer.Compare(y, x);
+            //int result = (int)y - (int)x;
             return result;
         }
     }
