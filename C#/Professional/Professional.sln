@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueDemo", "QueueDemo\Queu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackDemo", "StackDemo\StackDemo.csproj", "{6632968C-ADBC-4910-89DE-633BB9DBB7A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashtableDemo_01", "HashtableDemo_01\HashtableDemo_01.csproj", "{8C84CFC4-70F7-4A74-A178-6DE2FF45CACD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{6632968C-ADBC-4910-89DE-633BB9DBB7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6632968C-ADBC-4910-89DE-633BB9DBB7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6632968C-ADBC-4910-89DE-633BB9DBB7A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C84CFC4-70F7-4A74-A178-6DE2FF45CACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C84CFC4-70F7-4A74-A178-6DE2FF45CACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C84CFC4-70F7-4A74-A178-6DE2FF45CACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C84CFC4-70F7-4A74-A178-6DE2FF45CACD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{34AE5544-5C28-4771-AF04-09CD055F7CE9} = {3BC0966B-083B-4263-9E04-C0845A4F02AF}
 		{089A918F-3C40-4770-B8AA-21A5D369B26E} = {3BC0966B-083B-4263-9E04-C0845A4F02AF}
 		{6632968C-ADBC-4910-89DE-633BB9DBB7A7} = {3BC0966B-083B-4263-9E04-C0845A4F02AF}
+		{8C84CFC4-70F7-4A74-A178-6DE2FF45CACD} = {3BC0966B-083B-4263-9E04-C0845A4F02AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}
