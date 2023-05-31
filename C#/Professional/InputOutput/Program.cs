@@ -73,6 +73,29 @@ namespace InputOutput
 
                 switch (atrib)
                 {
+                    case "driver":
+                        {
+                            DriveInfo[] drives2 = DriveInfo.GetDrives();
+                            foreach(DriveInfo drive in drives2) 
+                            {
+                                Console.WriteLine("Driver: {0} Type: {1}", drive.Name, drive.DriveType);
+                            }
+                            break;
+                        }
+                    case "copy":
+                        {
+                            var file = new FileInfo(@"C:\Windows\notepad.exe");
+                            try
+                            {
+                                file.CopyTo(@"C:\Users\admin\source\repos\Code\C#\Professional\InputOutput\bin\Debug\notepad.exe");
+                                Console.WriteLine("copy successed");
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine(e.Message);
+                            }
+                            break;
+                        }
                     case "writetext":
                         {
                             var file = new FileInfo("Text.txt");
@@ -87,6 +110,19 @@ namespace InputOutput
                             }
                             writer.WriteLine(writer.NewLine);
                             writer.Close();
+
+                            var file2 = new FileStream("text2.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+                            var writer2 = new StreamWriter(file2, Encoding.GetEncoding(1251));
+                            writer2.WriteLine("Первая строка");
+                            writer2.WriteLine("Вторая строка");
+                            writer2.Close();
+                            StreamReader reader = File.OpenText("Text.txt");
+                            string input;
+                            while((input = reader.ReadLine()) != null) 
+                            {
+                                Console.WriteLine(input);
+                            }
+                            reader.Close();
                             break;
                         }
                     case "memory":
