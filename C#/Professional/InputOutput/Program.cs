@@ -135,6 +135,7 @@ namespace InputOutput
                             foreach(byte b in bytes3)
                                 Console.WriteLine(b);
                             Console.WriteLine(s3);
+                            reader3.Close();
                             
 
                             writer.Close();
