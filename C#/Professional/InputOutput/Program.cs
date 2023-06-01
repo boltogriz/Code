@@ -49,6 +49,23 @@ namespace InputOutput
     }
     internal class Program
     {
+        static void AppendToStream(Stream stream, byte[] data)
+        {
+            stream.Position = stream.Length;
+            stream.Write(data, 0, data.Length);
+        }
+        static void DumpStream(Stream stream)
+        {
+            stream.Position = 0;
+            while(stream.Position != stream.Length)
+            {
+                Console.WriteLine("{0:x3}", stream.ReadByte());
+            }
+        }
+        static public void WatcherChanged(object obj, FileSystemEventArgs e)
+        {
+            Console.WriteLine("WatcherChanged " + e.ChangeType + " " + e.FullPath);
+        }
         static void Main(string[] args)
         {
             Comands comands = new Comands();
@@ -68,15 +85,85 @@ namespace InputOutput
                     Console.WriteLine(stream.Position + "asdf");
                     stream.Position = 0;
                     stream.Close();
+                  
                 }
 
 
                 switch (atrib)
                 {
+                    case "open":
+                        {
+                            FileStream file = File.Open(@"Text.txt", FileMode.OpenOrCreate, FileAccess.Read);
+                            StreamReader reader = new StreamReader(file);
+                            Console.WriteLine(reader.ReadToEnd());
+                            Console.WriteLine(new string('-',20));
+                            file.Position = 0;
+                            while(!reader.EndOfStream) 
+                            { 
+                                string line = reader.ReadLine();
+                                if (line != null && line.Contains("Third"))
+                                {
+                                    Console.WriteLine("found Third");
+                                    break;
+                                }
+
+                            }
+                            Console.WriteLine(new string('-',20));
+                            reader.Close();
+                            reader = File.OpenText(@"Test.txt");
+                            Console.WriteLine(reader.ReadToEnd());
+                            reader.Close();
+
+                            Console.WriteLine(new string('-',20));
+
+                            FileStream file2 = File.Create(@"test2.txt");
+                            var writer = new BinaryWriter(file2);
+                            long number = 100;
+                            var bytes = new byte[] { 10, 20, 50, 100};
+                            string s = "hunger";
+                            writer.Write(number);
+                            writer.Write(bytes);
+                            writer.Write(s);
+                            writer.Close();
+
+                            FileStream file3 = File.Open(@"test2.txt", FileMode.Open);
+                            var reader3 = new BinaryReader(file3);
+                            long number3 = reader3.ReadInt64();
+                            byte[] bytes3 = reader3.ReadBytes(4);
+                            string s3 = reader3.ReadString();
+                            Console.WriteLine(number3);
+                            foreach(byte b in bytes3)
+                                Console.WriteLine(b);
+                            Console.WriteLine(s3);
+                            
+
+                            writer.Close();
+
+                            break;
+                        }
+                    case "streammemory":
+                        {
+                            Stream memory = new MemoryStream();
+                            AppendToStream(memory, new byte[] { 1, 2, 3, 4, 5});
+                            DumpStream(memory);
+                            memory.Close();
+                            break;
+                        }
+                    case "watcher":
+                        {
+
+                            var watcher = new FileSystemWatcher { Path = @"." };
+                            watcher.Created += new FileSystemEventHandler(WatcherChanged);
+                            watcher.Deleted += WatcherChanged;
+                            watcher.EnableRaisingEvents = true;
+                            var change = watcher.WaitForChanged(WatcherChangeTypes.All);
+                            Console.WriteLine(change.ChangeType);
+                            break;
+                        }
                     case "driver":
                         {
                             DriveInfo[] drives2 = DriveInfo.GetDrives();
-                            foreach(DriveInfo drive in drives2) 
+                            foreach (DriveInfo drive in drives2)
                             {
                                 Console.WriteLine("Driver: {0} Type: {1}", drive.Name, drive.DriveType);
                             }
@@ -118,7 +205,7 @@ namespace InputOutput
                             writer2.Close();
                             StreamReader reader = File.OpenText("Text.txt");
                             string input;
-                            while((input = reader.ReadLine()) != null) 
+                            while ((input = reader.ReadLine()) != null)
                             {
                                 Console.WriteLine(input);
                             }
@@ -155,7 +242,7 @@ namespace InputOutput
                             file.Position = 0;
                             for (var i = 0; i < 256; i++)
                             {
-                                Console.Write(" "+file.ReadByte());
+                                Console.Write(" " + file.ReadByte());
                             }
                             memory.Close();
                             file.Close();
