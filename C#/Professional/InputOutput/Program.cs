@@ -8,6 +8,8 @@ using System.ComponentModel.Design;
 using System.Collections;
 using System.Collections.Specialized;
 using System.Security.Cryptography.X509Certificates;
+using System.IO.Compression;
+using System.IO.IsolatedStorage;
 
 namespace InputOutput
 {
@@ -91,6 +93,66 @@ namespace InputOutput
 
                 switch (atrib)
                 {
+                    case "isolate":
+                        {
+                            IsolatedStorageFile machineStorage = IsolatedStorageFile.GetMachineStoreForAssembly();
+                            IsolatedStorageFile userStorage = IsolatedStorageFile.GetUserStoreForAssembly();
+                            IsolatedStorageFileStream userStream = new IsolatedStorageFileStream("UserSettings.set", FileMode.Create, userStorage);
+                            StreamWriter userWriter = new StreamWriter(userStream);
+                            userWriter.WriteLine("User Prefs...");
+                            userWriter.Close();
+                            string[] files = userStorage.GetFileNames("UserSettings.set");
+                            if(files.Length == 0)
+                            {
+                                Console.WriteLine("No data");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Yes data");
+                                userStream = new IsolatedStorageFileStream("UserSettings.set", FileMode.Open, userStorage);
+                                StreamReader userReader = new StreamReader(userStream);
+                                string contents = userReader.ReadToEnd();
+                                Console.WriteLine(contents);
+                                userStream.Close();
+                            }
+                            Console.WriteLine("end");
+                            break;
+                        }
+                    case "unzip":
+                        {
+                            FileStream source = File.OpenRead(@"archive.zip");
+                            Console.WriteLine(source.Name);
+                            FileStream destination = File.Create(@"Text_zip.txt");
+                            GZipStream deCompressor = new GZipStream(source, CompressionMode.Decompress);
+                            int theByte = deCompressor.ReadByte();
+                            while (theByte != -1)
+                            {
+                                Console.WriteLine(theByte);
+                                destination.WriteByte((byte)theByte);
+                                theByte = deCompressor.ReadByte();
+                            }
+                            deCompressor.Close();
+                            destination.Close();
+                            Console.WriteLine("end");
+                            break;
+                        }
+                    case "zip":
+                        {
+                            FileStream source = File.OpenRead(@"Text.txt");
+                            Console.WriteLine(source.Name);
+                            FileStream destination = File.Create(@"archive.zip");
+                            GZipStream compressor = new GZipStream(destination, CompressionMode.Compress);
+                            int theByte = source.ReadByte();
+                            while(theByte != -1) 
+                            { 
+                                Console.WriteLine(theByte);
+                                compressor.WriteByte((byte)theByte);
+                                theByte = source.ReadByte();
+                            }
+                            compressor.Close();
+                            Console.WriteLine("end");
+                            break;
+                        }
                     case "open":
                         {
                             FileStream file = File.Open(@"Text.txt", FileMode.OpenOrCreate, FileAccess.Read);
