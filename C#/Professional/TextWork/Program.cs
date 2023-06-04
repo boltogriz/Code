@@ -23,6 +23,8 @@ namespace TextWork
                     Jack and Jill
                     Went up the hill...";
             Console.WriteLine(s4 + s);
+            string s5 = String.Format("myS = {0:x} - Вывод", s);
+            Console.WriteLine(s5);
             Console.ReadKey();
         }
     }
