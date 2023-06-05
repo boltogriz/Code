@@ -23,17 +23,17 @@ namespace Labirint
             string way;
             string east = Direction.East.ToString();
             bool room1Done = false;
-            bool room2Done = false;
+            //bool room2Done = false;
             int currentRoom = 1;
             int nextRoom = 2;
 
-            int numberRoom = 1;
+            //int numberRoom = 1;
             MapSite side;
             while (true)
             {   
                 if (room1Done == false) 
                 {
-                    numberRoom = 1;
+                    //numberRoom = 1;
                     Console.WriteLine("Ты вошел в первую комнату");
                 }
                 room1Done = true;
@@ -46,7 +46,7 @@ namespace Labirint
                         if (side is Door)
                         {
                             room1Done = true;
-                            numberRoom = 2;
+                            //numberRoom = 2;
                             SwitchRoom(ref currentRoom, ref nextRoom);
                             
                             Console.WriteLine($"Ты вошел в {currentRoom} комнату");
@@ -58,7 +58,7 @@ namespace Labirint
                         if (side is Door)
                         {
                             room1Done = true;
-                            numberRoom = 2;
+                            //numberRoom = 2;
                             SwitchRoom(ref currentRoom, ref nextRoom);
                             Console.WriteLine($"Ты вошел в {currentRoom} комнату");
                         }
@@ -69,7 +69,7 @@ namespace Labirint
                         if (side is Door)
                         {
                             room1Done = true;
-                            numberRoom = 2;
+                            //numberRoom = 2;
                             SwitchRoom(ref currentRoom, ref nextRoom);
                             Console.WriteLine($"Ты вошел в {currentRoom} комнату");
                         }
@@ -80,7 +80,7 @@ namespace Labirint
                         if (side is Door)
                         {
                             room1Done = true;
-                            numberRoom = 2;
+                            //numberRoom = 2;
                             SwitchRoom(ref currentRoom, ref nextRoom);
                             Console.WriteLine($"Ты вошел в {currentRoom} комнату");
                         }
@@ -91,7 +91,7 @@ namespace Labirint
                 }
             }
 
-            Console.ReadKey();
+            //Console.ReadKey();
 
         }
     }
