@@ -9,6 +9,8 @@ namespace Labirint
 {
     internal class Program
     { 
+        static void ShowText()
+        { Console.WriteLine("ShowText"); }
         static void SwitchRoom(ref int currentRoom, ref int nextRoom )
         {
             int prom = currentRoom;
@@ -29,6 +31,7 @@ namespace Labirint
 
             //int numberRoom = 1;
             MapSite side;
+            ShowText();
             while (true)
             {   
                 if (room1Done == false) 
