@@ -11,7 +11,7 @@ namespace Labirint
     { 
         static void alt6()
         {
-            Console.WriteLine();
+            Console.WriteLine("alt5");
         }
         static void m4()
         {
