@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace Labirint
 {
+    enum SideVale
+    {
+        North,
+        West,
+        East,
+        Sourth
+    }
     internal class Program
     { 
         static void alt7()
@@ -62,6 +69,11 @@ namespace Labirint
         }
         static void Main(string[] args)
         {
+            Console.WriteLine(typeof(SideVale));
+            foreach (var item in Enum.GetValues(typeof(SideVale)))
+            {
+                Console.WriteLine(item);
+            }
             MazeGame mazeGame = new MazeGame();
             var maze = mazeGame.CreateMaze();
 
@@ -83,10 +95,38 @@ namespace Labirint
                     Console.WriteLine("Ты вошел в первую комнату");
                 }
                 room1Done = true;
-                way = Console.ReadLine().ToString();
-                switch (way)
+                SideVale wayEnum = 0;
+
+                bool isWayNotSelect = true;
+                while (isWayNotSelect)
                 {
-                    case "north":
+                    way = Console.ReadLine().ToString();
+                    switch (way.ToLower())
+                    {
+                        case "north":
+                            wayEnum = SideVale.North;
+                            isWayNotSelect = false;
+                            break;
+                        case "west":
+                            wayEnum = SideVale.West;
+                            isWayNotSelect = false;
+                            break;
+                        case "east":
+                            wayEnum = SideVale.East;
+                            isWayNotSelect = false;
+                            break;
+                        case "sourth":
+                            wayEnum = SideVale.Sourth;
+                            isWayNotSelect = false;
+                            break;
+                        default:
+                            Console.WriteLine("неправильная команды");
+                            break;
+                    }
+                }
+                switch (wayEnum)
+                {
+                    case SideVale.North:
                         maze.RoomNo(currentRoom).GetSide(Direction.North).Enter();
                         side = maze.RoomNo(currentRoom).GetSide(Direction.North);
                         if (side is Door)
@@ -98,7 +138,7 @@ namespace Labirint
                             Console.WriteLine($"Ты вошел в {currentRoom} комнату");
                         }
                         break;
-                    case "west":
+                    case SideVale.West:
                         maze.RoomNo(currentRoom).GetSide(Direction.West).Enter();
                         side = maze.RoomNo(currentRoom).GetSide(Direction.West);
                         if (side is Door)
@@ -109,7 +149,7 @@ namespace Labirint
                             Console.WriteLine($"Ты вошел в {currentRoom} комнату");
                         }
                         break;
-                    case "east":
+                    case SideVale.East:
                         maze.RoomNo(currentRoom).GetSide(Direction.East).Enter();
                         side = maze.RoomNo(currentRoom).GetSide(Direction.East);
                         if (side is Door)
@@ -120,7 +160,7 @@ namespace Labirint
                             Console.WriteLine($"Ты вошел в {currentRoom} комнату");
                         }
                         break;
-                    case "sourth":
+                    case SideVale.Sourth:
                         maze.RoomNo(currentRoom).GetSide(Direction.South).Enter();
                         side = maze.RoomNo(currentRoom).GetSide(Direction.South);
                         if (side is Door)
