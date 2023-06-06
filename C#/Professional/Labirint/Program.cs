@@ -11,10 +11,7 @@ namespace Labirint
     { 
         static void Alt()
         { System.Console.WriteLine("Alt"); }
-        static void MainShow()
-        {
-            Console.WriteLine("MainSHow()");
-        }
+
         static void Show3()
         {
             Console.WriteLine("SHOW3");
