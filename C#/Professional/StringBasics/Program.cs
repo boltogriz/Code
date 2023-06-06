@@ -22,7 +22,7 @@ namespace StringBasics
             Console.WriteLine(stringCOmplex);
 
             Console.WriteLine("\nОтладочный вывод:\n{0:TEST}", complex);
-
+            //
             Console.ReadKey();
         }
     }
