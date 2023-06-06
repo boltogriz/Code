@@ -9,6 +9,8 @@ namespace Labirint
 {
     internal class Program
     { 
+        static void Show2()
+        { Console.WriteLine("Show2"); }
         static void ShowText()
         { Console.WriteLine("ShowText"); }
         static void SwitchRoom(ref int currentRoom, ref int nextRoom )
