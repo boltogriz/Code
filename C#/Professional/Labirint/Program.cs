@@ -9,6 +9,10 @@ namespace Labirint
 {
     internal class Program
     { 
+        static void MainShow()
+        {
+            Console.WriteLine("MainShow2");
+        }
         static void Alt2()
         { System.Console.WriteLine("alt2"); }
         static void Alt()
