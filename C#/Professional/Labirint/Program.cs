@@ -9,7 +9,7 @@ namespace Labirint
 {
     internal class Program
     { 
-        static void alt6()
+        static void alt7()
         {
 
         }
