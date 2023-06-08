@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encoding_01", "Encoding_01\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions", "RegularExpressions\RegularExpressions.csproj", "{73F0026A-B5A7-4BD0-9DBE-139266CBC9C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions2", "RegularExpressions2\RegularExpressions2.csproj", "{4E24EAE0-A2B5-483E-9962-B88F4B95D716}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -229,6 +231,10 @@ Global
 		{73F0026A-B5A7-4BD0-9DBE-139266CBC9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73F0026A-B5A7-4BD0-9DBE-139266CBC9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73F0026A-B5A7-4BD0-9DBE-139266CBC9C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E24EAE0-A2B5-483E-9962-B88F4B95D716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E24EAE0-A2B5-483E-9962-B88F4B95D716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E24EAE0-A2B5-483E-9962-B88F4B95D716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E24EAE0-A2B5-483E-9962-B88F4B95D716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -269,6 +275,7 @@ Global
 		{D0083D26-0EB9-490D-9905-995F2F001674} = {9B522BF7-D9C3-47DB-8D09-E6BC29782736}
 		{115DE422-92A0-4206-A628-9AED276FC74E} = {9B522BF7-D9C3-47DB-8D09-E6BC29782736}
 		{73F0026A-B5A7-4BD0-9DBE-139266CBC9C2} = {9B522BF7-D9C3-47DB-8D09-E6BC29782736}
+		{4E24EAE0-A2B5-483E-9962-B88F4B95D716} = {9B522BF7-D9C3-47DB-8D09-E6BC29782736}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}
