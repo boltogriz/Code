@@ -9,6 +9,13 @@ namespace RegularExpressions2
 {
     internal class Program
     {
+        static string Math (Match x)
+        {
+            Console.WriteLine(x.Value);
+            int value = int.Parse (x.Value);
+            return (value + 1).ToString ();
+            //return "sdf";
+        }
         static void Main(string[] args)
         {
             string pattern;
@@ -27,6 +34,10 @@ namespace RegularExpressions2
 
                 Console.WriteLine(new string('-', 50));
             }
+            //Console.WriteLine(Regex.Replace("5 is less then 10", @"\d", m => (int.Parse(m.Value)+1).ToString()));
+            //MatchEvaluator match = new MatchEvaluator(Math);
+            MatchEvaluator match = Math;
+            Console.WriteLine(Regex.Replace("5 is less then 10", @"\d+", match));
             Console.ReadKey();
         }
     }
