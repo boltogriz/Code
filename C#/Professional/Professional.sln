@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions", "Regul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions2", "RegularExpressions2\RegularExpressions2.csproj", "{4E24EAE0-A2B5-483E-9962-B88F4B95D716}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pattern_Builder", "Pattern_Builder\Pattern_Builder.csproj", "{15A0F7F4-66B8-453A-BDFF-AE6752E4AFD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -235,6 +237,10 @@ Global
 		{4E24EAE0-A2B5-483E-9962-B88F4B95D716}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E24EAE0-A2B5-483E-9962-B88F4B95D716}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E24EAE0-A2B5-483E-9962-B88F4B95D716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A0F7F4-66B8-453A-BDFF-AE6752E4AFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A0F7F4-66B8-453A-BDFF-AE6752E4AFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A0F7F4-66B8-453A-BDFF-AE6752E4AFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A0F7F4-66B8-453A-BDFF-AE6752E4AFD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -276,6 +282,7 @@ Global
 		{115DE422-92A0-4206-A628-9AED276FC74E} = {9B522BF7-D9C3-47DB-8D09-E6BC29782736}
 		{73F0026A-B5A7-4BD0-9DBE-139266CBC9C2} = {9B522BF7-D9C3-47DB-8D09-E6BC29782736}
 		{4E24EAE0-A2B5-483E-9962-B88F4B95D716} = {9B522BF7-D9C3-47DB-8D09-E6BC29782736}
+		{15A0F7F4-66B8-453A-BDFF-AE6752E4AFD5} = {9F75D988-9E6F-489E-9858-CA2BCAE319E0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}
