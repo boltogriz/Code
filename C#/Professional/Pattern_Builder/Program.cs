@@ -17,6 +17,7 @@ namespace Pattern_Builder
             Product product = builder.GetResult();
             product.Show();
             Console.ReadKey();
+            //
         }
     }
 }
