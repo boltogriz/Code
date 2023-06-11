@@ -21,7 +21,7 @@ namespace XPathDocumentMy
             XPathNodeIterator iterator2 = navigator.Select(exception);
             foreach(var item in iterator2)
                 Console.WriteLine(item);
-
+            //
             Console.ReadKey();
         }
     }
