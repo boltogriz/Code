@@ -103,6 +103,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReestersMy", "ReestersMy\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterBasics", "RegisterBasics\RegisterBasics.csproj", "{C07884F1-2965-47B4-8A9E-BCA5F99D5A22}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P_05_Reflection", "P_05_Reflection", "{39AF05EF-F874-43D0-9CDE-3248E23FABA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
