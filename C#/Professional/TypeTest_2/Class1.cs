@@ -9,7 +9,7 @@ namespace TypeTest_2
     public class Class1 : IInterface1, IInterface2
     {
         public int myint;
-        private string mystring = "Hello";
+        private string mystring = "Hello";//Texts
         public Class1() { }
         public Class1(int i) 
         { 
