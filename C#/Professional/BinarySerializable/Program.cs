@@ -10,7 +10,7 @@ namespace BinarySerializable
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void BinarySerial()
         {
             Mersedes auto = new Mersedes("CLK 500", 250, Mode.Lux);
             auto.TurnOnRadio(true);
@@ -34,6 +34,32 @@ namespace BinarySerializable
             autoDeSer.TurnOnRadio(false);
 
             stream.Close();
+        }
+        static void UserSerialWork()
+        {
+            Car car = new Car("Mersedes-Benz", 250);
+            Stream stream = File.Create("CarDataUserSerial.dat");
+
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            formatter.Serialize(stream, car);
+            stream.Close();
+
+            stream = File.OpenRead("CarDataUserSerial.dat");
+
+            car = formatter.Deserialize(stream) as Car;
+
+            Console.WriteLine(car.Name);
+            Console.WriteLine(car.Speed);
+        }
+
+        static void Main(string[] args)
+        {
+            BinarySerial();
+
+            Console.WriteLine(new string('-',20));
+
+            UserSerialWork();
 
             Console.ReadKey();
         }
