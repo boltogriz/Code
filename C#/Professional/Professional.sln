@@ -131,6 +131,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializableDemo", "Seriali
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassSerializationXML", "ClassSerializationXML\ClassSerializationXML.csproj", "{52B1A438-D044-4FE9-9675-E17824DCA84C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P_08_Garbage_Collector", "P_08_Garbage_Collector", "{AC01EF63-6F53-404C-95A6-E44315BD5EF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Destructor", "Destructor\Destructor.csproj", "{9366B1FE-D519-438E-A23A-D1C0CB5BA934}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -357,6 +361,10 @@ Global
 		{52B1A438-D044-4FE9-9675-E17824DCA84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52B1A438-D044-4FE9-9675-E17824DCA84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52B1A438-D044-4FE9-9675-E17824DCA84C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9366B1FE-D519-438E-A23A-D1C0CB5BA934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9366B1FE-D519-438E-A23A-D1C0CB5BA934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9366B1FE-D519-438E-A23A-D1C0CB5BA934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9366B1FE-D519-438E-A23A-D1C0CB5BA934}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -417,6 +425,7 @@ Global
 		{8C9F7E62-B9F3-453C-8366-7D6A59CF6595} = {8B26EB53-861A-4D3B-AA20-B83930BC7580}
 		{D992C703-F04A-4DA0-9A8A-2081731D2694} = {8B26EB53-861A-4D3B-AA20-B83930BC7580}
 		{52B1A438-D044-4FE9-9675-E17824DCA84C} = {8B26EB53-861A-4D3B-AA20-B83930BC7580}
+		{9366B1FE-D519-438E-A23A-D1C0CB5BA934} = {AC01EF63-6F53-404C-95A6-E44315BD5EF5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}
