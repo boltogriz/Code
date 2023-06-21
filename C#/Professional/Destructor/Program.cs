@@ -23,6 +23,7 @@ namespace Destructor
         {
             Console.WriteLine("Main thread: {0}", Thread.CurrentThread.ManagedThreadId);
             SomeClass itamce = new SomeClass();
+            GC.Collect();
             Console.ReadKey();
 
         }
