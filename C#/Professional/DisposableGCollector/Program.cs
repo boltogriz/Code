@@ -13,7 +13,7 @@ namespace DisposableGCollector
             using(MyClass instance = new MyClass()) 
             {
                 instance.ShowInf();
-                throw new Exception("using");
+                //throw new Exception("using");
             }
 
             Console.WriteLine(new string('-',20));
