@@ -26,7 +26,7 @@ namespace AdHocPol
             inst1.Method();
             inst1 = new MyClass2();
             inst1.Method();
-            inst1.Method2();
+
             Console.ReadKey();
         }
     }
