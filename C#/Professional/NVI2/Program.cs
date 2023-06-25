@@ -13,7 +13,7 @@ namespace NVI2
             PreDoWork();
             CoreDoWork();
         }
-        protected void PreDoWork() { Console.WriteLine("0"); }
+        protected void PreDoWork() { Console.WriteLine("0"); }//
         protected virtual void CoreDoWork() { Console.WriteLine("1"); }
     }
     public class Derived : Base
