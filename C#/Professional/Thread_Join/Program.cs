@@ -21,7 +21,7 @@ namespace Thread_Join
             for (int i = 0; i < count; i++)
             {
                 Thread.Sleep(20);
-                Console.Write("+");
+                Console.Write(chr);
             }
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("{0} поток завершился", chr);
