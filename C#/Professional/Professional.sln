@@ -159,6 +159,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thread_Abort", "Thread_Abor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeGround", "ForeGround\ForeGround.csproj", "{375E6770-7F90-4C61-9E24-DC7B381CB230}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Priority", "Priority\Priority.csproj", "{C8A7C035-6563-4FFA-ADD1-4C29A17EA031}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -429,6 +431,10 @@ Global
 		{375E6770-7F90-4C61-9E24-DC7B381CB230}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{375E6770-7F90-4C61-9E24-DC7B381CB230}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{375E6770-7F90-4C61-9E24-DC7B381CB230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8A7C035-6563-4FFA-ADD1-4C29A17EA031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A7C035-6563-4FFA-ADD1-4C29A17EA031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A7C035-6563-4FFA-ADD1-4C29A17EA031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A7C035-6563-4FFA-ADD1-4C29A17EA031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -500,6 +506,7 @@ Global
 		{EFF607E6-721D-417F-916D-0EDCDC281991} = {823C341B-CB31-4B61-9101-D388826E7270}
 		{A31ABF5E-6EC4-4846-8F23-432931763F4D} = {823C341B-CB31-4B61-9101-D388826E7270}
 		{375E6770-7F90-4C61-9E24-DC7B381CB230} = {823C341B-CB31-4B61-9101-D388826E7270}
+		{C8A7C035-6563-4FFA-ADD1-4C29A17EA031} = {823C341B-CB31-4B61-9101-D388826E7270}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}
