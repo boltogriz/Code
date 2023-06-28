@@ -76,7 +76,6 @@ namespace InterLockedSpinLcok
                 threads[i].Start();
             }
 
-            Console.ReadKey();
         }
     }
 }
