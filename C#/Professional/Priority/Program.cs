@@ -54,7 +54,7 @@ internal class Program
             threadTwo[i].Priority = ThreadPriority.Highest;
         }
 
-        //
+        // ---
 
         for (int i = 0; i < threadOne.Length; i++)
             threadOne[i].Start();
