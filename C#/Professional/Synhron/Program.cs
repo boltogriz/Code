@@ -12,6 +12,7 @@ namespace Synhron
     internal class Program
     {
         static volatile bool stop;
+        //static  bool stop;
         static void Main(string[] args)
         {
 
