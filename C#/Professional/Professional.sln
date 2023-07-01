@@ -169,6 +169,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P_11_Thread_Synhron", "P_11
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synhron", "Synhron\Synhron.csproj", "{79982595-B3E1-4454-A903-76D4574927B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolNs", "ThreadPoolNs\ThreadPoolNs.csproj", "{661A16E8-E478-471B-875E-06967618D253}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -455,6 +457,10 @@ Global
 		{79982595-B3E1-4454-A903-76D4574927B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79982595-B3E1-4454-A903-76D4574927B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79982595-B3E1-4454-A903-76D4574927B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{661A16E8-E478-471B-875E-06967618D253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661A16E8-E478-471B-875E-06967618D253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661A16E8-E478-471B-875E-06967618D253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661A16E8-E478-471B-875E-06967618D253}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -530,6 +536,7 @@ Global
 		{B944D56C-DE76-4071-B055-6B63A937E205} = {823C341B-CB31-4B61-9101-D388826E7270}
 		{4621AC8B-FF39-489D-BAC5-F85BBFD178B0} = {823C341B-CB31-4B61-9101-D388826E7270}
 		{79982595-B3E1-4454-A903-76D4574927B0} = {45E26FBA-8723-4810-9A89-1B5AE53D8568}
+		{661A16E8-E478-471B-875E-06967618D253} = {45E26FBA-8723-4810-9A89-1B5AE53D8568}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}
