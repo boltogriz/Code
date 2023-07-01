@@ -171,6 +171,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synhron", "Synhron\Synhron.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolNs", "ThreadPoolNs\ThreadPoolNs.csproj", "{661A16E8-E478-471B-875E-06967618D253}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MutexSample", "MutexSample\MutexSample.csproj", "{49507085-93A2-4A13-A285-2D5FF9780B0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -461,6 +463,10 @@ Global
 		{661A16E8-E478-471B-875E-06967618D253}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{661A16E8-E478-471B-875E-06967618D253}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{661A16E8-E478-471B-875E-06967618D253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49507085-93A2-4A13-A285-2D5FF9780B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49507085-93A2-4A13-A285-2D5FF9780B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49507085-93A2-4A13-A285-2D5FF9780B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49507085-93A2-4A13-A285-2D5FF9780B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -537,6 +543,7 @@ Global
 		{4621AC8B-FF39-489D-BAC5-F85BBFD178B0} = {823C341B-CB31-4B61-9101-D388826E7270}
 		{79982595-B3E1-4454-A903-76D4574927B0} = {45E26FBA-8723-4810-9A89-1B5AE53D8568}
 		{661A16E8-E478-471B-875E-06967618D253} = {45E26FBA-8723-4810-9A89-1B5AE53D8568}
+		{49507085-93A2-4A13-A285-2D5FF9780B0C} = {45E26FBA-8723-4810-9A89-1B5AE53D8568}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}
