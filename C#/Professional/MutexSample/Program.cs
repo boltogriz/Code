@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MutexSample
 {
+    //
     internal class Program
     {
         static Mutex mutex = new Mutex(false, "MyMutex");
