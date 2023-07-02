@@ -33,6 +33,7 @@ namespace RegistredWaitHandle
                     break;
                 }
             }
+            //
             Console.ReadKey();
         }
     }
