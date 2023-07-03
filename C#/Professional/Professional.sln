@@ -181,6 +181,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventWaitHandleNs", "EventW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistredWaitHandle", "RegistredWaitHandle\RegistredWaitHandle.csproj", "{2FF16E3D-208E-4AB2-829F-4B40D889BB6A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P_12_AsyncMethods", "P_12_AsyncMethods", "{FB9740A6-69B0-4672-A3D0-3A1A3AD7B1CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousProg", "AsynchronousProg\AsynchronousProg.csproj", "{A3D73A80-BB33-4192-8252-593D30E27630}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -491,6 +495,10 @@ Global
 		{2FF16E3D-208E-4AB2-829F-4B40D889BB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FF16E3D-208E-4AB2-829F-4B40D889BB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FF16E3D-208E-4AB2-829F-4B40D889BB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D73A80-BB33-4192-8252-593D30E27630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D73A80-BB33-4192-8252-593D30E27630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D73A80-BB33-4192-8252-593D30E27630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D73A80-BB33-4192-8252-593D30E27630}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -572,6 +580,7 @@ Global
 		{EF5F79A3-0DF8-42B8-9227-1C205EE46376} = {45E26FBA-8723-4810-9A89-1B5AE53D8568}
 		{480C498A-45C6-43A9-A1CF-34B5810183DD} = {45E26FBA-8723-4810-9A89-1B5AE53D8568}
 		{2FF16E3D-208E-4AB2-829F-4B40D889BB6A} = {45E26FBA-8723-4810-9A89-1B5AE53D8568}
+		{A3D73A80-BB33-4192-8252-593D30E27630} = {FB9740A6-69B0-4672-A3D0-3A1A3AD7B1CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}
