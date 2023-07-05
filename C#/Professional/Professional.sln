@@ -187,6 +187,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousProg", "Asynchr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynResult", "AsynResult\AsynResult.csproj", "{AF5D9153-0996-405A-8C00-5193709D6E69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_CallBack", "Async_CallBack\Async_CallBack.csproj", "{CBAB8FA2-FE7C-47DF-841D-58DFBC8D8357}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -505,6 +507,10 @@ Global
 		{AF5D9153-0996-405A-8C00-5193709D6E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF5D9153-0996-405A-8C00-5193709D6E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF5D9153-0996-405A-8C00-5193709D6E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBAB8FA2-FE7C-47DF-841D-58DFBC8D8357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBAB8FA2-FE7C-47DF-841D-58DFBC8D8357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBAB8FA2-FE7C-47DF-841D-58DFBC8D8357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBAB8FA2-FE7C-47DF-841D-58DFBC8D8357}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -588,6 +594,7 @@ Global
 		{2FF16E3D-208E-4AB2-829F-4B40D889BB6A} = {45E26FBA-8723-4810-9A89-1B5AE53D8568}
 		{A3D73A80-BB33-4192-8252-593D30E27630} = {FB9740A6-69B0-4672-A3D0-3A1A3AD7B1CC}
 		{AF5D9153-0996-405A-8C00-5193709D6E69} = {FB9740A6-69B0-4672-A3D0-3A1A3AD7B1CC}
+		{CBAB8FA2-FE7C-47DF-841D-58DFBC8D8357} = {FB9740A6-69B0-4672-A3D0-3A1A3AD7B1CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {853BFA3C-3352-4931-8B10-69F18A1BBA2D}

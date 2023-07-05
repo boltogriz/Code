@@ -13,6 +13,11 @@ namespace AsynResult
         {
             Func<int, int, int> myDelegate = new Func<int, int, int>(Sum);
             IAsyncResult asyncResult = myDelegate.BeginInvoke(1, 2, null, null);
+            while(!asyncResult.IsCompleted) 
+            {
+                Thread.Sleep(100);
+                Console.Write(".");
+            }
             //int result = myDelegate.EndInvoke(asyncResult);
             //Console.WriteLine("Результ = " + result);
 
