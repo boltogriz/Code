@@ -12,7 +12,7 @@ namespace BeginRead
         static void Main(string[] args)
         {
             Stream stream = new FileStream("file.txt", FileMode.Open, FileAccess.Read);
-
+            //
             byte[] buffer = new byte[stream.Length];
 
             IAsyncResult asyncResult = stream.BeginRead(buffer, 0, buffer.Length, null, null);
