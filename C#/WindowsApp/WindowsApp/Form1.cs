@@ -28,6 +28,7 @@ namespace WindowsApp
             if (radioButton1.Checked)
                 MessageBox.Show("Show");
             //form2.Show();
+            //
             form2.ShowDialog();
         }
         static void FuncM()
