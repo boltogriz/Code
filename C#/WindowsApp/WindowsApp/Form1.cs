@@ -7,7 +7,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
+
 
 namespace WindowsApp
 {
@@ -20,6 +22,13 @@ namespace WindowsApp
         {
             InitializeComponent();
             form2 = new Form2();
+            buttonShow.Click += ShowMessage;
+      
+        }
+        private void ShowMessage(object send, EventArgs e)
+        {
+   
+            MessageBox.Show(e.ToString());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,6 +59,80 @@ namespace WindowsApp
         {
             Application.Exit();
             //this.Close();
+        }
+        private void LocationComboBox(int x, int y)
+        {
+            comboBox1.Location = new System.Drawing.Point(x, y);
+        }
+        int key;
+        private void MoveComboBox()
+        {
+            int x;
+            int y;
+            x = comboBox1.Location.X;
+            y = comboBox1.Location.Y;
+            switch (key)
+            {
+                case 37:
+                    x--;
+                    LocationComboBox(x, y);
+                    break;
+                case 38:
+                    y--;
+                    LocationComboBox(x, y);
+                    break;
+                case 39:
+                    x++;
+                    LocationComboBox(x, y);
+                    break;
+                case 40:
+                    y++;
+                    LocationComboBox(x, y);
+                    break;
+            }
+        }
+        
+
+
+        private void comboBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            key = e.KeyValue;
+            timer1.Stop();
+            MessageBox.Show(sender.ToString());
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            MoveComboBox();
+
+        }
+
+        private void buttonShow_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+       
+        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            MoveComboBox();
+            key = e.KeyValue;
+            timer1.Start();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
