@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,15 +17,28 @@ namespace WindowsApp
     public partial class Form1 : Form
     {
         static public Form2 form2;
-        
+        private event EventHandler PushBotton;
 
         public Form1()
         {
             InitializeComponent();
             form2 = new Form2();
             buttonShow.Click += ShowMessage;
-      
+            PushBotton += FunctionPushBotton;
+            PushBotton += AddItemList;
         }
+
+        private void AddItemList(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(sender.ToString());
+            listBox1.Items.Add(e.ToString());
+        }
+
+        private void FunctionPushBotton(object sender, EventArgs e)
+        {
+            MessageBox.Show("Event");
+        }
+
         private void ShowMessage(object send, EventArgs e)
         {
    
@@ -139,14 +153,70 @@ namespace WindowsApp
         {
             toolStripStatusLabel1.Text = "X "+e.Location.X.ToString() + ", Y " + e.Location.Y.ToString();
             //MessageBox.Show(statusStrip1.Text);
-
-
-
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem != null)
+                listBox1.Items.Add(comboBox1.SelectedItem);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(listBox1.Items.Count - 1 >= 0)
+                listBox1.Items.Remove(listBox1.Items[listBox1.Items.Count-1]);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OnPushBotton(sender, e);
+        }
+
+        private void OnPushBotton(object obj, EventArgs e)
+        {
+            EventHandler handle = PushBotton;
+            handle?.Invoke(obj, e);
+        }
+
+        private void listBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            listBox1.Items.Add((string)e.Data.GetData(DataFormats.Text));
+
+
+        }
+
+        private void comboBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void textBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                textBox1.DoDragDrop(textBox1.Text, DragDropEffects.Copy);
+        }
+
+        private void listBox1_DragEnter(object sender, DragEventArgs e)
+        {
+            if(e.Data.GetDataPresent(DataFormats.Text))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
         }
     }
 }
