@@ -99,7 +99,7 @@ namespace WindowsApp
 
             key = e.KeyValue;
             timer1.Stop();
-            MessageBox.Show(sender.ToString());
+ 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -131,6 +131,20 @@ namespace WindowsApp
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolStripStatusLabel1.Text = "X "+e.Location.X.ToString() + ", Y " + e.Location.Y.ToString();
+            //MessageBox.Show(statusStrip1.Text);
+
+
+
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
         }

@@ -164,13 +164,14 @@
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(354, 22);
             this.statusStrip1.TabIndex = 5;
-            this.statusStrip1.Text = "Статус";
+            this.statusStrip1.Text = "Статус 1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(43, 17);
-            this.toolStripStatusLabel1.Text = "Статус";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(58, 17);
+            this.toolStripStatusLabel1.Text = "Статус 34";
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // menuStrip1
             // 
@@ -234,6 +235,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
