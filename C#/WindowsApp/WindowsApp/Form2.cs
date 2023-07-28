@@ -63,5 +63,14 @@ namespace WindowsApp
                 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK) 
+            { 
+                pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+            }
+        }
     }
 }

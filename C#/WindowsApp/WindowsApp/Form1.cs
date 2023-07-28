@@ -20,6 +20,8 @@ namespace WindowsApp
         private ListBoxMaker listBoxMaker;
         static public Form2 form2;
         private event EventHandler PushBotton;
+        MyButton myButton = new MyButton();
+        int y;
 
         public Form1()
         {
@@ -30,6 +32,7 @@ namespace WindowsApp
             PushBotton += AddItemList;
             listBoxMaker = new ListBoxMaker(listBox1);
             form4 = new Form4();
+            y = myButton.Location.Y;
         }
 
         private void AddItemList(object sender, EventArgs e)
@@ -228,6 +231,31 @@ namespace WindowsApp
         private void button5_Click(object sender, EventArgs e)
         {
             form4.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SuspendLayout();
+            Button myButton2 = new Button();
+            myButton2.Location = new System.Drawing.Point(1, 300);
+
+            myButton2.Name = "MyButton2";
+            myButton2.Size = new System.Drawing.Size(112, 32);
+            myButton2.TabIndex = 0;
+            myButton2.Text = "MyButton2";
+            myButton2.UseVisualStyleBackColor = true;
+           
+            this.Controls.Add(myButton2);
+            this.Controls.Add(myButton);
+
+            TextBox myText = new TextBox();
+            myText.Location = new Point(25, 250);
+            this.Controls.Add(myText);
+
+            y += 29;
+
+            this.Controls.Add(new MyButton(y));
+            ResumeLayout();
         }
     }
 }
