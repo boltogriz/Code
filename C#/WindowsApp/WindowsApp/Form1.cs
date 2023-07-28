@@ -16,6 +16,8 @@ namespace WindowsApp
 {
     public partial class Form1 : Form
     {
+        private Form4 form4;
+        private ListBoxMaker listBoxMaker;
         static public Form2 form2;
         private event EventHandler PushBotton;
 
@@ -26,6 +28,8 @@ namespace WindowsApp
             buttonShow.Click += ShowMessage;
             PushBotton += FunctionPushBotton;
             PushBotton += AddItemList;
+            listBoxMaker = new ListBoxMaker(listBox1);
+            form4 = new Form4();
         }
 
         private void AddItemList(object sender, EventArgs e)
@@ -105,8 +109,6 @@ namespace WindowsApp
                     break;
             }
         }
-        
-
 
         private void comboBox1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -167,14 +169,13 @@ namespace WindowsApp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem != null)
-                listBox1.Items.Add(comboBox1.SelectedItem);
+            listBoxMaker.Add(comboBox1);
+            listBoxMaker.Add(textBox1);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(listBox1.Items.Count - 1 >= 0)
-                listBox1.Items.Remove(listBox1.Items[listBox1.Items.Count-1]);
+            listBoxMaker.Remove();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -217,6 +218,16 @@ namespace WindowsApp
             {
                 e.Effect = DragDropEffects.Copy;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            form4.Show();
         }
     }
 }
