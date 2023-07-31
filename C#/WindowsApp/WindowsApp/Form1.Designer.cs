@@ -62,11 +62,15 @@
             this.minuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.подменюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button7 = new System.Windows.Forms.Button();
+            this.myButton1 = new WindowsApp.MyButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonShow
@@ -327,6 +331,7 @@
             this.textBox1.TabIndex = 12;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // imageList1
             // 
@@ -375,7 +380,7 @@
             // подменюToolStripMenuItem
             // 
             this.подменюToolStripMenuItem.Name = "подменюToolStripMenuItem";
-            this.подменюToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.подменюToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.подменюToolStripMenuItem.Text = "Подменю";
             // 
             // toolStripMenuItem6
@@ -384,12 +389,37 @@
             this.toolStripMenuItem6.Size = new System.Drawing.Size(102, 22);
             this.toolStripMenuItem6.Text = "45";
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(551, 398);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // myButton1
+            // 
+            this.myButton1.Location = new System.Drawing.Point(227, 265);
+            this.myButton1.Name = "myButton1";
+            this.myButton1.Size = new System.Drawing.Size(84, 29);
+            this.myButton1.TabIndex = 14;
+            this.myButton1.Text = "myButton1";
+            this.myButton1.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
+            this.AcceptButton = this.button7;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 524);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.myButton1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox1);
@@ -421,6 +451,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,6 +491,9 @@
         private System.Windows.Forms.ToolStripMenuItem minuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem подменюToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private MyButton myButton1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

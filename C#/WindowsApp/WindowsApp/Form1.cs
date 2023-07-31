@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
@@ -256,6 +257,22 @@ namespace WindowsApp
 
             this.Controls.Add(new MyButton(y));
             ResumeLayout();
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            int i;
+            bool isDigital = int.TryParse(textBox1.Text, out i);
+            if (textBox1.Text.Length < 3 || !isDigital) 
+            { 
+                //e.Cancel = true;
+                errorProvider1.SetError(textBox1, "3 символа надо и только цифры");
+            }
+            else
+            {
+                errorProvider1.SetError(textBox1, "");
+            }
+            
         }
     }
 }
