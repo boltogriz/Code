@@ -63,8 +63,10 @@
             this.подменюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.button7 = new System.Windows.Forms.Button();
-            this.myButton1 = new WindowsApp.MyButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.customControl11 = new WindowsApp.CustomControl1();
+            this.myButton1 = new WindowsApp.MyButton();
+            this.textBoxUpper1 = new ClassLibrary1.TextBoxUpper(this.components);
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -398,6 +400,18 @@
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // customControl11
+            // 
+            this.customControl11.Location = new System.Drawing.Point(60, 345);
+            this.customControl11.Name = "customControl11";
+            this.customControl11.Size = new System.Drawing.Size(132, 24);
+            this.customControl11.TabIndex = 16;
+            this.customControl11.TextChanged += new System.EventHandler(this.customControl11_TextChanged);
+            // 
             // myButton1
             // 
             this.myButton1.Location = new System.Drawing.Point(227, 265);
@@ -407,9 +421,12 @@
             this.myButton1.Text = "myButton1";
             this.myButton1.UseVisualStyleBackColor = true;
             // 
-            // errorProvider1
+            // textBoxUpper1
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.textBoxUpper1.Location = new System.Drawing.Point(60, 420);
+            this.textBoxUpper1.Name = "textBoxUpper1";
+            this.textBoxUpper1.Size = new System.Drawing.Size(100, 24);
+            this.textBoxUpper1.TabIndex = 17;
             // 
             // Form1
             // 
@@ -418,6 +435,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 524);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.textBoxUpper1);
+            this.Controls.Add(this.customControl11);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.myButton1);
             this.Controls.Add(this.button6);
@@ -494,6 +513,8 @@
         private MyButton myButton1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private CustomControl1 customControl11;
+        private ClassLibrary1.TextBoxUpper textBoxUpper1;
     }
 }
 

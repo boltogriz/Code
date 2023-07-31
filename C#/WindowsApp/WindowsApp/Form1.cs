@@ -274,5 +274,10 @@ namespace WindowsApp
             }
             
         }
+
+        private void customControl11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
