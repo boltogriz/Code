@@ -182,6 +182,13 @@
       <Project>{24c50da1-cdb2-4532-9769-5c635dda7206}</Project>
       <Name>ClassLibrary1</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WindowsFormsControlLibrary1\WindowsFormsControlLibrary1.csproj">
+      <Project>{b33bb5de-a98d-4342-a6a5-89025c84eafc}</Project>
+      <Name>WindowsFormsControlLibrary1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\ClassLibrary1\bin\Debug\ClassLibrary1.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

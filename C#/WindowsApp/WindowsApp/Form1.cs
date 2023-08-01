@@ -279,5 +279,21 @@ namespace WindowsApp
         {
 
         }
+
+        private void myUserControl01_Load(object sender, EventArgs e)
+        {
+            myUserControl01.textBox1.Text = "Load";
+            myUserControl01.TextBox2Text = "Text2";
+        }
+
+        private void graficFunction1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private double graficFunction1_Function(double x)
+        {
+            return Math.Sin(x);
+        }
     }
 }

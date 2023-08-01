@@ -64,21 +64,25 @@
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.button7 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.graficFunction1 = new ClassLibrary1.GraficFunction(this.components);
+            this.myUserControl01 = new ClassLibrary1.MyUserControl0();
+            this.textBoxUpper1 = new ClassLibrary1.TextBoxUpper(this.components);
             this.customControl11 = new WindowsApp.CustomControl1();
             this.myButton1 = new WindowsApp.MyButton();
-            this.textBoxUpper1 = new ClassLibrary1.TextBoxUpper(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonShow
             // 
             this.buttonShow.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonShow.Location = new System.Drawing.Point(378, 389);
+            this.buttonShow.Location = new System.Drawing.Point(659, 517);
             this.buttonShow.Margin = new System.Windows.Forms.Padding(4);
             this.buttonShow.Name = "buttonShow";
             this.buttonShow.Size = new System.Drawing.Size(112, 32);
@@ -143,7 +147,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Location = new System.Drawing.Point(250, 389);
+            this.button2.Location = new System.Drawing.Point(531, 517);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 32);
@@ -161,7 +165,7 @@
             "Вторая",
             "Третья",
             ""});
-            this.comboBox1.Location = new System.Drawing.Point(250, 470);
+            this.comboBox1.Location = new System.Drawing.Point(531, 598);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(240, 26);
@@ -177,7 +181,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(256, 448);
+            this.label1.Location = new System.Drawing.Point(537, 576);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 18);
@@ -189,9 +193,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 502);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 630);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(829, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1390, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "Статус 1";
             // 
@@ -217,7 +221,7 @@
             this.toolStripMenuItem3});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(829, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1390, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -293,7 +297,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(829, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1390, 25);
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -404,6 +408,35 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // graficFunction1
+            // 
+            this.graficFunction1.Location = new System.Drawing.Point(-54, -27);
+            this.graficFunction1.LowerBorder = 0D;
+            this.graficFunction1.Name = "graficFunction1";
+            this.graficFunction1.Size = new System.Drawing.Size(302, 215);
+            this.graficFunction1.TabIndex = 20;
+            this.graficFunction1.Text = "graficFunction1";
+            this.graficFunction1.UpperBorder = 3.1415D;
+            this.graficFunction1.Function += new ClassLibrary1.GraficFunction.MathFunctionDelegate(this.graficFunction1_Function);
+            this.graficFunction1.Click += new System.EventHandler(this.graficFunction1_Click);
+            // 
+            // myUserControl01
+            // 
+            this.myUserControl01.Location = new System.Drawing.Point(669, 355);
+            this.myUserControl01.Margin = new System.Windows.Forms.Padding(4);
+            this.myUserControl01.Name = "myUserControl01";
+            this.myUserControl01.Size = new System.Drawing.Size(349, 121);
+            this.myUserControl01.TabIndex = 18;
+            this.myUserControl01.TextBox2Text = "Defould";
+            this.myUserControl01.Load += new System.EventHandler(this.myUserControl01_Load);
+            // 
+            // textBoxUpper1
+            // 
+            this.textBoxUpper1.Location = new System.Drawing.Point(60, 420);
+            this.textBoxUpper1.Name = "textBoxUpper1";
+            this.textBoxUpper1.Size = new System.Drawing.Size(100, 24);
+            this.textBoxUpper1.TabIndex = 17;
+            // 
             // customControl11
             // 
             this.customControl11.Location = new System.Drawing.Point(60, 345);
@@ -421,20 +454,24 @@
             this.myButton1.Text = "myButton1";
             this.myButton1.UseVisualStyleBackColor = true;
             // 
-            // textBoxUpper1
+            // panel1
             // 
-            this.textBoxUpper1.Location = new System.Drawing.Point(60, 420);
-            this.textBoxUpper1.Name = "textBoxUpper1";
-            this.textBoxUpper1.Size = new System.Drawing.Size(100, 24);
-            this.textBoxUpper1.TabIndex = 17;
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.graficFunction1);
+            this.panel1.Location = new System.Drawing.Point(1142, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(189, 188);
+            this.panel1.TabIndex = 21;
             // 
             // Form1
             // 
             this.AcceptButton = this.button7;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 524);
+            this.ClientSize = new System.Drawing.Size(1390, 652);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.myUserControl01);
             this.Controls.Add(this.textBoxUpper1);
             this.Controls.Add(this.customControl11);
             this.Controls.Add(this.button7);
@@ -471,6 +508,7 @@
             this.toolStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -515,6 +553,9 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private CustomControl1 customControl11;
         private ClassLibrary1.TextBoxUpper textBoxUpper1;
+        private ClassLibrary1.MyUserControl0 myUserControl01;
+        private ClassLibrary1.GraficFunction graficFunction1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
