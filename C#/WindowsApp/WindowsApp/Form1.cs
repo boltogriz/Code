@@ -24,6 +24,7 @@ namespace WindowsApp
         private event EventHandler PushBotton;
         MyButton myButton = new MyButton();
         int y;
+        TalbeForm talbeForm;
 
         public Form1()
         {
@@ -295,6 +296,15 @@ namespace WindowsApp
         private double graficFunction1_Function(double x)
         {
             return Math.Sin(x);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (talbeForm == null)
+            {
+                talbeForm = new TalbeForm();
+                talbeForm.Show();
+            }
         }
     }
 }

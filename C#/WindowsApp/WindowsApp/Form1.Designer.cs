@@ -70,6 +70,7 @@
             this.customControl11 = new WindowsApp.CustomControl1();
             this.myButton1 = new WindowsApp.MyButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -463,6 +464,16 @@
             this.panel1.Size = new System.Drawing.Size(189, 188);
             this.panel1.TabIndex = 21;
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(60, 472);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 22;
+            this.button8.Text = "Таблиц";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.button7;
@@ -470,6 +481,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 652);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.myUserControl01);
             this.Controls.Add(this.textBoxUpper1);
@@ -556,6 +568,7 @@
         private ClassLibrary1.MyUserControl0 myUserControl01;
         private ClassLibrary1.GraficFunction graficFunction1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button8;
     }
 }
 

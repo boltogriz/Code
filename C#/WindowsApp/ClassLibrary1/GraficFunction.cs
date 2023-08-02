@@ -37,6 +37,7 @@ namespace ClassLibrary1
         public GraficFunction()
         {
             InitializeComponent();
+
         }
         public GraficFunction(IContainer container)
         {
