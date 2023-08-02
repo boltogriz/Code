@@ -38,11 +38,23 @@ namespace DataForm
 
         private void getData_Click(object sender, EventArgs e)
         {
+            //while (dataGridView1.Rows.Count > 1)
+            //{
+            //    foreach (DataGridViewRow row in dataGridView1.Rows)
+            //    {
+            //        dataGridView1.Rows.Remove(row);
+            //    }
+            //}
 
+            sqlDataAdapter1.Fill(tohaBaseDataSet2, "doctors");
             //DataSet ds = new DataSet();
-            this.sqlDataAdapter1.Fill(this.tohaBaseDataSet2, "doctors");
-            
+            //this.sqlDataAdapter1.Fill(this.tohaBaseDataSet2, "doctors");
+
             //this.sqlDataAdapter1.Fill(ds, "doctors");
+            //foreach(DataGridViewRow row in dataGridView1.Rows)
+            //{
+            //    dataGridView1.Rows.Remove(row);
+            //}
             //dataGridView1.DataSource = ds;
         }
 
