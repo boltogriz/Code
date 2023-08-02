@@ -72,5 +72,10 @@ namespace DataForm
         {
   
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            new Form2().Show();
+        }
     }
 }
