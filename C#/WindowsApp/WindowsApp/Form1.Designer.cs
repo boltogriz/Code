@@ -64,13 +64,14 @@
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.button7 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.graficFunction2 = new ClassLibrary1.GraficFunction(this.components);
             this.graficFunction1 = new ClassLibrary1.GraficFunction(this.components);
             this.myUserControl01 = new ClassLibrary1.MyUserControl0();
             this.textBoxUpper1 = new ClassLibrary1.TextBoxUpper(this.components);
             this.customControl11 = new WindowsApp.CustomControl1();
             this.myButton1 = new WindowsApp.MyButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -409,6 +410,36 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.graficFunction1);
+            this.panel1.Location = new System.Drawing.Point(1142, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(189, 188);
+            this.panel1.TabIndex = 21;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(60, 472);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 22;
+            this.button8.Text = "Таблиц";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // graficFunction2
+            // 
+            this.graficFunction2.Location = new System.Drawing.Point(850, 88);
+            this.graficFunction2.LowerBorder = 0D;
+            this.graficFunction2.Name = "graficFunction2";
+            this.graficFunction2.Size = new System.Drawing.Size(168, 164);
+            this.graficFunction2.TabIndex = 23;
+            this.graficFunction2.Text = "graficFunction2";
+            this.graficFunction2.UpperBorder = 0D;
+            this.graficFunction2.Click += new System.EventHandler(this.graficFunction2_Click);
+            // 
             // graficFunction1
             // 
             this.graficFunction1.Location = new System.Drawing.Point(-54, -27);
@@ -455,25 +486,6 @@
             this.myButton1.Text = "myButton1";
             this.myButton1.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.graficFunction1);
-            this.panel1.Location = new System.Drawing.Point(1142, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(189, 188);
-            this.panel1.TabIndex = 21;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(60, 472);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 22;
-            this.button8.Text = "Таблиц";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // Form1
             // 
             this.AcceptButton = this.button7;
@@ -481,6 +493,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 652);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.graficFunction2);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.myUserControl01);
@@ -569,6 +582,7 @@
         private ClassLibrary1.GraficFunction graficFunction1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button8;
+        private ClassLibrary1.GraficFunction graficFunction2;
     }
 }
 

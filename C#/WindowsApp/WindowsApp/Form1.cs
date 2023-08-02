@@ -306,5 +306,14 @@ namespace WindowsApp
                 talbeForm.Show();
             }
         }
+
+        private void graficFunction2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private double graficFunction2_Function(double x)
+        {
+            return Math.Sin(x);
+        }
     }
 }
