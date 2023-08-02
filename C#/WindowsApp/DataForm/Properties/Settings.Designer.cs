@@ -33,5 +33,16 @@ namespace DataForm.Properties {
                 return ((string)(this["TohaBaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PC-TOHA-RYZEN\\SQLEXPRESS;Initial Catalog=TohaBase;Integrated Security" +
+            "=True")]
+        public string TohaBaseConnectionString1 {
+            get {
+                return ((string)(this["TohaBaseConnectionString1"]));
+            }
+        }
     }
 }

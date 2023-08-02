@@ -9,3 +9,10 @@
         }
     }
 }
+
+namespace DataForm.TohaBaseDataSetTableAdapters {
+    
+    
+    public partial class doctorsTableAdapter {
+    }
+}

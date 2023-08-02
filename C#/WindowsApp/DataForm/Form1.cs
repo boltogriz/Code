@@ -14,7 +14,6 @@ namespace DataForm
     public partial class Form1 : Form
     {
         private DataTable data;
-
         public Form1()
         {
             InitializeComponent();
@@ -22,14 +21,14 @@ namespace DataForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("Data Source=BUH-ADM2\\SQLEXPRESS;Initial Catalog=TohaBase;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = connection;
-            cmd.CommandText = "SELECT *" +
-                              "FROM doctors";
-            data = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(data);
+            //SqlConnection connection = new SqlConnection("Data Source=BUH-ADM2\\SQLEXPRESS;Initial Catalog=TohaBase;Integrated Security=True");
+            //SqlCommand cmd = new SqlCommand();
+            //cmd.Connection = connection;
+            //cmd.CommandText = "SELECT *" +
+            //                  "FROM doctors";
+            //data = new DataTable();
+            //SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            //adapter.Fill(data);
         }
 
         private void sqlDataAdapter1_RowUpdated(object sender, SqlRowUpdatedEventArgs e)
@@ -42,8 +41,24 @@ namespace DataForm
 
             //DataSet ds = new DataSet();
             this.sqlDataAdapter1.Fill(this.tohaBaseDataSet2, "doctors");
+            
             //this.sqlDataAdapter1.Fill(ds, "doctors");
             //dataGridView1.DataSource = ds;
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            sqlDataAdapter1.Update(this.tohaBaseDataSet2, "doctors");
+        }
+
+        private void sqlConnection1_InfoMessage(object sender, SqlInfoMessageEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+  
         }
     }
 }
