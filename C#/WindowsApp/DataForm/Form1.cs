@@ -40,10 +40,10 @@ namespace DataForm
         private void getData_Click(object sender, EventArgs e)
         {
 
-            DataSet ds = new DataSet();
-            //this.sqlDataAdapter1.Fill(this.tohaBaseDataSet2, "doctors");
-            this.sqlDataAdapter1.Fill(ds, "doctors");
-            dataGridView1.DataSource = ds;
+            //DataSet ds = new DataSet();
+            this.sqlDataAdapter1.Fill(this.tohaBaseDataSet2, "doctors");
+            //this.sqlDataAdapter1.Fill(ds, "doctors");
+            //dataGridView1.DataSource = ds;
         }
     }
 }
