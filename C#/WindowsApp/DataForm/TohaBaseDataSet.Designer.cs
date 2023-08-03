@@ -30,9 +30,9 @@ namespace DataForm {
         
         private specialtiesDataTable tablespecialties;
         
-        private global::System.Data.DataRelation relationspecialties_drspecialties;
-        
         private global::System.Data.DataRelation relationdoctors_drspecialties;
+        
+        private global::System.Data.DataRelation relationspecialties_drspecialties;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -246,8 +246,8 @@ namespace DataForm {
                     this.tablespecialties.InitVars();
                 }
             }
-            this.relationspecialties_drspecialties = this.Relations["specialties_drspecialties"];
             this.relationdoctors_drspecialties = this.Relations["doctors_drspecialties"];
+            this.relationspecialties_drspecialties = this.Relations["specialties_drspecialties"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -264,14 +264,30 @@ namespace DataForm {
             base.Tables.Add(this.tabledrspecialties);
             this.tablespecialties = new specialtiesDataTable();
             base.Tables.Add(this.tablespecialties);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("doctors_drspecialties", new global::System.Data.DataColumn[] {
+                        this.tabledoctors.dr_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tabledrspecialties.dr_idColumn});
+            this.tabledrspecialties.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("specialties_drspecialties", new global::System.Data.DataColumn[] {
+                        this.tablespecialties.spec_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tabledrspecialties.specialty_idColumn});
+            this.tabledrspecialties.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            this.relationdoctors_drspecialties = new global::System.Data.DataRelation("doctors_drspecialties", new global::System.Data.DataColumn[] {
+                        this.tabledoctors.dr_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tabledrspecialties.dr_idColumn}, false);
+            this.relationdoctors_drspecialties.Nested = true;
+            this.Relations.Add(this.relationdoctors_drspecialties);
             this.relationspecialties_drspecialties = new global::System.Data.DataRelation("specialties_drspecialties", new global::System.Data.DataColumn[] {
                         this.tablespecialties.spec_idColumn}, new global::System.Data.DataColumn[] {
                         this.tabledrspecialties.specialty_idColumn}, false);
             this.Relations.Add(this.relationspecialties_drspecialties);
-            this.relationdoctors_drspecialties = new global::System.Data.DataRelation("doctors_drspecialties", new global::System.Data.DataColumn[] {
-                        this.tabledoctors.dr_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tabledrspecialties.dr_idColumn}, false);
-            this.Relations.Add(this.relationdoctors_drspecialties);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1542,23 +1558,23 @@ namespace DataForm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public specialtiesRow specialtiesRow {
-                get {
-                    return ((specialtiesRow)(this.GetParentRow(this.Table.ParentRelations["specialties_drspecialties"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["specialties_drspecialties"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public doctorsRow doctorsRow {
                 get {
                     return ((doctorsRow)(this.GetParentRow(this.Table.ParentRelations["doctors_drspecialties"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["doctors_drspecialties"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public specialtiesRow specialtiesRow {
+                get {
+                    return ((specialtiesRow)(this.GetParentRow(this.Table.ParentRelations["specialties_drspecialties"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["specialties_drspecialties"]);
                 }
             }
         }

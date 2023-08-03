@@ -227,14 +227,14 @@ SELECT spec_id, specialty FROM specialties WHERE (spec_id = @spec_id)</CommandTe
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="drspecialties" msprop:Generator_RowClassName="drspecialtiesRow" msprop:Generator_RowEvHandlerName="drspecialtiesRowChangeEventHandler" msprop:Generator_RowDeletedName="drspecialtiesRowDeleted" msprop:Generator_RowDeletingName="drspecialtiesRowDeleting" msprop:Generator_RowEvArgName="drspecialtiesRowChangeEvent" msprop:Generator_TablePropName="drspecialties" msprop:Generator_RowChangedName="drspecialtiesRowChanged" msprop:Generator_UserTableName="drspecialties" msprop:Generator_RowChangingName="drspecialtiesRowChanging" msprop:Generator_TableClassName="drspecialtiesDataTable" msprop:Generator_TableVarName="tabledrspecialties">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="dr_id" msprop:Generator_UserColumnName="dr_id" msprop:Generator_ColumnPropNameInTable="dr_idColumn" msprop:Generator_ColumnPropNameInRow="dr_id" msprop:Generator_ColumnVarNameInTable="columndr_id" type="xs:int" />
-              <xs:element name="specialty_id" msprop:Generator_UserColumnName="specialty_id" msprop:Generator_ColumnPropNameInTable="specialty_idColumn" msprop:Generator_ColumnPropNameInRow="specialty_id" msprop:Generator_ColumnVarNameInTable="columnspecialty_id" type="xs:int" />
+              <xs:element name="drspecialties" msprop:Generator_RowClassName="drspecialtiesRow" msprop:Generator_RowEvHandlerName="drspecialtiesRowChangeEventHandler" msprop:Generator_RowDeletedName="drspecialtiesRowDeleted" msprop:Generator_RowDeletingName="drspecialtiesRowDeleting" msprop:Generator_RowEvArgName="drspecialtiesRowChangeEvent" msprop:Generator_TablePropName="drspecialties" msprop:Generator_RowChangedName="drspecialtiesRowChanged" msprop:Generator_UserTableName="drspecialties" msprop:Generator_RowChangingName="drspecialtiesRowChanging" msprop:Generator_TableClassName="drspecialtiesDataTable" msprop:Generator_TableVarName="tabledrspecialties" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="dr_id" msprop:Generator_UserColumnName="dr_id" msprop:Generator_ColumnPropNameInTable="dr_idColumn" msprop:Generator_ColumnPropNameInRow="dr_id" msprop:Generator_ColumnVarNameInTable="columndr_id" type="xs:int" />
+                    <xs:element name="specialty_id" msprop:Generator_UserColumnName="specialty_id" msprop:Generator_ColumnPropNameInTable="specialty_idColumn" msprop:Generator_ColumnPropNameInRow="specialty_id" msprop:Generator_ColumnVarNameInTable="columnspecialty_id" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -254,23 +254,25 @@ SELECT spec_id, specialty FROM specialties WHERE (spec_id = @spec_id)</CommandTe
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:doctors" />
-      <xs:field xpath="mstns:dr_id" />
-    </xs:unique>
     <xs:unique name="drspecialties_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:drspecialties" />
+      <xs:field xpath="mstns:dr_id" />
+    </xs:unique>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:doctors" />
       <xs:field xpath="mstns:dr_id" />
     </xs:unique>
     <xs:unique name="specialties_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:specialties" />
       <xs:field xpath="mstns:spec_id" />
     </xs:unique>
+    <xs:keyref name="specialties_drspecialties" refer="specialties_Constraint1" msprop:rel_Generator_UserParentTable="specialties" msprop:rel_Generator_UserChildTable="drspecialties" msprop:rel_Generator_RelationVarName="relationspecialties_drspecialties" msprop:rel_Generator_UserRelationName="specialties_drspecialties" msprop:rel_Generator_ChildPropName="GetdrspecialtiesRows" msprop:rel_Generator_ParentPropName="specialtiesRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:drspecialties" />
+      <xs:field xpath="mstns:specialty_id" />
+    </xs:keyref>
+    <xs:keyref name="doctors_drspecialties" refer="Constraint1" msdata:IsNested="true" msprop:rel_Generator_UserParentTable="doctors" msprop:rel_Generator_UserChildTable="drspecialties" msprop:rel_Generator_RelationVarName="relationdoctors_drspecialties" msprop:rel_Generator_ChildPropName="GetdrspecialtiesRows" msprop:rel_Generator_ParentPropName="doctorsRow" msprop:rel_Generator_UserRelationName="doctors_drspecialties" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:drspecialties" />
+      <xs:field xpath="mstns:dr_id" />
+    </xs:keyref>
   </xs:element>
-  <xs:annotation>
-    <xs:appinfo>
-      <msdata:Relationship name="specialties_drspecialties" msdata:parent="specialties" msdata:child="drspecialties" msdata:parentkey="spec_id" msdata:childkey="specialty_id" msprop:Generator_UserParentTable="specialties" msprop:Generator_UserChildTable="drspecialties" msprop:Generator_RelationVarName="relationspecialties_drspecialties" msprop:Generator_UserRelationName="specialties_drspecialties" msprop:Generator_ChildPropName="GetdrspecialtiesRows" msprop:Generator_ParentPropName="specialtiesRow" />
-      <msdata:Relationship name="doctors_drspecialties" msdata:parent="doctors" msdata:child="drspecialties" msdata:parentkey="dr_id" msdata:childkey="dr_id" msprop:Generator_UserParentTable="doctors" msprop:Generator_UserChildTable="drspecialties" msprop:Generator_RelationVarName="relationdoctors_drspecialties" msprop:Generator_ChildPropName="GetdrspecialtiesRows" msprop:Generator_ParentPropName="doctorsRow" msprop:Generator_UserRelationName="doctors_drspecialties" />
-    </xs:appinfo>
-  </xs:annotation>
 </xs:schema>
