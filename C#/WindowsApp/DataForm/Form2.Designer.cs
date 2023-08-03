@@ -32,6 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tohaBaseDataSet1 = new DataForm.TohaBaseDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drlnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doctorsTableAdapter = new DataForm.TohaBaseDataSetTableAdapters.doctorsTableAdapter();
             this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
@@ -41,14 +49,6 @@
             this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
-            this.dridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drlnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tohaBaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource)).BeginInit();
@@ -79,6 +79,54 @@
             this.dataGridView1.Size = new System.Drawing.Size(867, 150);
             this.dataGridView1.TabIndex = 0;
             // 
+            // dridDataGridViewTextBoxColumn
+            // 
+            this.dridDataGridViewTextBoxColumn.DataPropertyName = "dr_id";
+            this.dridDataGridViewTextBoxColumn.HeaderText = "dr_id";
+            this.dridDataGridViewTextBoxColumn.Name = "dridDataGridViewTextBoxColumn";
+            // 
+            // drlnameDataGridViewTextBoxColumn
+            // 
+            this.drlnameDataGridViewTextBoxColumn.DataPropertyName = "dr_lname";
+            this.drlnameDataGridViewTextBoxColumn.HeaderText = "dr_lname";
+            this.drlnameDataGridViewTextBoxColumn.Name = "drlnameDataGridViewTextBoxColumn";
+            // 
+            // drfnameDataGridViewTextBoxColumn
+            // 
+            this.drfnameDataGridViewTextBoxColumn.DataPropertyName = "dr_fname";
+            this.drfnameDataGridViewTextBoxColumn.HeaderText = "dr_fname";
+            this.drfnameDataGridViewTextBoxColumn.Name = "drfnameDataGridViewTextBoxColumn";
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            // 
+            // zipDataGridViewTextBoxColumn
+            // 
+            this.zipDataGridViewTextBoxColumn.DataPropertyName = "zip";
+            this.zipDataGridViewTextBoxColumn.HeaderText = "zip";
+            this.zipDataGridViewTextBoxColumn.Name = "zipDataGridViewTextBoxColumn";
+            // 
             // doctorsBindingSource
             // 
             this.doctorsBindingSource.DataMember = "doctors";
@@ -90,9 +138,10 @@
             // 
             // sqlConnection1
             // 
-            this.sqlConnection1.ConnectionString = "Data Source=PC-TOHA-RYZEN\\SQLEXPRESS;Initial Catalog=TohaBase;Integrated Security" +
-    "=True";
+            this.sqlConnection1.ConnectionString = "Data Source=BUH-ADM2\\SQLEXPRESS;Initial Catalog=TohaBase;Integrated Security=True" +
+    "";
             this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
+            this.sqlConnection1.InfoMessage += new System.Data.SqlClient.SqlInfoMessageEventHandler(this.sqlConnection1_InfoMessage);
             // 
             // button1
             // 
@@ -162,54 +211,6 @@
                         new System.Data.Common.DataColumnMapping("state", "state"),
                         new System.Data.Common.DataColumnMapping("zip", "zip")})});
             this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
-            // 
-            // dridDataGridViewTextBoxColumn
-            // 
-            this.dridDataGridViewTextBoxColumn.DataPropertyName = "dr_id";
-            this.dridDataGridViewTextBoxColumn.HeaderText = "dr_id";
-            this.dridDataGridViewTextBoxColumn.Name = "dridDataGridViewTextBoxColumn";
-            // 
-            // drlnameDataGridViewTextBoxColumn
-            // 
-            this.drlnameDataGridViewTextBoxColumn.DataPropertyName = "dr_lname";
-            this.drlnameDataGridViewTextBoxColumn.HeaderText = "dr_lname";
-            this.drlnameDataGridViewTextBoxColumn.Name = "drlnameDataGridViewTextBoxColumn";
-            // 
-            // drfnameDataGridViewTextBoxColumn
-            // 
-            this.drfnameDataGridViewTextBoxColumn.DataPropertyName = "dr_fname";
-            this.drfnameDataGridViewTextBoxColumn.HeaderText = "dr_fname";
-            this.drfnameDataGridViewTextBoxColumn.Name = "drfnameDataGridViewTextBoxColumn";
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "city";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            // 
-            // zipDataGridViewTextBoxColumn
-            // 
-            this.zipDataGridViewTextBoxColumn.DataPropertyName = "zip";
-            this.zipDataGridViewTextBoxColumn.HeaderText = "zip";
-            this.zipDataGridViewTextBoxColumn.Name = "zipDataGridViewTextBoxColumn";
             // 
             // Form2
             // 

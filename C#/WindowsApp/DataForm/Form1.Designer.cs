@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
@@ -48,13 +49,29 @@
             this.updateButton = new System.Windows.Forms.Button();
             this.sqlSelectCommand2 = new System.Data.SqlClient.SqlCommand();
             this.sqlInsertCommand2 = new System.Data.SqlClient.SqlCommand();
-            this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.sqlSelectCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDataAdapter2 = new System.Data.SqlClient.SqlDataAdapter();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tohaBaseDataSet = new DataForm.TohaBaseDataSet();
+            this.specialtiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.specialtiesTableAdapter = new DataForm.TohaBaseDataSetTableAdapters.specialtiesTableAdapter();
+            this.specialtiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tohaBaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.specialtiesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.specialtiesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tohaBaseDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tohaBaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tohaBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specialtiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specialtiesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tohaBaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specialtiesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specialtiesBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // sqlSelectCommand1
@@ -66,8 +83,8 @@
             // 
             // sqlConnection1
             // 
-            this.sqlConnection1.ConnectionString = "Data Source=PC-TOHA-RYZEN\\SQLEXPRESS;Initial Catalog=TohaBase;Integrated Security" +
-    "=True";
+            this.sqlConnection1.ConnectionString = "Data Source=BUH-ADM2\\SQLEXPRESS;Initial Catalog=TohaBase;Integrated Security=True" +
+    "";
             this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
             this.sqlConnection1.InfoMessage += new System.Data.SqlClient.SqlInfoMessageEventHandler(this.sqlConnection1_InfoMessage);
             // 
@@ -94,6 +111,7 @@
             // 
             // sqlCommand1
             // 
+            this.sqlCommand1.CommandText = resources.GetString("sqlCommand1.CommandText");
             this.sqlCommand1.Connection = this.sqlConnection1;
             this.sqlCommand1.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@dr_id", System.Data.SqlDbType.Int, 4, "dr_id"),
@@ -103,11 +121,12 @@
             new System.Data.SqlClient.SqlParameter("@address", System.Data.SqlDbType.VarChar, 2147483647, "address"),
             new System.Data.SqlClient.SqlParameter("@city", System.Data.SqlDbType.VarChar, 2147483647, "city"),
             new System.Data.SqlClient.SqlParameter("@state", System.Data.SqlDbType.VarChar, 2147483647, "state"),
-            new System.Data.SqlClient.SqlParameter("@zip", System.Data.SqlDbType.VarChar, 2147483647, "zip")});
+            new System.Data.SqlClient.SqlParameter("@zip", System.Data.SqlDbType.VarChar, 2147483647, "zip"),
+            new System.Data.SqlClient.SqlParameter("@Original_dr_id", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "dr_id", System.Data.DataRowVersion.Original, null)});
             // 
             // getData
             // 
-            this.getData.Location = new System.Drawing.Point(12, 180);
+            this.getData.Location = new System.Drawing.Point(14, 218);
             this.getData.Name = "getData";
             this.getData.Size = new System.Drawing.Size(75, 23);
             this.getData.TabIndex = 1;
@@ -119,6 +138,7 @@
             // 
             this.dataGridView1.AllowDrop = true;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dridDataGridViewTextBoxColumn,
@@ -131,9 +151,9 @@
             this.zipDataGridViewTextBoxColumn});
             this.dataGridView1.DataMember = "doctors";
             this.dataGridView1.DataSource = this.tohaBaseDataSet2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 40);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(914, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(542, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // dridDataGridViewTextBoxColumn
@@ -141,48 +161,56 @@
             this.dridDataGridViewTextBoxColumn.DataPropertyName = "dr_id";
             this.dridDataGridViewTextBoxColumn.HeaderText = "dr_id";
             this.dridDataGridViewTextBoxColumn.Name = "dridDataGridViewTextBoxColumn";
+            this.dridDataGridViewTextBoxColumn.Width = 55;
             // 
             // drlnameDataGridViewTextBoxColumn
             // 
             this.drlnameDataGridViewTextBoxColumn.DataPropertyName = "dr_lname";
             this.drlnameDataGridViewTextBoxColumn.HeaderText = "dr_lname";
             this.drlnameDataGridViewTextBoxColumn.Name = "drlnameDataGridViewTextBoxColumn";
+            this.drlnameDataGridViewTextBoxColumn.Width = 75;
             // 
             // drfnameDataGridViewTextBoxColumn
             // 
             this.drfnameDataGridViewTextBoxColumn.DataPropertyName = "dr_fname";
             this.drfnameDataGridViewTextBoxColumn.HeaderText = "dr_fname";
             this.drfnameDataGridViewTextBoxColumn.Name = "drfnameDataGridViewTextBoxColumn";
+            this.drfnameDataGridViewTextBoxColumn.Width = 76;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
             this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.Width = 62;
             // 
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Width = 69;
             // 
             // cityDataGridViewTextBoxColumn
             // 
             this.cityDataGridViewTextBoxColumn.DataPropertyName = "city";
             this.cityDataGridViewTextBoxColumn.HeaderText = "city";
             this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.cityDataGridViewTextBoxColumn.Width = 48;
             // 
             // stateDataGridViewTextBoxColumn
             // 
             this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
             this.stateDataGridViewTextBoxColumn.HeaderText = "state";
             this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.Width = 55;
             // 
             // zipDataGridViewTextBoxColumn
             // 
             this.zipDataGridViewTextBoxColumn.DataPropertyName = "zip";
             this.zipDataGridViewTextBoxColumn.HeaderText = "zip";
             this.zipDataGridViewTextBoxColumn.Name = "zipDataGridViewTextBoxColumn";
+            this.zipDataGridViewTextBoxColumn.Width = 45;
             // 
             // tohaBaseDataSet2
             // 
@@ -197,7 +225,7 @@
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(135, 180);
+            this.updateButton.Location = new System.Drawing.Point(132, 218);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(75, 23);
             this.updateButton.TabIndex = 2;
@@ -213,7 +241,9 @@
             // 
             // sqlInsertCommand2
             // 
-            this.sqlInsertCommand2.CommandText = resources.GetString("sqlInsertCommand2.CommandText");
+            this.sqlInsertCommand2.CommandText = "INSERT INTO [doctors] ([dr_id], [dr_lname], [dr_fname], [phone], [address], [city" +
+    "], [state], [zip]) VALUES (@dr_id, @dr_lname, @dr_fname, @phone, @address, @city" +
+    ", @state, @zip)";
             this.sqlInsertCommand2.Connection = this.sqlConnection1;
             this.sqlInsertCommand2.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@dr_id", System.Data.SqlDbType.Int, 0, "dr_id"),
@@ -224,21 +254,6 @@
             new System.Data.SqlClient.SqlParameter("@city", System.Data.SqlDbType.VarChar, 0, "city"),
             new System.Data.SqlClient.SqlParameter("@state", System.Data.SqlDbType.VarChar, 0, "state"),
             new System.Data.SqlClient.SqlParameter("@zip", System.Data.SqlDbType.VarChar, 0, "zip")});
-            // 
-            // sqlUpdateCommand1
-            // 
-            this.sqlUpdateCommand1.CommandText = resources.GetString("sqlUpdateCommand1.CommandText");
-            this.sqlUpdateCommand1.Connection = this.sqlConnection1;
-            this.sqlUpdateCommand1.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
-            new System.Data.SqlClient.SqlParameter("@dr_id", System.Data.SqlDbType.Int, 0, "dr_id"),
-            new System.Data.SqlClient.SqlParameter("@dr_lname", System.Data.SqlDbType.VarChar, 0, "dr_lname"),
-            new System.Data.SqlClient.SqlParameter("@dr_fname", System.Data.SqlDbType.VarChar, 0, "dr_fname"),
-            new System.Data.SqlClient.SqlParameter("@phone", System.Data.SqlDbType.VarChar, 0, "phone"),
-            new System.Data.SqlClient.SqlParameter("@address", System.Data.SqlDbType.VarChar, 0, "address"),
-            new System.Data.SqlClient.SqlParameter("@city", System.Data.SqlDbType.VarChar, 0, "city"),
-            new System.Data.SqlClient.SqlParameter("@state", System.Data.SqlDbType.VarChar, 0, "state"),
-            new System.Data.SqlClient.SqlParameter("@zip", System.Data.SqlDbType.VarChar, 0, "zip"),
-            new System.Data.SqlClient.SqlParameter("@Original_dr_id", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "dr_id", System.Data.DataRowVersion.Original, null)});
             // 
             // sqlDeleteCommand1
             // 
@@ -263,11 +278,12 @@
                         new System.Data.Common.DataColumnMapping("city", "city"),
                         new System.Data.Common.DataColumnMapping("state", "state"),
                         new System.Data.Common.DataColumnMapping("zip", "zip")})});
-            this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
+            this.sqlDataAdapter1.UpdateCommand = this.sqlCommand1;
+            this.sqlDataAdapter1.RowUpdated += new System.Data.SqlClient.SqlRowUpdatedEventHandler(this.sqlDataAdapter1_RowUpdated_1);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 237);
+            this.button1.Location = new System.Drawing.Point(481, 218);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -275,11 +291,77 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // sqlSelectCommand3
+            // 
+            this.sqlSelectCommand3.CommandText = "SELECT        spec_id, specialty\r\nFROM            specialties\r\nORDER BY spec_id";
+            this.sqlSelectCommand3.Connection = this.sqlConnection1;
+            // 
+            // sqlDataAdapter2
+            // 
+            this.sqlDataAdapter2.SelectCommand = this.sqlSelectCommand3;
+            this.sqlDataAdapter2.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "specialties", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("spec_id", "spec_id"),
+                        new System.Data.Common.DataColumnMapping("specialty", "specialty")})});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tohaBaseDataSet2, "specialties.spec_id", true));
+            this.comboBox1.DataSource = this.tohaBaseDataSet2;
+            this.comboBox1.DisplayMember = "specialties.specialty";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.ValueMember = "specialties.spec_id";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // tohaBaseDataSet
+            // 
+            this.tohaBaseDataSet.DataSetName = "TohaBaseDataSet";
+            this.tohaBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // specialtiesBindingSource
+            // 
+            this.specialtiesBindingSource.DataMember = "specialties";
+            this.specialtiesBindingSource.DataSource = this.tohaBaseDataSet;
+            // 
+            // specialtiesTableAdapter
+            // 
+            this.specialtiesTableAdapter.ClearBeforeFill = true;
+            // 
+            // specialtiesBindingSource1
+            // 
+            this.specialtiesBindingSource1.DataMember = "specialties";
+            this.specialtiesBindingSource1.DataSource = this.tohaBaseDataSet;
+            // 
+            // tohaBaseDataSetBindingSource
+            // 
+            this.tohaBaseDataSetBindingSource.DataSource = this.tohaBaseDataSet;
+            this.tohaBaseDataSetBindingSource.Position = 0;
+            // 
+            // specialtiesBindingSource2
+            // 
+            this.specialtiesBindingSource2.DataMember = "specialties";
+            this.specialtiesBindingSource2.DataSource = this.tohaBaseDataSetBindingSource;
+            // 
+            // specialtiesBindingSource3
+            // 
+            this.specialtiesBindingSource3.DataMember = "specialties";
+            this.specialtiesBindingSource3.DataSource = this.tohaBaseDataSet;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 450);
+            this.ClientSize = new System.Drawing.Size(599, 276);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.getData);
@@ -290,6 +372,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tohaBaseDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tohaBaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tohaBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specialtiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specialtiesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tohaBaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specialtiesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specialtiesBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,10 +403,20 @@
         private System.Data.SqlClient.SqlCommand sqlCommand1;
         private System.Data.SqlClient.SqlCommand sqlSelectCommand2;
         private System.Data.SqlClient.SqlCommand sqlInsertCommand2;
-        private System.Data.SqlClient.SqlCommand sqlUpdateCommand1;
         private System.Data.SqlClient.SqlCommand sqlDeleteCommand1;
-        public System.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
         private System.Windows.Forms.Button button1;
+        public System.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
+        private System.Data.SqlClient.SqlCommand sqlSelectCommand3;
+        private System.Data.SqlClient.SqlDataAdapter sqlDataAdapter2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private TohaBaseDataSet tohaBaseDataSet;
+        private System.Windows.Forms.BindingSource specialtiesBindingSource;
+        private TohaBaseDataSetTableAdapters.specialtiesTableAdapter specialtiesTableAdapter;
+        private System.Windows.Forms.BindingSource specialtiesBindingSource1;
+        private System.Windows.Forms.BindingSource tohaBaseDataSetBindingSource;
+        private System.Windows.Forms.BindingSource specialtiesBindingSource2;
+        private System.Windows.Forms.BindingSource specialtiesBindingSource3;
     }
 }
 

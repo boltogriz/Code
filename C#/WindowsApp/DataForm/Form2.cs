@@ -28,5 +28,10 @@ namespace DataForm
         {
             sqlDataAdapter1.Update(this.tohaBaseDataSet1, "doctors");
         }
+
+        private void sqlConnection1_InfoMessage(object sender, System.Data.SqlClient.SqlInfoMessageEventArgs e)
+        {
+
+        }
     }
 }
