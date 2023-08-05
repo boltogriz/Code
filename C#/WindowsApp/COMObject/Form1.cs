@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
+using MyCom;
 
 namespace COMObject
 {
@@ -33,6 +34,12 @@ namespace COMObject
             { 
                 app.Quit();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Test test = new Test();
+            MessageBox.Show(test.CalculateAverage(2, 3).ToString());
         }
     }
 }

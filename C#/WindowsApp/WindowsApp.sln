@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataForm", "DataForm\DataFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMObject", "COMObject\COMObject.csproj", "{84529A8F-6CBE-4302-B8AB-062BFC79C374}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCom", "MyCom\MyCom.csproj", "{ABAAFEEB-D885-41A6-833C-EFF9FC0351BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{84529A8F-6CBE-4302-B8AB-062BFC79C374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84529A8F-6CBE-4302-B8AB-062BFC79C374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84529A8F-6CBE-4302-B8AB-062BFC79C374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABAAFEEB-D885-41A6-833C-EFF9FC0351BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABAAFEEB-D885-41A6-833C-EFF9FC0351BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABAAFEEB-D885-41A6-833C-EFF9FC0351BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABAAFEEB-D885-41A6-833C-EFF9FC0351BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
