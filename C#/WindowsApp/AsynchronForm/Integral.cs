@@ -7,24 +7,30 @@ using System.Threading.Tasks;
 namespace AsynchronForm
 {
     public delegate double MathFunction(double x);
-    internal class Integral
+    public class Integral
     {
-        public const long STEIPS = 10000000L;
-        private static double Integrals(MathFunction f, double a, double b, long steps)
+        private long currenStep;
+        public long STEIPS = 100000000L;
+        public long CurrenStep 
+        {
+            get { return currenStep; } 
+        }
+        private double Calculate(MathFunction f, double a, double b, long steps)
         {
             double summa = 0.0;
             double h = (b - a) / steps;
-            for(long i=0; i < steps; i++)
+            for(currenStep = 0; currenStep < steps; currenStep++)
             {
-                double x = a + h * i + h / 2;
+                double x = a + h * currenStep + h / 2;
                 double y = f(x);
-                summa += y * x;
+                summa += y;
             }
+            summa *= h;
             return summa;
         }
-        public static double Integrals(MathFunction f, double a, double b)
+        public double Calculate(MathFunction f, double a, double b)
         {
-            return Integrals(f, a, b, STEIPS);
+            return Calculate(f, a, b, STEIPS);
         }
     }
 }

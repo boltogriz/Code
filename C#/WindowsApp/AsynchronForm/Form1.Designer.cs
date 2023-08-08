@@ -32,6 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numeralTextBoxB = new MyCom.NumeralTextBox();
+            this.buttonIntegral = new System.Windows.Forms.Button();
+            this.labelResult = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // numeralTextBoxA
@@ -70,11 +73,41 @@
             this.numeralTextBoxB.Text = "0";
             this.numeralTextBoxB.Value = 0D;
             // 
+            // buttonIntegral
+            // 
+            this.buttonIntegral.Location = new System.Drawing.Point(31, 48);
+            this.buttonIntegral.Name = "buttonIntegral";
+            this.buttonIntegral.Size = new System.Drawing.Size(75, 23);
+            this.buttonIntegral.TabIndex = 4;
+            this.buttonIntegral.Text = "Интеграл";
+            this.buttonIntegral.UseVisualStyleBackColor = true;
+            this.buttonIntegral.Click += new System.EventHandler(this.buttonIntegral_Click);
+            // 
+            // labelResult
+            // 
+            this.labelResult.AutoSize = true;
+            this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelResult.Location = new System.Drawing.Point(27, 88);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(36, 20);
+            this.labelResult.TabIndex = 5;
+            this.labelResult.Text = "___";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(6, 141);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(305, 23);
+            this.progressBar1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 133);
+            this.ClientSize = new System.Drawing.Size(323, 173);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.labelResult);
+            this.Controls.Add(this.buttonIntegral);
             this.Controls.Add(this.numeralTextBoxB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -92,6 +125,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private MyCom.NumeralTextBox numeralTextBoxB;
+        private System.Windows.Forms.Button buttonIntegral;
+        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
