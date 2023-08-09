@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.numeralTextBoxA = new MyCom.NumeralTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,66 +42,42 @@
             // 
             // numeralTextBoxA
             // 
-            this.numeralTextBoxA.Location = new System.Drawing.Point(31, 6);
+            resources.ApplyResources(this.numeralTextBoxA, "numeralTextBoxA");
             this.numeralTextBoxA.Name = "numeralTextBoxA";
-            this.numeralTextBoxA.Size = new System.Drawing.Size(100, 20);
-            this.numeralTextBoxA.TabIndex = 0;
-            this.numeralTextBoxA.Text = "0";
             this.numeralTextBoxA.Value = 0D;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 9);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "A:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(163, 9);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "B:";
             // 
             // numeralTextBoxB
             // 
-            this.numeralTextBoxB.Location = new System.Drawing.Point(186, 6);
+            resources.ApplyResources(this.numeralTextBoxB, "numeralTextBoxB");
             this.numeralTextBoxB.Name = "numeralTextBoxB";
-            this.numeralTextBoxB.Size = new System.Drawing.Size(100, 20);
-            this.numeralTextBoxB.TabIndex = 3;
-            this.numeralTextBoxB.Text = "0";
             this.numeralTextBoxB.Value = 0D;
             // 
             // buttonIntegral
             // 
-            this.buttonIntegral.Location = new System.Drawing.Point(31, 48);
+            resources.ApplyResources(this.buttonIntegral, "buttonIntegral");
             this.buttonIntegral.Name = "buttonIntegral";
-            this.buttonIntegral.Size = new System.Drawing.Size(75, 23);
-            this.buttonIntegral.TabIndex = 4;
-            this.buttonIntegral.Text = "Интеграл";
             this.buttonIntegral.UseVisualStyleBackColor = true;
             this.buttonIntegral.Click += new System.EventHandler(this.buttonIntegral_Click);
             // 
             // labelResult
             // 
-            this.labelResult.AutoSize = true;
-            this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelResult.Location = new System.Drawing.Point(27, 88);
+            resources.ApplyResources(this.labelResult, "labelResult");
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(36, 20);
-            this.labelResult.TabIndex = 5;
-            this.labelResult.Text = "___";
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(6, 141);
+            resources.ApplyResources(this.progressBar1, "progressBar1");
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(305, 23);
-            this.progressBar1.TabIndex = 6;
             // 
             // backgroundWorker1
             // 
@@ -110,19 +87,15 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 48);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Stop";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 173);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.labelResult);
@@ -132,7 +105,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numeralTextBoxA);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 

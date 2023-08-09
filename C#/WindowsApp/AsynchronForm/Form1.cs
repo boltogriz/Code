@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Security;
+using System.Resources;
+using System.Resources;
+using System.Reflection;
 
 namespace AsynchronForm
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -125,12 +129,15 @@ namespace AsynchronForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            labelResult.Text = integral.summaEnable.ToString();
+            
+            labelResult.Text = string.Format($"Интеграл {0}", integral.summaEnable.ToString());
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            labelResult.Text = integral.summaEnable.ToString();
+            ResourceManager rm = new ResourceManager("AsynchronForm.MyString", Assembly.GetExecutingAssembly());
+            
+            labelResult.Text = string.Format("{0}: {1}", rm.GetString("integral"), integral.summaEnable.ToString());
             if (backgroundWorker1.WorkerSupportsCancellation == true)
                 labelResult.Text = "Отменен Пользователем!!!!_";
             backgroundWorker1.WorkerSupportsCancellation = false;
