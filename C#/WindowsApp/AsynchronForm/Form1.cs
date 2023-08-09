@@ -20,7 +20,8 @@ namespace AsynchronForm
             numeralTextBoxA.Value = 0.0;
             numeralTextBoxB.Value = Math.PI/2;
             backgroundWorker1.WorkerReportsProgress = true;
-            backgroundWorker1.WorkerSupportsCancellation = true;
+            backgroundWorker1.WorkerSupportsCancellation = false;
+
         }
 
         private Integral integral;
