@@ -33,6 +33,7 @@ namespace AsynchronForm
                     i = ((currenStep + 1) / 10000000) * 10;
                     worker.ReportProgress((int)i);
                     //MessageBox.Show(((int)i).ToString());
+                    //
                 }
                 if (worker.CancellationPending)
                 {
