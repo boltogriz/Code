@@ -19,10 +19,12 @@ namespace AsynchronForm
             InitializeComponent();
             numeralTextBoxA.Value = 0.0;
             numeralTextBoxB.Value = Math.PI/2;
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.WorkerSupportsCancellation = true;
         }
 
         private Integral integral;
-        private void buttonIntegral_Click(object sender, EventArgs e)
+        private async void buttonIntegral_Click(object sender, EventArgs e)
         {
             //Thread t = new Thread(new ThreadStart(IntegralCalculate));
             //t.Start();
@@ -38,15 +40,22 @@ namespace AsynchronForm
             //var thread3 = new Thread(ProgressThrea);
             //thread3.Start();
             // thread2.Start();
-            var t1 = new Task(IntegralCalculate);
-            var t2 = new Task(ProgressThrea);
- 
-            t1.Start();
-            t2.Start();
+            //var t1 = new Task(IntegralCalculate);
+            //var t2 = new Task(ProgressThrea);
+
+            //t1.Start();
+            //t2.Start();
+            labelResult.Text = "___";
+
+                if (backgroundWorker1.IsBusy != true)
+                backgroundWorker1.RunWorkerAsync();
 
 
 
         }
+
+
+
         private void ProgressThrea()
         {
             if (progressBar1.InvokeRequired) 
@@ -70,19 +79,65 @@ namespace AsynchronForm
         }
         private void IntegralCalculate()
         {
-            if (labelResult.InvokeRequired) 
+            //if (labelResult.InvokeRequired) 
+            //{
+            //    Action safeWrite = delegate { IntegralCalculate(); };
+            //    labelResult.Invoke(safeWrite);
+            //}
+            //else
+            //{
+            //    integral = new Integral();
+            //    double r = integral.Calculate(new MathFunction(Math.Sin), numeralTextBoxA.Value, numeralTextBoxB.Value);
+            //    labelResult.Text = r.ToString();
+            //}
+            integral = new Integral();
+            //double r = integral.Calculate(new MathFunction(Math.Sin), numeralTextBoxA.Value, numeralTextBoxB.Value);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (backgroundWorker1.WorkerSupportsCancellation == true)
             {
-                Action safeWrite = delegate { IntegralCalculate(); };
-                labelResult.Invoke(safeWrite);
+                backgroundWorker1.CancelAsync();
+                labelResult.Text = "Отмена";
+                progressBar1.Value = 0;
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker worker = sender as BackgroundWorker;
+
+            if (worker.CancellationPending == true) 
+            {
+                e.Cancel = true;
             }
             else
             {
                 integral = new Integral();
-                double r = integral.Calculate(new MathFunction(Math.Sin), numeralTextBoxA.Value, numeralTextBoxB.Value);
-                labelResult.Text = r.ToString();
+                //worker.ReportProgress(10);
+                double r = integral.Calculate(new MathFunction(Math.Sin), numeralTextBoxA.Value, numeralTextBoxB.Value, worker);
             }
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            labelResult.Text = integral.summaEnable.ToString();
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            labelResult.Text = integral.summaEnable.ToString();
+            if (backgroundWorker1.WorkerSupportsCancellation == true)
+                labelResult.Text = "Cancel";
+            backgroundWorker1.WorkerSupportsCancellation = false;
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            if(e.ProgressPercentage <= 100 && e.ProgressPercentage >= 0)
+              progressBar1.Value = e.ProgressPercentage;
+        }
     }
 }
