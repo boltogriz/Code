@@ -131,7 +131,7 @@ namespace AsynchronForm
         {
             labelResult.Text = integral.summaEnable.ToString();
             if (backgroundWorker1.WorkerSupportsCancellation == true)
-                labelResult.Text = "Отменен Пользователем!!!!";
+                labelResult.Text = "Отменен Пользователем!!!!_";
             backgroundWorker1.WorkerSupportsCancellation = false;
         }
 
