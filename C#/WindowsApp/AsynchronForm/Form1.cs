@@ -96,6 +96,7 @@ namespace AsynchronForm
 
         private void button1_Click(object sender, EventArgs e)
         {
+            backgroundWorker1.WorkerSupportsCancellation = true;
             if (backgroundWorker1.WorkerSupportsCancellation == true)
             {
                 backgroundWorker1.CancelAsync();
@@ -130,7 +131,7 @@ namespace AsynchronForm
         {
             labelResult.Text = integral.summaEnable.ToString();
             if (backgroundWorker1.WorkerSupportsCancellation == true)
-                labelResult.Text = "Cancel";
+                labelResult.Text = "Отменен Пользователем";
             backgroundWorker1.WorkerSupportsCancellation = false;
         }
 
