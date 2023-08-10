@@ -12,11 +12,13 @@ using System.Security;
 using System.Resources;
 using System.Resources;
 using System.Reflection;
+using System.Security.Principal;
 
 namespace AsynchronForm
 {
     public partial class Form1 : Form
     {
+        WindowsPrincipal windowsPrincipal;
         
         public Form1()
         {
@@ -25,6 +27,7 @@ namespace AsynchronForm
             numeralTextBoxB.Value = Math.PI/2;
             backgroundWorker1.WorkerReportsProgress = true;
             backgroundWorker1.WorkerSupportsCancellation = false;
+
 
         }
 
