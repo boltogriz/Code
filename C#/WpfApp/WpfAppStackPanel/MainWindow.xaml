@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfAppStackPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppStackPanel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Background="LightBlue" Padding="10" Margin="10">TextBock1</TextBlock>
+        <TextBlock Background="LightCoral" Padding="10" Margin="10">TextBock2</TextBlock>
+        <TextBlock Background="LightCyan" Padding="10" Margin="10">TextBock3</TextBlock>
+        <TextBlock Background="LightGoldenrodYellow" Padding="10" Margin="10">TextBock4</TextBlock>
+        <TextBlock Background="LightGray" Padding="10" Margin="10">TextBock5</TextBlock>
+    </StackPanel>
+</Window>

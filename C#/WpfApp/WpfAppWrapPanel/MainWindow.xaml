@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfAppWrapPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppWrapPanel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <WrapPanel Orientation="Vertical">
+        <TextBlock Background="LightBlue" Padding="10" Margin="10">TextBolck1</TextBlock>
+        <TextBlock Background="LightCoral" Padding="10" Margin="10">TextBolck2</TextBlock>
+        <TextBlock Background="LightCyan" Padding="10" Margin="10">TextBolck3</TextBlock>
+        <TextBlock Background="LightGray" Padding="10" Margin="10">TextBolck4</TextBlock>
+        <TextBlock Background="LightPink" Padding="10" Margin="10">TextBolck5</TextBlock>
+        <TextBlock Background="LightSkyBlue" Padding="10" Margin="10">TextBolck6</TextBlock>
+    </WrapPanel>
+</Window>
