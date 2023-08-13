@@ -25,6 +25,11 @@ namespace BackgroundWorkerSample
     {
         BackgroundWorker _worker;
         int result;
+        class Result
+        {
+            public int result;
+        }
+        Result resultObj;
         public MainWindow()
         {
             InitializeComponent();
@@ -34,12 +39,13 @@ namespace BackgroundWorkerSample
             _worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(worker_RunWorkerCompleted);
             _worker.WorkerReportsProgress = true;
             _worker.WorkerSupportsCancellation = true;
+            resultObj = new Result();
 
         }
 
         private void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            this.Title = result.ToString();
+            this.Title = resultObj.result.ToString();
             if (e.Cancelled)
                 this.Title = "Cancelled";
         }
@@ -51,11 +57,11 @@ namespace BackgroundWorkerSample
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
 
-            result = 0;
+            resultObj.result = 0;
             for (int i=0; i <= 100; i++)
             {
                 Thread.Sleep(50);
-                result += i;
+                resultObj.result += i;
                 if (_worker.CancellationPending) 
                 { 
                     e.Cancel = true;
