@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B880371E-D262-4D7B-96F1-790D423E9FF9}</ProjectGuid>
+    <ProjectGuid>{80B70325-D355-43FC-A798-B598956A0985}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SingleInstanceApplication</RootNamespace>
-    <AssemblyName>SingleInstanceApplication</AssemblyName>
+    <RootNamespace>BackgroundWorkerSample</RootNamespace>
+    <AssemblyName>BackgroundWorkerSample</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,9 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ExtensionRegisterHelper.cs" />
-    <Compile Include="SingleInstanceApplicationWrapper.cs" />
-    <Compile Include="WpfApplication.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

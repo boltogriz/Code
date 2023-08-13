@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,11 @@ namespace SingleInstanceApplication
         public MainWindow()
         {
             InitializeComponent();
+        }
+        public void ShowFileText(string path)
+        {
+            string fileContent = File.ReadAllText(path);
+            this.Content = fileContent;
         }
     }
 }
