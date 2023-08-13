@@ -5,10 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppContent"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" SizeToContent="WidthAndHeight">
     <Grid>
-        <Button Name="button1" Content="Button" HorizontalAlignment="Left" Margin="128,90,0,0" VerticalAlignment="Top" Width="200"/>
-        <Button Name="button2" Content="Button" HorizontalAlignment="Left" Margin="128,155,0,0" VerticalAlignment="Top" Width="200"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="stak" Grid.Row="0" Grid.Column="0">
+            <Button Name="cmdPrev" Content="Назад"/>
+            <Button Name="cmdNext" Content="Вперед"/>
+            <CheckBox Name="chkLongText" Content="cmdPrev" Checked="chkLongText_Checked" Unchecked="chkLongText_Unchecked"/>
+            <Button Name="cmdClose" Content="Закрыть" Click="cmdClose_Click"/>
+        </StackPanel>
+        <TextBox Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="Text Text  Text Text Text Text Text Text Text Text Text Text Text" Margin="0,0,0,0"/>
 
     </Grid>
 </Window>

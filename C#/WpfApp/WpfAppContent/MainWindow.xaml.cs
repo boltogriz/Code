@@ -23,10 +23,39 @@ namespace WpfAppContent
         public MainWindow()
         {
             InitializeComponent();
-            button1.Content = new Test();
-            TextBox textBox = new TextBox();
-            button2.Content = textBox;
+            AddHandler(CheckBox.CheckedEvent, new RoutedEventHandler(chk_Checked));
+            AddHandler(CheckBox.UncheckedEvent, new RoutedEventHandler(chk_Unchecked));
+        }
 
+        private void chk_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox chk = e.OriginalSource as CheckBox;
+            DependencyObject dpObj = LogicalTreeHelper.FindLogicalNode(stak, chk.Content.ToString());
+            ((FrameworkElement)dpObj).Visibility = Visibility.Visible;
+        }
+
+        private void chk_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox chk = e.OriginalSource as CheckBox;
+            DependencyObject dpObj = LogicalTreeHelper.FindLogicalNode(stak, chk.Content.ToString());
+            ((FrameworkElement)dpObj).Visibility = Visibility.Hidden;
+        }
+
+        private void chkLongText_Checked(object sender, RoutedEventArgs e)
+        {
+            cmdPrev.Content = "<-----";
+            cmdNext.Content = "----->";
+        }
+
+        private void chkLongText_Unchecked(object sender, RoutedEventArgs e)
+        {
+            cmdPrev.Content = "Назад";
+            cmdNext.Content = "Вперед";
+        }
+
+        private void cmdClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
