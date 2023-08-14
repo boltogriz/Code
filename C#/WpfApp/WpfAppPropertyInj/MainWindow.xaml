@@ -4,10 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppPropertyInj"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <local:Phone x:Key="nexusPhone" Title="Nexus" Company="Google" Price="50000"/>
+        <system:DateTime x:Key="myDate">2/12/2016</system:DateTime>
+        <local:DateTimeToDateConverter x:Key="myDateConverter"/>
     </Window.Resources>
     <Grid Background="LightSkyBlue">
         <Grid.RowDefinitions>
@@ -36,13 +39,15 @@
         <StackPanel Grid.Row="0" Grid.Column="1" DataContext="{StaticResource nexusPhone}">
             <TextBlock Text="{Binding Title}"/>
             <TextBlock Text="{Binding Company}"/>
-            <TextBlock Text="{Binding Price}"/>
+            <TextBlock Text="{Binding StringFormat=Итоговая цена {0} рублей, Source={StaticResource nexusPhone}, Path=Price}"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" DataContext="{StaticResource nexusPhone}">
+        <StackPanel Grid.Row="1" Grid.Column="1" DataContext="{StaticResource nexusPhone}" Background="LightBlue">
             <TextBlock Text="{Binding Title}"/>
             <TextBlock Text="{Binding Company}"/>
             <TextBlock Text="{Binding Price}"/>
             <Button Content="Update Data" Click="button_UpdateData_Click" Name="button_UpdateData"/>
+            <TextBlock Text="{Binding Source={StaticResource myDate}, Converter={StaticResource myDateConverter}, ConverterParameter=EN}"/>
+            <TextBlock Text="{Binding Source={StaticResource myDate}}"/>
         </StackPanel>
     </Grid>
 </Window>

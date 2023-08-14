@@ -37,6 +37,7 @@ namespace WpfAppPropertyInj
             Phone phone = (Phone)this.Resources["nexusPhone"];
             phone.Company = "LG";
             phone.Title = "Nexus2";
+            phone.Price = 80000;
         }
     }
 }

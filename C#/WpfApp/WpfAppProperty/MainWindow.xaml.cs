@@ -30,9 +30,11 @@ namespace WpfAppProperty
             MessageBox.Show(myFirstConrol1.Data.ToString());
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void button2_Click(object sender, RoutedEventArgs e)
         {
             mySecondControl1.DataStr = "Мой текст";
+            textBox1.Text = mySecondControl1.DataStr;
+            Console.WriteLine("asdf");
         }
     }
 }
