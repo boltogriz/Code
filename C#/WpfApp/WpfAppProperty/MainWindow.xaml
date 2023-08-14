@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfAppProperty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppProperty"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:myControls="clr-namespace:WpfAppProperty"
+        xmlns:myControls2="clr-namespace:WpfAppProperty">
+    <Grid>
+        <myControls:MyFirstControl
+            x:Name="myFirstConrol1"
+            Data="{Binding ElementName=slider1, Path=Value}">
+        </myControls:MyFirstControl>
+        <myControls2:MySecondControl
+            x:Name="mySecondControl1"
+            DataStr="{Binding ElementName=textBox1, Path=Text}">
+        </myControls2:MySecondControl>
+        <Slider HorizontalAlignment="Left" Margin="39,66,0,0" VerticalAlignment="Top" Width="616" Name="slider1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="39,136,0,0" VerticalAlignment="Top" Name="button1" Click="button1_Click"/>
+        <TextBox Name="textBox1" HorizontalAlignment="Left" Margin="35,217,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="39,279,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+    </Grid>
+</Window>
