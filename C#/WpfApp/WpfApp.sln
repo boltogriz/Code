@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppProperty", "WpfAppPro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppPropertyInj", "WpfAppPropertyInj\WpfAppPropertyInj.csproj", "{4C903496-CAC5-430A-8F1E-7CB132CC8EFE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elements", "Elements", "{C50CEB01-E41C-48B3-9EE0-062F7CD11F41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfElements", "WpfElements\WpfElements.csproj", "{3A5FC673-B6C9-4CCE-B914-A6353772708E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +129,10 @@ Global
 		{4C903496-CAC5-430A-8F1E-7CB132CC8EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C903496-CAC5-430A-8F1E-7CB132CC8EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C903496-CAC5-430A-8F1E-7CB132CC8EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5FC673-B6C9-4CCE-B914-A6353772708E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5FC673-B6C9-4CCE-B914-A6353772708E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5FC673-B6C9-4CCE-B914-A6353772708E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5FC673-B6C9-4CCE-B914-A6353772708E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +156,7 @@ Global
 		{5EFB891E-EE1A-403F-9107-4C7BDF7F1E82} = {D4F26762-DCDA-4618-B049-EC9B29CC5CFF}
 		{22FF0765-0869-4D52-A000-85683665FAAE} = {CBF4A4EA-A6AF-4E25-B9F7-D63012BA40DA}
 		{4C903496-CAC5-430A-8F1E-7CB132CC8EFE} = {CBF4A4EA-A6AF-4E25-B9F7-D63012BA40DA}
+		{3A5FC673-B6C9-4CCE-B914-A6353772708E} = {C50CEB01-E41C-48B3-9EE0-062F7CD11F41}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9E9754A-3490-4C57-A58E-E2B4927C0A04}

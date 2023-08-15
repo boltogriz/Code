@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfElements.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfElements"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label Target="{Binding ElementName=txtA}" Content="X" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtA" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" SelectionChanged="txtA_SelectionChanged"/>
+        <Label Target="{Binding ElementName=txtB}" Content="Y" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"/>
+        <TextBox SpellCheck.IsEnabled="True" VerticalScrollBarVisibility="Auto" Name="txtB" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Width="248" SizeChanged="txtB_SizeChanged" SelectionChanged="txtB_SelectionChanged" RenderTransformOrigin="0.5,0.5">
+            txtB txtB
+        txtBtxtBtxtBtxtBtxtBtxtBtxtBtxtBtxtB txtB txtB txtB txtB </TextBox>
+        <TextBlock Name="textBlockA" TextWrapping="Wrap" Text="TextBlock"/>
+        <ListBox x:Name="lst" SelectionChanged="lst_SelectionChanged">
+        <CheckBox Content="CheckBox 1"/>
+        <CheckBox Content="CheckBox 2"/>
+            
+        <CheckBox Content="CheckBox 3"/>
+        </ListBox>
+        <Button Content="Button" Click="Button_Click"/>
+
+    </StackPanel>
+</Window>
