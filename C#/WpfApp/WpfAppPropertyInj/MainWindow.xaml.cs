@@ -34,7 +34,7 @@ namespace WpfAppPropertyInj
 
         private void button_UpdateData_Click(object sender, RoutedEventArgs e)
         {
-            Phone phone = (Phone)this.Resources["nexusPhone"];
+            Phone phone = (Phone)this.Resources["nexusPhone"];//
             phone.Company = "LG";
             phone.Title = "Nexus2";
             phone.Price = 80000;
