@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppWindows"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800" Activated="Window_Activated">
+        Title="Window1" Height="450" Width="800" Activated="Window_Activated" GotFocus="Window_GotFocus">
     <Window.Resources>
         <local:ListItemAction x:Key="listItemAction1"/>
     </Window.Resources>
-    <Grid>
-        <ListBox Name="listBox" ItemsSource="{Binding Source={StaticResource listItemAction1}, Path=ItemAction}"/>
-
-    </Grid>
+    <StackPanel>
+        <ListBox Name="listBox" Height="130" Margin="10" ItemsSource="{Binding Source={StaticResource listItemAction1}, Path=ItemAction}"/>
+        <ListBox x:Name="listBox2" Height="300" Margin="10">
+        </ListBox>
+        <TextBox Margin="10" Name="texBox1" Height="30" Text="{Binding Source={StaticResource listItemAction1}, Path=Str}"></TextBox>
+    </StackPanel>
 </Window>

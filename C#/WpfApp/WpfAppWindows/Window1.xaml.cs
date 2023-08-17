@@ -29,15 +29,30 @@ namespace WpfAppWindows
         {
             listItemAction = (ListItemAction)this.Resources["listItemAction1"];
             Title = str;
-            listItemAction.ItemAction.Add("InitializaComponent");
+            listItemAction.ItemAction[0] = "Init";
+            listBox2.Items.Add("III");
+            listBox2.Height = 50;
+            //listBox2.Items.Add("InitializaComponent");
             //listBox.ItemsSource = listItemAction.ItemAction;
-            //MessageBox.Show(listItemAction.ItemAction[0].ToString());
-            //MessageBox.Show(listBox.Items[0].ToString());
+            MessageBox.Show(listBox2.Items[0].ToString());
         }
 
         private void Window_Activated(object sender, EventArgs e)
         {
-            listItemAction.ItemAction.Add("Activated");
+
+            listItemAction.ItemAction[1] = "act4444";
+            //listBox2.Items.Add("Activated");
+            listItemAction.Str = "Act";
+            listBox2.Items.Add("III");
+
+        }
+
+        private void Window_GotFocus(object sender, RoutedEventArgs e)
+        {
+            listItemAction.ItemAction[2] = "act444dddd4";
+            //listBox2.Items.Add("GotFocus");
+            listItemAction.Str = "Fou";
+            listBox2.Items.Add("III");
         }
     }
 }

@@ -1,23 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WpfAppWindows
 {
-    internal class ListItemAction : INotifyCollectionChanged
+    internal class ListItemAction : INotifyPropertyChanged
     {
-        public List<string> itemAction = new List<string>();
-        public List<string> ItemAction { get {  return itemAction; } set { itemAction = value; } }
+        private string[] itemAction = new string[10];
+        public string str = "sfsdf";
+        public string Str
+        {
+            get
+            {
+                return str;
+            }
+            set
+            {
+                str = value;
+                OnPropertyChanced("Str");
+            }
+        }
+        public string[] ItemAction 
+        { 
+            get 
+            {  
+                return itemAction; 
+            } 
+            set 
+            {
+                str = this.itemAction[0].ToLower();
+                itemAction = value;
+                OnPropertyChanced("ItemAction");
+            } 
+        }
 
-        public event NotifyCollectionChangedEventHandler CollectionChanged;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanced([CallerMemberName] string prop = "")
         {
-
+            if (PropertyChanged != null) 
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            }
         }
     }
 }
