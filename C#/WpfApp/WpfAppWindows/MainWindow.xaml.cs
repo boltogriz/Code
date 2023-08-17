@@ -24,5 +24,17 @@ namespace WpfAppWindows
         {
             InitializeComponent();
         }
+
+        private void buttonModalShow_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 window = new Window1("Модальный");
+            window.ShowDialog();
+        }
+
+        private void buttonNoModalShow_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 window = new Window1("Немодальное");
+            window.Show();
+        }
     }
 }
