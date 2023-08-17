@@ -12,34 +12,14 @@ namespace WpfAppWindows
 {
     internal class ListItemAction : INotifyPropertyChanged
     {
-        private string[] itemAction = new string[10];
-        public string str = "sfsdf";
-        public string Str
-        {
-            get
-            {
-                return str;
-            }
-            set
-            {
-                str = value;
-                OnPropertyChanced("Str");
-            }
-        }
-        public string[] ItemAction 
-        { 
-            get 
-            {  
-                return itemAction; 
-            } 
-            set 
-            {
-                str = this.itemAction[0].ToLower();
-                itemAction = value;
-                OnPropertyChanced("ItemAction");
-            } 
-        }
+        public List<string> itemAction = new List<string>();
 
+        public List<string> addItem(string str)
+        {
+            itemAction.Add(str);
+            OnPropertyChanced("itemAction");
+            return itemAction;
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
