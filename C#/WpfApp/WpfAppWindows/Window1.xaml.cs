@@ -24,26 +24,32 @@ namespace WpfAppWindows
         public Window1()
         {
             InitializeComponent();
-            listItemAction = (ListItemAction)this.Resources["listItemAction1"];
-            listItemAction.addItem("initial");
+            listItemAction = (ListItemAction)this.Resources["MyListItemAction"];
+ 
         }
         public Window1(string str)
         {
             InitializeComponent();
-            listItemAction = (ListItemAction)this.Resources["listItemAction1"];
-            listItemAction.addItem("initial");
+            listItemAction = (ListItemAction)this.Resources["MyListItemAction"];
+            listItemAction.ItemAction.Add("Initialize");
         }
 
         private void Window_Activated(object sender, EventArgs e)
         {
-
+            listItemAction.ItemAction.Add("Activated");
 
 
         }
 
         private void Window_GotFocus(object sender, RoutedEventArgs e)
         {
+            listItemAction.ItemAction.Add("GotFocus");
+        }
 
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            listItemAction.ItemAction.Add("Button");
+            MessageBox.Show(listItemAction.ItemAction.Count.ToString());
         }
     }
 }

@@ -3,13 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfAppWindows"
+        xmlns:c="clr-namespace:WpfAppWindows"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800" Activated="Window_Activated" GotFocus="Window_GotFocus">
     <Window.Resources>
-        <local:ListItemAction x:Key="listItemAction1"/>
+        <c:ListItemAction x:Key="MyListItemAction"/>
     </Window.Resources>
     <StackPanel>
-        <ListBox Name="listBox" ItemsSource="{Binding Source={StaticResource listItemAction1}, Path=itemAction}"/>
+        <ListBox Name="listBox"  ItemsSource="{Binding Source={StaticResource MyListItemAction}, Path=ItemAction}" 
+                 SelectedValuePath="4"
+                 Height="300"
+                 SelectionMode="Multiple"/>
+        <Button Name="button1" Content="Button" Click="button1_Click"/>
     </StackPanel>
 </Window>

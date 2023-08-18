@@ -14,13 +14,18 @@ namespace WpfAppWindows
     {
         public List<string> itemAction = new List<string>();
 
-        public List<string> addItem(string str)
+        public List<string> ItemAction
         {
-            itemAction.Add(str);
-            OnPropertyChanced("itemAction");
-            return itemAction;
+            get
+            {
+                return itemAction;
+            }
+            set
+            {
+                OnPropertyChanced(nameof(ItemAction));
+                itemAction = value;
+            }
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanced([CallerMemberName] string prop = "")
