@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,21 @@ namespace WpfAppWindows
         public MainWindow()
         {
             InitializeComponent();
+            Closing += new System.ComponentModel.CancelEventHandler(WindowMain_Closing);
+            Left = Properties.Settings.Default.WindowsPosition.Left;
+            Top = Properties.Settings.Default.WindowsPosition.Top;
+
+            Width = Properties.Settings.Default.WindowsPosition.Width;
+            Height = Properties.Settings.Default.WindowsPosition.Height;
+
+            Title = Properties.Settings.Default.Title;
+        }
+
+        private void WindowMain_Closing(object sender, CancelEventArgs e)
+        {
+            Properties.Settings.Default.WindowsPosition = this.RestoreBounds;
+            //Properties.Settings.Default.Title = Title;
+            Properties.Settings.Default.Save();
         }
 
         private void buttonModalShow_Click(object sender, RoutedEventArgs e)
