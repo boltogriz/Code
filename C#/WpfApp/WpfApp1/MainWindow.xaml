@@ -12,6 +12,7 @@
     <Grid>
         <Button Content="Button" Command="New" HorizontalAlignment="Left" Margin="371,206,0,0" VerticalAlignment="Top"/>
         <Button Content="Button" Command="Open" HorizontalAlignment="Left" Margin="371,262,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" Command="Open" HorizontalAlignment="Left" Margin="487,282,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
