@@ -6,9 +6,24 @@
         xmlns:local="clr-namespace:MyResource"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="BigFontButtonStyle">
+            <Style.Setters>
+                <Setter Property="Control.FontFamily" Value="Times New Roman"/>
+                <Setter Property="Control.FontSize" Value="30"/>
+                <Setter Property="Control.FontWeight" Value="Bold"/>
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.Foreground" Value="Yellow"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+    </Window.Resources>
     <Grid>
         <StackPanel>
-            <Button x:Name="getImage" Content="Получить Картинку" Click="getImage_Click"/>
+            <Button Style="{StaticResource BigFontButtonStyle}" x:Name="getImage" Content="Получить Картинку" Click="getImage_Click" />
             <Image x:Name="imageContaner" />
         </StackPanel>
     </Grid>
