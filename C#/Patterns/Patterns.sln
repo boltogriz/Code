@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_2 Design_Patterns", "Lesson_2 Design_Patterns", "{6F58C169-C70B-48DB-805B-E46630E8DE33}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_3_UML", "Lesson_3_UML", "{D10A43AA-5728-4DA6-9930-3DE8BCFAF158}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UML", "UML\UML.csproj", "{9E4DB718-5E35-400B-B93A-00A8446DB027}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +29,17 @@ Global
 		{39961C47-00A4-4DAC-9059-5082330E8F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39961C47-00A4-4DAC-9059-5082330E8F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39961C47-00A4-4DAC-9059-5082330E8F94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E4DB718-5E35-400B-B93A-00A8446DB027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4DB718-5E35-400B-B93A-00A8446DB027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4DB718-5E35-400B-B93A-00A8446DB027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4DB718-5E35-400B-B93A-00A8446DB027}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{39961C47-00A4-4DAC-9059-5082330E8F94} = {F2BB007A-9D05-4D9A-98CD-A0F6C05D5956}
+		{9E4DB718-5E35-400B-B93A-00A8446DB027} = {D10A43AA-5728-4DA6-9930-3DE8BCFAF158}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EDF974B7-EFFE-469B-BB7A-D710A079900C}
