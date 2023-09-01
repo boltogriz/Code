@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UML", "UML\UML.csproj", "{9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_4_Paradigma_OOP", "Lesson_4_Paradigma_OOP", "{89F0F125-0C23-47D1-BA6C-2EF66F22C23C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_5_State_Machine", "Lesson_5_State_Machine", "{5A266D3A-2867-416F-A3C5-AA9A1CF5EBA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
