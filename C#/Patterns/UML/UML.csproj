@@ -45,12 +45,15 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="ConcreteClass.cs" />
+    <Compile Include="DiscrayDocument.cs" />
+    <Compile Include="Document.cs" />
     <Compile Include="MyClassLittle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Diagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
