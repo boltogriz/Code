@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_4_Paradigma_OOP", "L
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_5_State_Machine", "Lesson_5_State_Machine", "{5A266D3A-2867-416F-A3C5-AA9A1CF5EBA9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_6_Grammar", "Lesson_6_Grammar", "{E1880849-633D-4F92-B529-42DACC87D370}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
