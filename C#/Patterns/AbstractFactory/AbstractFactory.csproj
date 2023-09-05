@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{73DF7D7F-F0A3-4B25-8E07-A467E2BAE4A0}</ProjectGuid>
+    <ProjectGuid>{AC3CCC06-0328-422C-BE56-B768186F1715}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Patterns</RootNamespace>
-    <AssemblyName>Patterns</AssemblyName>
+    <RootNamespace>AbstractFactory</RootNamespace>
+    <AssemblyName>AbstractFactory</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractBottle.cs" />
+    <Compile Include="AbstractCover.cs" />
+    <Compile Include="AbstractFatory.cs" />
+    <Compile Include="AbstractWater.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="CocaColaBottle.cs" />
+    <Compile Include="CocaColaCover.cs" />
+    <Compile Include="CocaColaFactory.cs" />
+    <Compile Include="CocaColaWater.cs" />
+    <Compile Include="PepsiBottle.cs" />
+    <Compile Include="PepsiCover.cs" />
+    <Compile Include="PepsiFactory.cs" />
+    <Compile Include="PepsiWater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
