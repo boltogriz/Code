@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PatternDecorator.Program" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternDecorator.Component">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternDecorator.Decorator">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAA=</HashCode>
+      <FileName>Decorator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Component" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PatternDecorator.ConcreteComponent1">
+    <Position X="0.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>ConcreteComponent1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternDecorator.ConcreteDecoratorA">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>ConcreteDecoratorA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternDecorator.ConcreteDecoratorB">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>ConcreteDecoratorB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
