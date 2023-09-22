@@ -15,10 +15,12 @@ namespace PatternDecorator
             Component component = new ConcreteComponent1();
             Decorator decoratorA = new ConcreteDecoratorA();
             Decorator decoratorB = new ConcreteDecoratorB();
+            Decorator decoratorC = new ConcreteDocoratorC();
 
             decoratorA.Component = component;
             decoratorB.Component = decoratorA;
-            decoratorB.Operation();
+            decoratorC.Component = decoratorB;
+            decoratorC.Operation();
 
             Console.ReadKey();
         }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E4B6D3D6-CC0F-4CFB-908D-2FF770CF92B8}</ProjectGuid>
+    <ProjectGuid>{AFC2A8C7-1872-4014-B4EC-15AF87405E39}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PatternDecorator</RootNamespace>
-    <AssemblyName>PatternDecorator</AssemblyName>
+    <RootNamespace>PatternFacade</RootNamespace>
+    <AssemblyName>PatternFacade</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component.cs" />
-    <Compile Include="ConcreteComponent.cs" />
-    <Compile Include="ConcreteComponent1.cs" />
-    <Compile Include="ConcreteDecoratorA.cs" />
-    <Compile Include="ConcreteDecoratorB.cs" />
-    <Compile Include="ConcreteDocoratorC.cs" />
-    <Compile Include="Decorator.cs" />
+    <Compile Include="Facade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubSystem1.cs" />
+    <Compile Include="SybSystem2.cs" />
+    <Compile Include="SybSystem3.cs" />
+    <Compile Include="SybSystem4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
