@@ -71,6 +71,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_18_Proxy", "Lesson_1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternProxy", "PatternProxy\PatternProxy.csproj", "{090EEB5C-2713-405A-8AD2-01D594F998BB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_19_Chain_Of_Responsibility", "Lesson_19_Chain_Of_Responsibility", "{85C07F3A-4B3A-4360-BA93-18A3DF34C464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{E3B28DB8-FDF8-42FD-B6B2-757F72E4048A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +141,10 @@ Global
 		{090EEB5C-2713-405A-8AD2-01D594F998BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{090EEB5C-2713-405A-8AD2-01D594F998BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{090EEB5C-2713-405A-8AD2-01D594F998BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3B28DB8-FDF8-42FD-B6B2-757F72E4048A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3B28DB8-FDF8-42FD-B6B2-757F72E4048A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3B28DB8-FDF8-42FD-B6B2-757F72E4048A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3B28DB8-FDF8-42FD-B6B2-757F72E4048A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -157,6 +165,7 @@ Global
 		{AFC2A8C7-1872-4014-B4EC-15AF87405E39} = {3173D2D4-2B86-4D12-9579-898B88435E9C}
 		{4FBB30E9-8B02-44E0-86F2-1D829D099F07} = {9363CCF5-D93F-48EE-B572-007209CB2ABB}
 		{090EEB5C-2713-405A-8AD2-01D594F998BB} = {F6E6DD2C-96B4-4516-92C8-E6C9F94FA224}
+		{E3B28DB8-FDF8-42FD-B6B2-757F72E4048A} = {85C07F3A-4B3A-4360-BA93-18A3DF34C464}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EDF974B7-EFFE-469B-BB7A-D710A079900C}
