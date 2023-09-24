@@ -81,6 +81,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternCommand", "PatternCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PourPatternCommand", "PourPatternCommand\PourPatternCommand.csproj", "{114254A2-B16E-4F8A-BD61-CBE90C9DE2AD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_21_Interpreter", "Lesson_21_Interpreter", "{202F5DE3-369C-4835-AB54-8EAD38322EAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternInterpreter", "PatternInterpreter\PatternInterpreter.csproj", "{E24A8EAE-E480-4133-9768-728BB2BB55FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +163,10 @@ Global
 		{114254A2-B16E-4F8A-BD61-CBE90C9DE2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{114254A2-B16E-4F8A-BD61-CBE90C9DE2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{114254A2-B16E-4F8A-BD61-CBE90C9DE2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E24A8EAE-E480-4133-9768-728BB2BB55FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24A8EAE-E480-4133-9768-728BB2BB55FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24A8EAE-E480-4133-9768-728BB2BB55FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24A8EAE-E480-4133-9768-728BB2BB55FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +190,7 @@ Global
 		{E3B28DB8-FDF8-42FD-B6B2-757F72E4048A} = {85C07F3A-4B3A-4360-BA93-18A3DF34C464}
 		{FE23C9C2-4AB0-4C3E-81A6-8052D8A18379} = {1D689C46-14C5-43D0-BF01-B7F006A40CA3}
 		{114254A2-B16E-4F8A-BD61-CBE90C9DE2AD} = {1D689C46-14C5-43D0-BF01-B7F006A40CA3}
+		{E24A8EAE-E480-4133-9768-728BB2BB55FF} = {202F5DE3-369C-4835-AB54-8EAD38322EAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EDF974B7-EFFE-469B-BB7A-D710A079900C}
