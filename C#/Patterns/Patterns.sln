@@ -115,6 +115,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_27_Strategy", "Lesso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternStrategy", "PatternStrategy\PatternStrategy.csproj", "{1940298D-690A-478A-951C-F10EF8C2F14C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_28_Template_Method", "Lesson_28_Template_Method", "{D718EA4C-9972-40CB-A236-585F0C5D9E25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternTemplateMethod", "PatternTemplateMethod\PatternTemplateMethod.csproj", "{C7DA7C01-2C17-4D11-9D55-B1D720760FF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -233,6 +237,10 @@ Global
 		{1940298D-690A-478A-951C-F10EF8C2F14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1940298D-690A-478A-951C-F10EF8C2F14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1940298D-690A-478A-951C-F10EF8C2F14C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7DA7C01-2C17-4D11-9D55-B1D720760FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7DA7C01-2C17-4D11-9D55-B1D720760FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7DA7C01-2C17-4D11-9D55-B1D720760FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7DA7C01-2C17-4D11-9D55-B1D720760FF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -266,6 +274,7 @@ Global
 		{BA341A60-022C-419A-8643-F8F9069B86D5} = {F8AC9EF6-5A00-4E6E-AF72-36B12162C719}
 		{04EEA483-1608-43AA-B01A-C161866DE70C} = {83AC1CD2-5CD9-4287-8C57-E21C9F7713E0}
 		{1940298D-690A-478A-951C-F10EF8C2F14C} = {11CE816D-8599-4E93-9B2F-B8F0189B0EF6}
+		{C7DA7C01-2C17-4D11-9D55-B1D720760FF1} = {D718EA4C-9972-40CB-A236-585F0C5D9E25}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EDF974B7-EFFE-469B-BB7A-D710A079900C}
