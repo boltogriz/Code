@@ -12,6 +12,7 @@ namespace WatcherMessageBox
     {
         public async Task StartWatch(string direction)
         {
+            
             string dir = direction;
             MyData getDirekt = new MyData();
             DateTime startTime = DateTime.Now;
@@ -40,9 +41,8 @@ namespace WatcherMessageBox
                                  | NotifyFilters.Security
                                  | NotifyFilters.Size;
 
-            //watcher.Changed += OnChanged;
+
             watcher.Created += OnCreated;
-            //watcher.Deleted += OnDeleted;
             watcher.Renamed += OnRenamed;
 
             watcher.Filter = "*.*";
@@ -61,13 +61,15 @@ namespace WatcherMessageBox
             string attribute = GetAttribute(e.Name);
             string value = $"{e.Name}";
 
-            value = FormatString(value, 40);
+            value = FormatString(value, 60);
 
             if (attribute != "")
             {
                 title = "Репликация";
                 value += $"\n{attribute}";
             }
+
+            NonBlockingMessageBox form = new NonBlockingMessageBox(value, title);
 
             MessageBox.Show(
                     value,
@@ -80,13 +82,20 @@ namespace WatcherMessageBox
 
         private void OnRenamed(object sender, RenamedEventArgs e)
         {
+            if (e.Name.Contains("~$"))
+                return;
+
+            string title = "Переименовал";
+
             string value = $"Старое: {e.OldName}\n" +
                            $"Новое: {e.Name}";
-            value = FormatString(value, 40);
+            value = FormatString(value, 60);
+            
+            NonBlockingMessageBox form = new NonBlockingMessageBox(value, title);
 
             MessageBox.Show(
                     value,
-                    "Переименовал",
+                    title,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information,
                     MessageBoxDefaultButton.Button1,
@@ -122,9 +131,9 @@ namespace WatcherMessageBox
 
             if (str.Length <= maxLength)
             {
-                return str.PadRight(maxLength + 10);
+                return str.PadRight(maxLength);
             }
-            
+
             return str;
         }
     }
