@@ -10,15 +10,16 @@ namespace WatcherMessageBox
 {
     internal class Watcher
     {
-        public void StartWatch(string direction)
+        public async Task StartWatch(string direction)
         {
             
             string dir = direction;
-            MyData getDirekt = new MyData();
+            string talDir = @"\\tal\mail";
+
             DateTime startTime = DateTime.Now;
 
-            if (direction == @"\\tal\mail")
-                dir = getDirekt.GetData();
+            if (direction == talDir)
+                dir = MyData.GetData(talDir);
 
             while (!Directory.Exists(dir))
             {
@@ -27,7 +28,7 @@ namespace WatcherMessageBox
                     return;
                 }
 
-                Task.Delay(30000);
+                await Task.Delay(30000);
             }
 
             FileSystemWatcher watcher = new FileSystemWatcher($@"{dir}");
@@ -61,25 +62,13 @@ namespace WatcherMessageBox
             string attribute = GetAttribute(e.Name);
             string value = $"{e.Name}";
 
-            value = FormatString(value, 60);
-
             if (attribute != "")
             {
                 title = "Репликация";
                 value += $"\n{attribute}";
             }
 
-            //NonBlockingMessageBox form = new NonBlockingMessageBox(value, title);
-            //form.Show();
             Application.Run(new CustomMessageBox(value, title));
-            //CustomMessageBox.Show(value, title);
-            //MessageBox.Show(
-            //        value,
-            //        title,
-            //        MessageBoxButtons.OK,
-            //        MessageBoxIcon.Information,
-            //        MessageBoxDefaultButton.Button1,
-            //        MessageBoxOptions.DefaultDesktopOnly);
         }
 
         private void OnRenamed(object sender, RenamedEventArgs e)
@@ -91,17 +80,8 @@ namespace WatcherMessageBox
 
             string value = $"Старое: {e.OldName}\n" +
                            $"Новое: {e.Name}";
-            value = FormatString(value, 60);
 
-            //NonBlockingMessageBox form = new NonBlockingMessageBox(value, title);
-            CustomMessageBox.Show(value, title);
-            //MessageBox.Show(
-            //        value,
-            //        title,
-            //        MessageBoxButtons.OK,
-            //        MessageBoxIcon.Information,
-            //        MessageBoxDefaultButton.Button1,
-            //        MessageBoxOptions.DefaultDesktopOnly);
+            Application.Run(new CustomMessageBox(value, title));
         }
 
         private string GetAttribute(string name)
@@ -124,19 +104,6 @@ namespace WatcherMessageBox
                 attribute = "Камышеватский ДИПИ";
 
             return attribute;
-        }
-
-        private string FormatString(string str, int maxLength)
-        {
-            if (string.IsNullOrEmpty(str))
-                return new string(' ', maxLength);
-
-            if (str.Length <= maxLength)
-            {
-                return str.PadRight(maxLength);
-            }
-
-            return str;
         }
     }
 }

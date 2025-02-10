@@ -8,15 +8,15 @@ namespace WatcherMessageBox
 {
     internal class MyData
     {
-        public string month;
-        public string month0;
-        public string day;
-        public string direkt;
-        public string kadr = "\\\\tal\\share\\mail";
-
-        public string GetData()
+        public static string GetData(string dir)
         {
+            string month = "";
+            string month0 = "";
+            string day;
+            string direkt;
+
             DateTime thisday = DateTime.Today;
+
             if (thisday.Day.ToString().Length == 1)
             {
                 day = "0" + thisday.Day.ToString();
@@ -85,7 +85,7 @@ namespace WatcherMessageBox
                 month = "Декабрь";
                 month0 = "12";
             }
-            return direkt = @"\\tal\mail\" + thisday.Year.ToString() + "\\" + month + "\\" + day + "_" + month0 + "_" + thisday.Year.ToString();
+            return direkt = $@"{dir}\" + thisday.Year.ToString() + "\\" + month + "\\" + day + "_" + month0 + "_" + thisday.Year.ToString();
         }
     }
 }
