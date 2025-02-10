@@ -10,7 +10,7 @@ namespace WatcherMessageBox
 {
     internal class Watcher
     {
-        public async Task StartWatch(string direction)
+        public void StartWatch(string direction)
         {
             
             string dir = direction;
@@ -27,7 +27,7 @@ namespace WatcherMessageBox
                     return;
                 }
 
-                await Task.Delay(30000);
+                Task.Delay(30000);
             }
 
             FileSystemWatcher watcher = new FileSystemWatcher($@"{dir}");
@@ -69,15 +69,17 @@ namespace WatcherMessageBox
                 value += $"\n{attribute}";
             }
 
-            NonBlockingMessageBox form = new NonBlockingMessageBox(value, title);
-
-            MessageBox.Show(
-                    value,
-                    title,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information,
-                    MessageBoxDefaultButton.Button1,
-                    MessageBoxOptions.DefaultDesktopOnly);
+            //NonBlockingMessageBox form = new NonBlockingMessageBox(value, title);
+            //form.Show();
+            Application.Run(new CustomMessageBox(value, title));
+            //CustomMessageBox.Show(value, title);
+            //MessageBox.Show(
+            //        value,
+            //        title,
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Information,
+            //        MessageBoxDefaultButton.Button1,
+            //        MessageBoxOptions.DefaultDesktopOnly);
         }
 
         private void OnRenamed(object sender, RenamedEventArgs e)
@@ -90,16 +92,16 @@ namespace WatcherMessageBox
             string value = $"Старое: {e.OldName}\n" +
                            $"Новое: {e.Name}";
             value = FormatString(value, 60);
-            
-            NonBlockingMessageBox form = new NonBlockingMessageBox(value, title);
 
-            MessageBox.Show(
-                    value,
-                    title,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information,
-                    MessageBoxDefaultButton.Button1,
-                    MessageBoxOptions.DefaultDesktopOnly);
+            //NonBlockingMessageBox form = new NonBlockingMessageBox(value, title);
+            CustomMessageBox.Show(value, title);
+            //MessageBox.Show(
+            //        value,
+            //        title,
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Information,
+            //        MessageBoxDefaultButton.Button1,
+            //        MessageBoxOptions.DefaultDesktopOnly);
         }
 
         private string GetAttribute(string name)

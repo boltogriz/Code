@@ -25,12 +25,12 @@ namespace WatcherMessageBox
             {
                 foreach (string arg in args)
                 {
-                    _ = watcher.StartWatch(arg);
+                    watcher.StartWatch(arg);
                 }
             }
             else
             {
-                _ = watcher.StartWatch(def);
+                watcher.StartWatch(def);
             }
 
             Application.EnableVisualStyles();
