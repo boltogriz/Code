@@ -108,14 +108,14 @@ namespace WatcherMessageBox
             if (e.Name.Contains("~$"))
                 return;
 
-            string title = "Почта";
-            string attribute = GetAttribute(e.Name);
+            string title = dir != null ? Path.GetFileName(dir) : "почта";
+            string attributeRep = GetAttributeRep(e.Name);
             string value = $"{e.Name}";
 
-            if (attribute != "")
+            if (attributeRep != "")
             {
                 title = "Репликация";
-                value += $"\n{attribute}";
+                value += $"\n{attributeRep}";
             }
 
             Application.Run(new CustomMessageBox(value, title));
@@ -126,7 +126,8 @@ namespace WatcherMessageBox
             if (e.Name.Contains("~$"))
                 return;
 
-            string title = "Переименовал";
+            string title = "Переименовал в ";
+            title += dir != null ? Path.GetFileName(dir) : "почта";
 
             string value = $"Старое: {e.OldName}\n" +
                            $"Новое: {e.Name}";
@@ -134,7 +135,7 @@ namespace WatcherMessageBox
             Application.Run(new CustomMessageBox(value, title));
         }
 
-        private string GetAttribute(string name)
+        private string GetAttributeRep(string name)
         {
             string attribute = "";
 
