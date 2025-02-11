@@ -32,6 +32,7 @@ public class CustomMessageBox : Form
         buttonOK.DialogResult = DialogResult.OK;
         buttonOK.Dock = DockStyle.Bottom;
         buttonOK.TabStop = false;
+        buttonOK.Select();
 
         buttonOK.Click += (sender, e) => this.Close();
 
