@@ -1,29 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace WatcherMessageBox
 {
     internal class Watcher
     {
-        public async Task StartWatch(string direction)
-        {
-            
-            string dir = direction;
-            string talDir = @"\\tal\mail";
+        private Timer timer;
+        private string talDir = @"C:\Users\admin\Documents\testw\mail";
 
+        private FileSystemWatcher watcher;
+        private string dir;
+        private string setDir;
+
+        public Watcher(string direction) 
+        {
+            setDir = direction;
+        }
+        public async Task StartWatch()
+        {
             DateTime startTime = DateTime.Now;
 
-            if (direction == talDir)
+            if (setDir == talDir)
                 dir = MyData.GetData(talDir);
+
 
             while (!Directory.Exists(dir))
             {
-                if ((DateTime.Now - startTime).TotalMinutes > 3600000)
+                if ((DateTime.Now - startTime).TotalMinutes > 1000)//1800000
                 {
                     return;
                 }
@@ -31,7 +41,11 @@ namespace WatcherMessageBox
                 await Task.Delay(30000);
             }
 
-            FileSystemWatcher watcher = new FileSystemWatcher($@"{dir}");
+            timer = new Timer() { Interval = 20000 };
+            timer.Tick += CheckRestart;
+            timer.Start();
+
+            watcher = new FileSystemWatcher($@"{dir}");
 
             watcher.NotifyFilter = NotifyFilters.Attributes
                                  | NotifyFilters.CreationTime
@@ -51,6 +65,42 @@ namespace WatcherMessageBox
             watcher.EnableRaisingEvents = true;
 
 
+        }
+
+        private void CheckRestart(object sender, EventArgs e)
+        {
+            if (!IsStarted())
+            {
+                RestartWatch();
+            }
+        }
+
+        public bool IsStarted()
+        {
+            if (setDir == talDir && dir != MyData.GetData(talDir))
+            {
+                return false;
+            }
+            else
+            {
+                return watcher != null && Directory.Exists(dir);
+            }
+        }
+
+        public Task RestartWatch()
+        {
+            timer.Stop();
+            StopWatch();
+            return StartWatch();
+        }
+
+        private void StopWatch()
+        {
+            if (watcher != null)
+            {
+                watcher.Created -= OnCreated;
+                watcher.Renamed -= OnRenamed;
+            }
         }
 
         private void OnCreated(object sender, FileSystemEventArgs e)

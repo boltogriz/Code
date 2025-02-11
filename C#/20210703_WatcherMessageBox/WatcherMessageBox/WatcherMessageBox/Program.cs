@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 
 namespace WatcherMessageBox
@@ -14,27 +15,32 @@ namespace WatcherMessageBox
     static class Program
     {
 
-
         [STAThread]
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            string def = @"\\tal\mail";
-            var watcher = new Watcher();
+            List<Watcher> watchers = new List<Watcher>();
+            List<Task> tasks = new List<Task>();
+            string def = @"C:\Users\admin\Documents\testw\mail";
 
             if (args.Length != 0)
             {
                 foreach (string arg in args)
                 {
-                    _ = watcher.StartWatch(arg);
+                    Watcher watcher = new Watcher(arg);
+                    watchers.Add(watcher);
+
+                    tasks.Add(watcher.StartWatch());
                 }
             }
             else
             {
-                _ = watcher.StartWatch(def);
+                Watcher watcher = new Watcher(def);
+                watchers.Add(watcher);
+
+                tasks.Add(watcher.StartWatch());
             }
 
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run();
         }
     }
