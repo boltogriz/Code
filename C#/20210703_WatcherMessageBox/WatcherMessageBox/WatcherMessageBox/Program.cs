@@ -1,13 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Drawing.Text;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
-
 
 namespace WatcherMessageBox
 {
@@ -20,7 +14,7 @@ namespace WatcherMessageBox
         {
             List<Watcher> watchers = new List<Watcher>();
             List<Task> tasks = new List<Task>();
-            string def = @"C:\Users\admin\Documents\testw\mail";
+            string def = @"\\tal\mail";
 
             if (args.Length != 0)
             {

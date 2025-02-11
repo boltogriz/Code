@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 public class CustomMessageBox : Form
@@ -32,6 +31,7 @@ public class CustomMessageBox : Form
         buttonOK.Text = "OK";
         buttonOK.DialogResult = DialogResult.OK;
         buttonOK.Dock = DockStyle.Bottom;
+        buttonOK.TabStop = false;
 
         buttonOK.Click += (sender, e) => this.Close();
 

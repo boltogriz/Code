@@ -1,23 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace WatcherMessageBox
 {
     internal class Watcher
     {
-        private Timer timer;
-        private string talDir = @"C:\Users\admin\Documents\testw\mail";
+        private string talDir = @"\\tal\mail";
+        private double timeOutWaitExistDir = 1800000;
+        private int timeCheckExistDri = 30000;
+        private int timeCheckRestartWatcher = 600000;
 
+        private Timer timer;
         private FileSystemWatcher watcher;
         private string dir;
-        private string setDir;
+        private readonly string setDir;
 
         public Watcher(string direction) 
         {
@@ -27,21 +25,23 @@ namespace WatcherMessageBox
         {
             DateTime startTime = DateTime.Now;
 
+            dir = setDir;
+
             if (setDir == talDir)
                 dir = MyData.GetData(talDir);
 
 
             while (!Directory.Exists(dir))
             {
-                if ((DateTime.Now - startTime).TotalMinutes > 1000)//1800000
+                if ((DateTime.Now - startTime).TotalMinutes > timeOutWaitExistDir)
                 {
                     return;
                 }
 
-                await Task.Delay(30000);
+                await Task.Delay(timeCheckExistDri);
             }
 
-            timer = new Timer() { Interval = 20000 };
+            timer = new Timer() { Interval = timeCheckRestartWatcher };
             timer.Tick += CheckRestart;
             timer.Start();
 
