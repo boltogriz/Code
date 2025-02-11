@@ -1,4 +1,7 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 public class CustomMessageBox : Form
@@ -13,7 +16,7 @@ public class CustomMessageBox : Form
         this.Size = new Size(300, 150);
         this.FormBorderStyle = FormBorderStyle.FixedDialog;
         this.StartPosition = FormStartPosition.Manual;
-        this.TopMost = true; // Окно всегда поверх других окон
+        this.Icon = WatcherMessageBox.Properties.Resources.icons8_mail_48s;
 
         // Позиционирование формы в нижнем правом углу экрана
         Rectangle screen = Screen.PrimaryScreen.WorkingArea;
@@ -24,16 +27,14 @@ public class CustomMessageBox : Form
         labelMessage.Text = message;
         labelMessage.AutoSize = false;
         labelMessage.TextAlign = ContentAlignment.MiddleCenter;
-        labelMessage.Dock = DockStyle.Fill;
+        labelMessage.Dock = DockStyle.Fill;;
 
         // Создание и настройка кнопки OK
         buttonOK = new Button();
         buttonOK.Text = "OK";
         buttonOK.DialogResult = DialogResult.OK;
         buttonOK.Dock = DockStyle.Bottom;
-        buttonOK.TabStop = false;
-        buttonOK.Select();
-
+        
         buttonOK.Click += (sender, e) => this.Close();
 
         // Добавление элементов управления на форму
@@ -44,10 +45,25 @@ public class CustomMessageBox : Form
     // Переопределение метода, чтобы окно не активировалось
     protected override bool ShowWithoutActivation => true;
 
+
     public static void Show(string message, string title)
     {
         CustomMessageBox customMessageBox = new CustomMessageBox(message, title);
         customMessageBox.Show();
+    }
+
+    private void InitializeComponent()
+    {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomMessageBox));
+            this.SuspendLayout();
+            // 
+            // CustomMessageBox
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "CustomMessageBox";
+            this.ResumeLayout(false);
+
     }
 }
 
