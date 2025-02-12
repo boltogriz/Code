@@ -37,6 +37,9 @@ public class CustomMessageBox : Form
         
         buttonOK.Click += (sender, e) => this.Close();
 
+        
+
+
         // Добавление элементов управления на форму
         this.Controls.Add(labelMessage);
         this.Controls.Add(buttonOK);
@@ -50,6 +53,7 @@ public class CustomMessageBox : Form
     {
         CustomMessageBox customMessageBox = new CustomMessageBox(message, title);
         customMessageBox.Show();
+        customMessageBox.TopMost = true;
     }
 
     private void InitializeComponent()
