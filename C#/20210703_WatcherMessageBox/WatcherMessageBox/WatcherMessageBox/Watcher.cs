@@ -112,6 +112,10 @@ namespace WatcherMessageBox
                 if (!e.Name.Contains("UP_"))
                     return;
 
+            if (dir.Contains($@"\pochta"))
+                if (!e.Name.Contains("FULL.log"))
+                    return;
+
             string title = dir != null ? Path.GetFileName(dir) : "почта";
             string attributeRepUP = GetAttributeRepUP(e.Name);
             string attributeRepLog = GetAttributeRepLog(e.Name);
