@@ -15,7 +15,7 @@ namespace WatcherMessageBox
         {
             List<Watcher> watchers = new List<Watcher>();
             List<Task> tasks = new List<Task>();
-            string def = @"C:\Users\Toha\Documents\testwatcher\norm";
+            string def = @"\\tal\mail";
 
             if (args.Length != 0)
             {
