@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,11 +11,11 @@ namespace WatcherMessageBox
     {
 
         [STAThread]
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             List<Watcher> watchers = new List<Watcher>();
             List<Task> tasks = new List<Task>();
-            string def = @"\\tal\mail";
+            string def = @"C:\Users\Toha\Documents\testwatcher\norm";
 
             if (args.Length != 0)
             {
@@ -34,8 +35,19 @@ namespace WatcherMessageBox
                 tasks.Add(watcher.StartWatch());
             }
 
+            TestCreateFolder(def);
+
             Application.EnableVisualStyles();
             Application.Run();
+        }
+
+        private static void TestCreateFolder(string def)
+        {
+            Timer timer = new Timer();
+            
+            timer.Interval = 10000;
+            timer.Tick += (object sender, EventArgs e) => { Directory.CreateDirectory($@"{def}\{DateTime.Now.Ticks}"); };
+            timer.Start();
         }
     }
 }
