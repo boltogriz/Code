@@ -109,16 +109,35 @@ namespace WatcherMessageBox
                 return;
 
             string title = dir != null ? Path.GetFileName(dir) : "почта";
-            string attributeRep = GetAttributeRep(e.Name);
+            string attributeRepUP = GetAttributeRepUP(e.Name);
+            string attributeRepLog = GetAttributeRepLog(e.Name);
+            string attributeMail = setDir == talDir ? "Почта: " : "";
             string value = $"{e.Name}";
 
-            if (attributeRep != "")
+            if (attributeRepUP != "")
             {
-                title = "Репликация";
-                value += $"\n{attributeRep}";
+                title = $"Поступил UP: {title}";
+                value += $"{attributeRepUP}\n{value}";
+            }
+
+            if (attributeMail != "")
+                title = $"{attributeMail}{title}";
+
+            if (attributeRepLog != "")
+            {
+                title = $"Репликация: {title}";
+                value = $"{attributeRepLog}: \n{value}";
             }
 
             Application.Run(new CustomMessageBox(value, title));
+        }
+
+        private string GetAttributeRepLog(string name)
+        {
+            string attributeLog = "";
+            if (name.Contains(".log"))
+                attributeLog = "Репликация завершена";
+            return attributeLog;
         }
 
         private void OnRenamed(object sender, RenamedEventArgs e)
@@ -135,7 +154,7 @@ namespace WatcherMessageBox
             Application.Run(new CustomMessageBox(value, title));
         }
 
-        private string GetAttributeRep(string name)
+        private string GetAttributeRepUP(string name)
         {
             string attribute = "";
 
