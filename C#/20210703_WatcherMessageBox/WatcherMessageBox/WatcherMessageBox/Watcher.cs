@@ -108,6 +108,10 @@ namespace WatcherMessageBox
             if (e.Name.Contains("~$"))
                 return;
 
+            if (dir.Contains($@"\in"))
+                if (!e.Name.Contains("UP_"))
+                    return;
+
             string title = dir != null ? Path.GetFileName(dir) : "почта";
             string attributeRepUP = GetAttributeRepUP(e.Name);
             string attributeRepLog = GetAttributeRepLog(e.Name);
@@ -117,7 +121,7 @@ namespace WatcherMessageBox
             if (attributeRepUP != "")
             {
                 title = $"Поступил UP: {title}";
-                value += $"{attributeRepUP}\n{value}";
+                value = $"{attributeRepUP}\n{value}";
             }
 
             if (attributeMail != "")
