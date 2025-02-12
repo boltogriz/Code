@@ -176,6 +176,8 @@ namespace WatcherMessageBox
                 attribute = "Камышеватский СРЦН";
             else if (name.Contains("UP_2331005902"))
                 attribute = "Камышеватский ДИПИ";
+            else if (name.Contains("UP_23610184402"))
+                attribute = "ГКУ КК - УСЗН в Ейском районе";
 
             return attribute;
         }
