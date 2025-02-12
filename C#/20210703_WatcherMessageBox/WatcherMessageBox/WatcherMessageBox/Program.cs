@@ -35,19 +35,19 @@ namespace WatcherMessageBox
                 tasks.Add(watcher.StartWatch());
             }
 
-            TestCreateFolder(def);
+            //TestCreateFolder(def);
 
             Application.EnableVisualStyles();
             Application.Run();
         }
 
-        private static void TestCreateFolder(string def)
-        {
-            Timer timer = new Timer();
+        //private static void TestCreateFolder(string def)
+        //{
+        //    Timer timer = new Timer();
             
-            timer.Interval = 10000;
-            timer.Tick += (object sender, EventArgs e) => { Directory.CreateDirectory($@"{def}\{DateTime.Now.Ticks}"); };
-            timer.Start();
-        }
+        //    timer.Interval = 500;
+        //    timer.Tick += (object sender, EventArgs e) => { Directory.CreateDirectory($@"{def}\{DateTime.Now.Ticks}"); };
+        //    timer.Start();
+        //}
     }
 }

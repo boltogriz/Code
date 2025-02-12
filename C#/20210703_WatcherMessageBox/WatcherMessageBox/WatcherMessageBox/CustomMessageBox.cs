@@ -56,9 +56,6 @@ public class CustomMessageBox : Form
         this.StartPosition = FormStartPosition.Manual;
         this.Icon = WatcherMessageBox.Properties.Resources.icons8_mail_48s;
 
-        this.Load += Form1_Load;
-        this.FormClosing += Form1_FormClosing;
-
         // Позиционирование формы в нижнем правом углу экрана
         Rectangle screen = Screen.PrimaryScreen.WorkingArea;
         this.Location = new Point(screen.Right - this.Width, screen.Bottom - this.Height);
@@ -85,12 +82,6 @@ public class CustomMessageBox : Form
         this.Controls.Add(buttonOK);
     }
 
-    private void Form1_Load(object sender, EventArgs e)
-    {
-        _handle = this.Handle;
-        // ... остальной код из Load
-    }
-
     protected override CreateParams CreateParams
     {
         get
@@ -99,42 +90,6 @@ public class CustomMessageBox : Form
             cp.ExStyle |= WS_EX_NOACTIVATE | WS_EX_TOPMOST;
             return cp;
         }
-    }
-
-    private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-    {
-        // Освобождаем ресурсы при закрытии формы
-        Dispose(true);
-    }
-
-    protected override void Dispose(bool disposing)
-    {
-        if (!_disposed)
-        {
-            if (disposing)
-            {
-                // Освобождаем управляемые ресурсы
-                //if (components != null)
-                //{
-                    //components.Dispose();
-                //}
-
-                // Отписываемся от событий
-                this.Load -= Form1_Load;
-                this.FormClosing -= Form1_FormClosing;
-            }
-
-            // Освобождаем неуправляемые ресурсы
-            if (_handle != IntPtr.Zero)
-            {
-                SetWindowLong(_handle, GWL_EXSTYLE, GetWindowLong(_handle, GWL_EXSTYLE) & ~(WS_EX_NOACTIVATE | WS_EX_TOPMOST));
-                _handle = IntPtr.Zero;
-            }
-
-            _disposed = true;
-        }
-
-        base.Dispose(disposing);
     }
 
     // Переопределение метода, чтобы окно не активировалось
