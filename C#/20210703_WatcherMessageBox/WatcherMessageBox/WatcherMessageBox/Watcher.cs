@@ -112,6 +112,10 @@ namespace WatcherMessageBox
                 if (!e.Name.Contains("UP_"))
                     return;
 
+            if (dir.Contains($@"\in"))
+                if (e.Name.Contains(".sql_tmp"))
+                    return;
+
             if (dir.Contains($@"\pochta") && !dir.Contains($@"\in"))
                 if (!e.Name.Contains("FULL.log"))
                     return;
