@@ -81,6 +81,10 @@ namespace WatcherMessageBox
             {
                 return false;
             }
+            else if (setDir == talDir && dir == MyData.GetData(talDir))
+            {
+                return true;
+            }
             else
             {
                 return watcher != null && Directory.Exists(dir);
