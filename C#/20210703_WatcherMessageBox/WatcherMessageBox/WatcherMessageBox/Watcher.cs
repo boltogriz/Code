@@ -11,10 +11,9 @@ namespace WatcherMessageBox
         private string talDir = @"\\tal\mail";
         private double timeOutWaitExistDir = 1800000;
         private int timeCheckExistDri = 30000;
-        //private int timeCheckRestartWatcher = 600000;
+
         Thread checkThread;
 
-        //private Timer timer;
         private FileSystemWatcher watcher;
         private string dir;
         private readonly string setDir;
@@ -42,10 +41,6 @@ namespace WatcherMessageBox
 
                 await Task.Delay(timeCheckExistDri);
             }
-
-            //timer = new Timer() { Interval = timeCheckRestartWatcher };
-            //timer.Tick += CheckRestart;
-            //timer.Start();
 
             watcher = new FileSystemWatcher($@"{dir}");
 
@@ -94,7 +89,6 @@ namespace WatcherMessageBox
 
         public Task RestartWatch()
         {
-            //timer.Stop();
             StopWatch();
             return StartWatch();
         }
@@ -147,7 +141,6 @@ namespace WatcherMessageBox
                 value = $"{attributeRepLog}: \n{value}";
             }
 
-            //Application.Run(new CustomMessageBox(value, title));
             ShowMessageBox(value, title);
         }
 
@@ -178,7 +171,6 @@ namespace WatcherMessageBox
             string value = $"Старое: {e.OldName}\n" +
                            $"Новое: {e.Name}";
 
-            //Application.Run(new CustomMessageBox(value, title));
             ShowMessageBox(value, title);
         }
 
