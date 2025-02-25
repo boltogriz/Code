@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,9 +11,10 @@ namespace WatcherMessageBox
         private string talDir = @"\\tal\mail";
         private double timeOutWaitExistDir = 1800000;
         private int timeCheckExistDri = 30000;
-        private int timeCheckRestartWatcher = 600000;
+        //private int timeCheckRestartWatcher = 600000;
+        Thread checkThread;
 
-        private Timer timer;
+        //private Timer timer;
         private FileSystemWatcher watcher;
         private string dir;
         private readonly string setDir;
@@ -41,9 +43,9 @@ namespace WatcherMessageBox
                 await Task.Delay(timeCheckExistDri);
             }
 
-            timer = new Timer() { Interval = timeCheckRestartWatcher };
-            timer.Tick += CheckRestart;
-            timer.Start();
+            //timer = new Timer() { Interval = timeCheckRestartWatcher };
+            //timer.Tick += CheckRestart;
+            //timer.Start();
 
             watcher = new FileSystemWatcher($@"{dir}");
 
@@ -64,36 +66,35 @@ namespace WatcherMessageBox
             watcher.IncludeSubdirectories = false;
             watcher.EnableRaisingEvents = true;
 
-
+            checkThread = new Thread(CheckRestart);
+            checkThread.IsBackground = true;
+            checkThread.Start();
         }
 
-        private void CheckRestart(object sender, EventArgs e)
+        private void CheckRestart()
         {
-            if (!IsStarted())
+            while (true)
             {
-                RestartWatch();
+                if (!IsDirExists())
+                {
+                    watcher.EnableRaisingEvents = false;
+                }
+                else if (!watcher.EnableRaisingEvents)
+                {
+                    RestartWatch();
+                }
+                Thread.Sleep(timeCheckExistDri);
             }
         }
 
-        public bool IsStarted()
+        public bool IsDirExists()
         {
-            if (setDir == talDir && dir != MyData.GetData(talDir))
-            {
-                return false;
-            }
-            else if (setDir == talDir && dir == MyData.GetData(talDir))
-            {
-                return true;
-            }
-            else
-            {
-                return watcher != null && Directory.Exists(dir);
-            }
+            return Directory.Exists(dir);
         }
 
         public Task RestartWatch()
         {
-            timer.Stop();
+            //timer.Stop();
             StopWatch();
             return StartWatch();
         }
@@ -104,6 +105,7 @@ namespace WatcherMessageBox
             {
                 watcher.Created -= OnCreated;
                 watcher.Renamed -= OnRenamed;
+                watcher.EnableRaisingEvents = false;
             }
         }
 
@@ -145,7 +147,16 @@ namespace WatcherMessageBox
                 value = $"{attributeRepLog}: \n{value}";
             }
 
-            Application.Run(new CustomMessageBox(value, title));
+            //Application.Run(new CustomMessageBox(value, title));
+            ShowMessageBox(value, title);
+        }
+
+        private void ShowMessageBox(string value, string title)
+        {
+            Task.Run(() =>
+            {
+                Application.Run(new CustomMessageBox(value, title));
+            });
         }
 
         private string GetAttributeRepLog(string name)
@@ -167,7 +178,8 @@ namespace WatcherMessageBox
             string value = $"Старое: {e.OldName}\n" +
                            $"Новое: {e.Name}";
 
-            Application.Run(new CustomMessageBox(value, title));
+            //Application.Run(new CustomMessageBox(value, title));
+            ShowMessageBox(value, title);
         }
 
         private string GetAttributeRepUP(string name)

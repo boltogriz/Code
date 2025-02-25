@@ -13,6 +13,7 @@ namespace WatcherMessageBox
         [STAThread]
         static void Main(string[] args)
         {
+            //string[] argsTest = new string[] {"\\\\tal\\share\\mailtest\\test1", "\\\\tal\\share\\mailtest\\test2"};
             List<Watcher> watchers = new List<Watcher>();
             List<Task> tasks = new List<Task>();
             string def = @"\\tal\mail";
